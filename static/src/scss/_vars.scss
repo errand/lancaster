@@ -1,23 +1,29 @@
-:root {
-  --wrapper: 1200px;
-  --gutter: 20px;
+//Fonts//
+$OpenSans: 'Open Sans', sans-serif;
 
-  @media (min-width: 1300px) {
-    --wrapper: 90%;
-    --gutter: 40px;
-  }
+//End Fonts//
 
-  @media (min-width: 1500px) {
-    --wrapper: 90%;
-    --gutter: 50px;
-  }
-}
+//Fonts weight//
+$thin: 200;
+$light: 300;
+$regular: 400;
+$medium: 500;
+$semi-bold: 600;
+$bold: 700;
+$extra-bold: 800;
+$black-bold: 900;
+//End Fonts weight//
 
-$blue-50: #e4f4fd;
-$blue-100: #A2D9F6;
-$blue-200: #0065BD;
-$blue-300: #0A1633;
 
-$grey-100: #f6f6f6;
-$grey-200: #AEADB4;
-$grey-300: #666;
+$white: #ffffff;
+$black: #000000;
+
+$gray-100: #CCCCCC;
+$gray-200: #848484;
+$gray-300: #9C9C9C;
+$gray-400: #414141;
+$gray-500: #444444;
+$gray-600: #464646;
+
+$red-100: #D75E5E;
+$red-200: #C00000;

@@ -1,29 +1,68 @@
 html {
-  box-sizing: border-box;
-
   font-size: 16px;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
-*, *:before, *:after {
-  box-sizing: inherit;
+
+body {
+  display: flex;
+  flex-direction: column;
+  border: 0;
+  margin: 0;
+  padding: 0
+}
+
+p{
+  margin: 0;
 }
 
 a {
   text-decoration: none;
+  border: 0
 }
 
-h1, h2, h3, h4, h5, h6 {
+div,span,object,iframe,img,table,caption,thead,tbody,tfoot,tr,tr,td,article,aside,canvas,details,figure,hgroup,menu,nav,footer,header,section,summary,mark,audio,video {
+  border: 0;
   margin: 0;
+  padding: 0
 }
 
-body {
+h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,address,code,del,dfn,em,ins,q,samp,small,strong,sub,sup,b,i,hr,dl,dt,dd,ol,ul,li,fieldset,legend,label {
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
   margin: 0;
-  display: flex;
-  flex-direction: column;
+  padding: 0
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0
+}
+
+table caption,table th,table td {
+  text-align: left;
+  vertical-align: middle
 }
 
 img {
+  max-width: 100%;
   width: 100%;
   height: auto;
+  border: 0
+}
+
+ul,li {
+  list-style-type: none;
+  line-height: 1
+}
+
+:focus {
+  outline: 0
+}
+
+* {
+  box-sizing: border-box
 }
 
 /* Forms

@@ -4,225 +4,32 @@
  * Author: Talahassa.Ink
 */
 
-@import "vars";
 @import "normalize";
-@import "fonts";
+@import "vars";
+@import "mixins";
 @import "header";
-@import "navs";
-@import "icons";
-@import "searchform";
-@import "sidebar";
-@import "social_icons";
-@import "hero-block";
-@import "news-timeline";
-@import "tease";
-@import "post";
-@import "archive";
 @import "footer";
 
-@import "wp-block";
+//* Global *//
+body{
+  font-family: $OpenSans;
+}
+
+.container{
+  display: block;
+  max-width: 1210px;
+  width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+//* End Global *//
 
 /*! purgecss start ignore */
 .visually-hidden {
+  position: absolute;
   width: 1px;
   height: 1px;
   clip: rect(1px, 1px, 1px, 1px);
-  position: absolute;
   overflow: hidden;
-}
-
-*::placeholder {
-  color: black;
-  font-style: italic;
-  text-align: center;
-}
-
-*::-webkit-scrollbar {
-  width: 9px;
-  height: 9px;
-}
-
-*::-webkit-scrollbar-thumb {
-  background: darken($grey-100, 9);
-  border-radius: 9px;
-}
-
-*::-webkit-scrollbar-track {
-  background: darken($grey-100, 3);
-}
-
-.content-wrapper__inner {
-  margin-top: 144px;
-}
-
-.main, .sidebar {
-  padding-top: 26px;
-}
-
-.content-wrapper__inner-row {
-  margin-left: 0;
-  margin-right: 0;
-
-  & > * {
-    padding-right: calc(var(--bs-gutter-x));
-    padding-left: calc(var(--bs-gutter-x));
-  }
-}
-
-a {
-  color: $blue-200;
-}
-
-p {
-  margin-top: 0;
-}
-
-p:last-child {
-  margin-bottom: 0;
-}
-
-.page-title {
-  margin-bottom: calc(var(--bs-gutter-x) * 2);
-  padding-bottom: calc(var(--bs-gutter-x));
-  border-bottom: 1px solid $grey-200;
-
-  font-family: 'PT Serif', serif;
-  font-size: 3rem;
-
-  line-height: 1.2;
-}
-
-.date {
-  display: flex;
-  align-items: center;
-
-  color: $grey-300;
-
-  margin-bottom: 6px;
-
-  &:before {
-    display: inline-table;
-    margin-right: 9px;
-    content: '';
-    width: 16px;
-    height: 16px;
-    background: url('static/img/icon_time.svg') no-repeat;
-  }
-}
-
-.article-block__preview {
-  margin-bottom: 10px;
-}
-
-.read-more {
-  a {
-    display: inline-block;
-    background: $blue-200;
-    color: white;
-    padding: 4px 6px;
-  }
-}
-
-.form-group {
-  margin-bottom: 1rem;
-}
-
-.form-control {
-  display: block;
-  width: 100%;
-  height: calc(1.5em + .75rem + 2px);
-  padding: .375rem .75rem;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: $grey-200;
-  background-color: #fff;
-  background-clip: padding-box;
-  border: 1px solid $grey-200;
-  border-radius: .25rem;
-  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-}
-
-.btn {
-  display: inline-block;
-  cursor: pointer;
-  font-weight: 400;
-  color: #212529;
-  text-align: center;
-  vertical-align: middle;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  background-color: transparent;
-  border: 1px solid transparent;
-  padding: .375rem .75rem;
-  font-size: 1rem;
-  line-height: 1.5;
-  border-radius: .25rem;
-  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-
-  &.btn-primary {
-    background: $blue-100;
-  }
-}
-
-.article-block__title {
-  margin-bottom: 6px;
-
-  a {
-    text-decoration: underline;
-  }
-}
-
-
-@media (max-width: 640px) {
-  .desktop {
-    display: none;
-  }
-  .content-wrapper__inner {
-    margin-top: 60px;
-  }
-
-  .page-title {
-    font-size: 1.5rem;
-  }
-
-  .article-block__picture img, .article-block__title, .article-block__date {
-    margin-bottom: 10px;
-  }
-}
-
-@media (min-width: 641px) {
-  body{
-    &:not(.admin-bar) {
-
-      .content-wrapper__inner {
-        margin-top: 144px;
-      }
-    }
-
-    &:not(.home) {
-      .main {
-        padding-right: calc(var(--bs-gutter-x) * 2);
-        padding-left: calc(var(--bs-gutter-x) * 4);
-      }
-    }
-
-    &.home {
-      .main {
-        padding-right: 0!important;
-        padding-left: 0!important;
-
-        .posts {
-          padding-right: calc(var(--bs-gutter-x) * 2);
-          padding-left: calc(var(--bs-gutter-x) * 4);
-        }
-      }
-    }
-  }
-  .mobile {
-    display: none;
-  }
 }
 /*! purgecss end ignore */
