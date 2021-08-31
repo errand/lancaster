@@ -1,0 +1,138 @@
+/*! purgecss start ignore */
+.site__header {
+
+  position: absolute;
+  z-index: 40;
+
+  top: 0px;
+  left: 0;
+  right: 0px;
+  width: 100%;
+  height: 144px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 25px 25px 7px 25px;
+
+  background: $blue-300;
+
+  .site-logo__wrapper {
+    flex: 2;
+
+    text-align: center;
+
+    .site-logo {
+      display: inline-block;
+    }
+
+    .site-logo__picture {
+      display: flex;
+      align-items: center;
+      img {
+        max-width: 100%;
+      }
+    }
+
+    .site-logo__slogan_wrapper {
+      display: flex;
+      justify-content: space-between;
+
+      margin-bottom: 3px;
+
+      font-size: 0.7rem;
+      text-transform: uppercase;
+    }
+
+    .site-logo__site_name {
+      color: white;
+    }
+
+    .site-logo__slogan {
+      color: $blue-100;
+      margin-right: 13px;
+    }
+  }
+
+  &.hasScrolled {
+    position: absolute;
+    top: -144px;
+
+  }
+
+  &.fixed {
+    position: fixed;
+    top: 0;
+
+    height: 60px;
+
+    padding: 7px 20px;
+
+    transition: top .4s ease-out;
+
+    .site-logo {
+      width: 200px;
+    }
+
+    .site-logo__slogan_wrapper {
+      display: none;
+    }
+  }
+
+  .site-menu, .search-block {
+    display: flex;
+    flex: 1;
+  }
+
+  .menu-label {
+    display: none;
+  }
+
+  .search-block {
+    justify-content: space-between;
+  }
+}
+
+.subscribtion-block__inner {
+  display: inline-flex;
+  align-items: center;
+
+  border: 1px solid white;
+  padding: 2px 10px;
+  text-transform: uppercase;
+
+  color: white;
+  font-size: 0.8rem;
+  font-weight: bold;
+
+  .icon {
+    margin-right: 4px;
+    height: 13px;
+  }
+}
+
+@media (max-width: 640px) {
+
+  .site__header {
+    height: 60px;
+    padding: 7px 20px;
+    .search-block {
+      justify-content: flex-end;
+    }
+
+    .icon_age18, .site-logo__wrapper .site-logo__slogan_wrapper, .subscribtion-block,  .social-block {
+      display: none;
+    }
+  }
+}
+
+
+@media (min-width: 641px) {
+  .site__header {
+    .menu-label {
+      display: block;
+    }
+  }
+}
+/*! purgecss end ignore */

@@ -1,0 +1,20 @@
+<div class="comment-form">
+    <form class="form comment-form" method="post" action="{{ site.site_url~'/wp-comments-post.php' }}">
+        {% if user %}
+          <input type="hidden" name="email" value="{{ user.email }}">
+          <input type="hidden" name="author" value="{{ user.name }}">
+          <input type="hidden" name="url" value="{{ user.link }}">
+          <div class="form-group">
+            <textarea class="form-control" name="comment" id="commentText" required></textarea>
+          </div>
+          <input name="comment_post_ID" value="{{ post.id }}" type="hidden">
+          <input name="comment_parent"  value="{{ comment.ID|default('0') }}" type="hidden">
+          <button type="submit" name="Submit" class="btn btn-primary">Отправить</button>
+          <button type="reset" class="btn btn-danger">Отмена</button>
+        {% else %}
+          {% filter shortcodes %}
+            [wordpress_social_login]
+          {% endfilter %}
+        {% endif %}
+    </form>
+</div>

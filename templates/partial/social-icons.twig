@@ -1,0 +1,9 @@
+<ul class="social-list social-block">
+{% for item in smmLinks %}
+    <li class="social-link-item {{ item.smmLinkCssClass }}">
+      <a href="{{ item.smmLinkUrl }}" target="_blank">
+        <img src="{{ item.smmLinkIcon.url }}" alt="{{ item.smmLinkName }}" width="{{ item.smmLinkIcon.width }}" height="{{ item.smmLinkIcon.height }}">
+      </a>
+    </li>
+{% endfor %}
+</ul>

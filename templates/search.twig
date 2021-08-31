@@ -1,0 +1,28 @@
+{# see `archive.twig` for an alternative strategy of extending templates #}
+{% extends "base.twig" %}
+
+{% block content %}
+
+  <form role="search" method="get" class="search-results__search" action="{{ site.link }}" _lpchecked="1">
+    <div class="form-input">
+      <input type="text" class="form-input__input" value="" placeholder="Введите ключевое слово" name="s" id="s">
+    </div>
+    <button class="form-submit"><img src="{{ theme.link }}/static/img/icon_search_dark.png" alt="Искать" class="form-submit" width="50" height="50">
+      <span class="visually-hidden">Поиск</span>
+    </button>
+  </form>
+
+  {% for row in posts | batch(3) %}
+    <div class="row">
+      {% for post in row %}
+        {% include ['tease-'~post.post_type~'.twig', 'tease.twig'] %}
+      {% endfor %}
+    </div>
+
+    <div class="ads-wrapper">
+        {{ categoryBanners[ loop.index ] }}
+    </div>
+  {% endfor %}
+
+  {% include 'partial/pagination.twig' with { pagination: posts.pagination({show_all: false, mid_size: 3, end_size: 2}) } %}
+{% endblock %}

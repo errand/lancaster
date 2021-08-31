@@ -1,0 +1,56 @@
+{% if newsRightColumnList %}
+	{% set date = null %}
+
+	{% for post in newsRightColumnList %}
+		{% if date != post.post_date | date( 'd.m.Y' ) %}
+			{% set date = post.post_date | date( 'd.m.Y' ) %}
+			<div class="news-timeline__day">{{ date | date( 'd F' ) }}</div>
+		{% endif %}
+		{% if loop.index == 2 %}
+			<div class="ads-wrapper">
+				{{ timelineBanners[1] }}
+			</div>
+		{% endif %}
+		{% if loop.index == 5 %}
+			<div class="ads-wrapper">
+				{{ timelineBanners[2] }}
+			</div>
+		{% endif %}
+		{% if loop.index == 10 %}
+			<div class="ads-wrapper">
+				{{ timelineBanners[3] }}
+			</div>
+		{% endif %}
+		{% if loop.index == 13 %}
+			<div class="ads-wrapper">
+				{{ timelineBanners[4] }}
+			</div>
+		{% endif %}
+		<article class="news-timeline__article">
+			{% if post.thumbnail.src and hideTimelineImages == false %}
+				<a href="{{ post.link }}" title="{{ post.title }}">
+					<picture class="news-timeline__picture">
+						<source media="(max-width: 640px)" srcset="{{ post.thumbnail.src|resize(355,200, 'top')|towebp }}" type="image/webp">
+						<source media="(max-width: 640px)" srcset="{{ post.thumbnail.src|resize(355,200, 'top')|tojpg }}">
+						<source media="(min-width: 641px)" srcset="{{ post.thumbnail.src|resize(395,222, 'top')|towebp }}" type="image/webp">
+						<source media="(min-width: 641px)" srcset="{{ post.thumbnail.src|resize(395,222, 'top')|tojpg }}">
+						<img src="/wp-content/uploads/2021/06/no-noimage-395x222-c-default.jpg" width="395" height="222" alt="{% if post.thumbnail.alt %}{{ post.thumbnail.alt }}{% else %}{{ post.title }}{% endif %}" loading="lazy" data-src="{{ fn('dummy_image_url', post.ID)|resize(395,222, 'top')|tojpg }}"/>
+					</picture>
+				</a>
+				{% endif%}
+				<div class="news-timeline__date-wrapper">
+					<time class="news-timeline__date date" datetime="{{ post.post_date | date( 'Y-m-d H:i' ) }}">
+						{{ post.post_date | date( 'd.m.Y H:i' ) }}
+					</time>
+					<div class="category_link">
+						<a href="{{ post.terms[0].link }}">{{ post.category }}</a>
+					</div>
+				</div>
+				<h2 class="news-timeline__title">
+					<a href="{{ post.link }}" title="{{ post.title }}">{{ post.title }}</a>
+				</h2>
+
+				<div class="news-timeline__preview">{{ post.preview.length(21).read_more( '' ).force }}</div>
+			</article>
+		{% endfor %}
+		{% endif%}

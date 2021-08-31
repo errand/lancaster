@@ -1,0 +1,95 @@
+<div class="pagination__wrapper">
+  <div class="posts-count">
+    Показано <strong>{{ posts|length }}</strong> из {{ total_posts }}
+  </div>
+  {% if posts.pagination.pages is not empty %}
+    <nav class="pagination-block">
+      <ul class="pagination">
+
+        {# First #}
+        {% if posts.pagination.pages|first and posts.pagination.pages|first.current != true %}
+          <a href="{{ posts.pagination.pages|first.link }}">
+            <li class="first">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3.85742 6.00042L9.57171 1.42899L9.57171 10.5719L3.85742 6.00042Z"/>
+                <rect x="0.429688" y="1.42871" width="1.14286" height="9.14286"/>
+              </svg>
+            </li>
+          </a>
+        {% else %}
+          <li class="first disabled">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3.85742 6.00042L9.57171 1.42899L9.57171 10.5719L3.85742 6.00042Z"/>
+              <rect x="0.429688" y="1.42871" width="1.14286" height="9.14286"/>
+            </svg>
+          </li>
+        {% endif %}
+
+        {# Previous #}
+        {% if posts.pagination.prev %}
+          <a href="{{ posts.pagination.prev.link }}">
+            <li class="prev">
+              <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M-2.30736e-07 5.27864L6.85714 0.707206L6.85714 9.85006L-2.30736e-07 5.27864Z"/>
+              </svg>
+            </li>
+          </a>
+        {% else %}
+          <li class="prev disabled">
+            <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M-2.30736e-07 5.27864L6.85714 0.707206L6.85714 9.85006L-2.30736e-07 5.27864Z"/>
+            </svg>
+          </li>
+        {% endif %}
+
+        {# Pages #}
+        {% for page in posts.pagination.pages %}
+          {% if page.link %}
+            <a href="{{ page.link }}" class="{{ page.class }}">
+              <li>{{ page.title }}</li>
+            </a>
+          {% else %}
+            <li class="current {{ page.class }}">{{ page.title }}</li>
+          {% endif %}
+        {% endfor %}
+
+        {# Next #}
+        {% if posts.pagination.next %}
+          <a href="{{ posts.pagination.next.link }}">
+            <li class="next">
+              <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M-2.30736e-07 5.27864L6.85714 0.707206L6.85714 9.85006L-2.30736e-07 5.27864Z"/>
+              </svg>
+            </li>
+          </a>
+        {% else %}
+          <li class="next disabled">
+            <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M-2.30736e-07 5.27864L6.85714 0.707206L6.85714 9.85006L-2.30736e-07 5.27864Z"/>
+            </svg>
+          </li>
+        {% endif %}
+
+        {# Last #}
+        {% if posts.pagination.pages|last and posts.pagination.pages|last.current != true %}
+          <a href="{{ posts.pagination.pages|last.link }}">
+            <li class="last">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3.85742 6.00042L9.57171 1.42899L9.57171 10.5719L3.85742 6.00042Z"/>
+              <rect x="0.429688" y="1.42871" width="1.14286" height="9.14286"/>
+            </svg>
+            </li>
+          </a>
+        {% else %}
+          <li class="last disabled">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3.85742 6.00042L9.57171 1.42899L9.57171 10.5719L3.85742 6.00042Z"/>
+              <rect x="0.429688" y="1.42871" width="1.14286" height="9.14286"/>
+            </svg>
+          </li>
+        {% endif %}
+      </ul>
+    </nav>
+  {% endif %}
+
+</div>

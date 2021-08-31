@@ -1,0 +1,26 @@
+<div class="main-footer__texts">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-5 offset-md-1">
+        <div class="copyright-block">
+          <picture class="icon_age18">
+            <source srcset="{{ theme.link }}/static/img/icon_age18.svg" type="image/svg+xml">
+            <img src="{{ theme.link }}/static/img/icon_age18.png" alt="{{ site.name }}" width="24" height="24">
+          </picture>
+          <div>{{ footerLeftColumn }}</div>
+        </div>
+      </div>
+      <div class="col-12 col-md-3">{{ footerCentralColumn }}</div>
+      <div class="col-12 col-md-3">{{ footerRightColumn }}</div>
+    </div>
+  </div>
+</div>
+<div class="main-footer__dates">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        &copy; 2013 - {{"now"|date('Y')}}
+      </div>
+    </div>
+  </div>
+</div>

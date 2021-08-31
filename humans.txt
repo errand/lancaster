@@ -1,0 +1,13 @@
+  _______    _       _                           _____       _
+ |__   __|  | |     | |                         |_   _|     | |
+    | | __ _| | __ _| |__   __ _ ___ ___  __ _    | |  _ __ | | __
+    | |/ _` | |/ _` | '_ \ / _` / __/ __|/ _` |   | | | '_ \| |/ /
+    | | (_| | | (_| | | | | (_| \__ \__ \ (_| |_ _| |_| | | |   <
+    |_|\__,_|_|\__,_|_| |_|\__,_|___/___/\__,_(_)_____|_| |_|_|\_\
+
+
+
+This site is made with awesome Timber software for the Wordpress by enthusiastic web-developers:
+
+Front-end, Back-end: Aleksandr Shatskikh (work@errand.ru)
+Back-end: Shamagir (shamagir@errand.ru)

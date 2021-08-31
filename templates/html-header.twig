@@ -1,0 +1,46 @@
+<!doctype html>
+<!--[if lt IE 9]><html class="no-js no-svg ie lt-ie9 lt-ie8 lt-ie7" {{ site.language_attributes }}> <![endif]-->
+<!--[if IE 9]><html class="no-js no-svg ie ie9 lt-ie9 lt-ie8" {{ site.language_attributes }}> <![endif]-->
+<!--[if gt IE 9]><!-->
+	<html
+	class="no-js no-svg" {{ site.language_attributes }}> <!--<![endif]-->
+	<head>
+		<meta
+		charset="{{ site.charset }}"/>
+		{#
+																        We remove it because YOAST is handling meta description
+																        <meta name="description" content="{{ site.description }}">
+																     #}
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="{{ site.theme.link }}/style.css" type="text/css" media="screen"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="author" href="{{ site.theme.link }}/humans.txt"/>
+		<link rel="pingback" href="{{ site.pingback_url }}"/>
+		<link rel="profile" href="http://gmpg.org/xfn/11">
+		<link rel="apple-touch-icon" sizes="57x57" href="{{ theme.link }}/static/img/app_icons/apple-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="{{ theme.link }}/static/img/app_icons/apple-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="{{ theme.link }}/static/img/app_icons/apple-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="{{ theme.link }}/static/img/app_icons/apple-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="{{ theme.link }}/static/img/app_icons/apple-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="{{ theme.link }}/static/img/app_icons/apple-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="{{ theme.link }}/static/img/app_icons/apple-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="{{ theme.link }}/static/img/app_icons/apple-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="{{ theme.link }}/static/img/app_icons/apple-icon-180x180.png">
+		<link rel="icon" type="image/png" sizes="144x144" href="{{ theme.link }}/static/img/app_icons/android-icon-144x144.png">
+		<link rel="icon" type="image/png" sizes="192x192" href="{{ theme.link }}/static/img/app_icons/android-icon-192x192.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="{{ theme.link }}/static/img/app_icons/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="96x96" href="{{ theme.link }}/static/img/app_icons/favicon-96x96.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="{{ theme.link }}/static/img/app_icons/favicon-16x16.png">
+		<link rel="manifest" href="{{ theme.link }}/static/img/app_icons/manifest.json">
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="msapplication-TileImage" content="{{ theme.link }}/static/img/app_icons/ms-icon-144x144.png">
+		<meta name="theme-color" content="#ffffff">
+		<meta name='wmail-verification' content='6ced4ea5bff6c06fbb0345ff3958d6e9'/>
+		<script>
+			window.yaContextCb = window.yaContextCb || []
+		</script>
+		<meta http-equiv="refresh" content="300">
+
+		{{function('wp_head')}}

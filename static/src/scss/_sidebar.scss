@@ -1,0 +1,30 @@
+/*! purgecss start ignore */
+.sidebar {
+  background: $grey-100;
+
+  @media (min-width: 641px) {
+    padding-left: 15px!important;
+    padding-right: 15px!important;
+  }
+
+  @media (min-width: 961px) {
+    padding-left: 30px!important;
+    padding-right: 40px!important;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  .sidebar-widgets {
+    padding-top: 40px;
+    position: sticky;
+    top: 49px
+  }
+  }
+
+.above_sidebar {
+  margin-bottom: calc(var(--bs-gutter-x) * 2);
+}
+
+/*! purgecss end ignore */

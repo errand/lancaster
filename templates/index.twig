@@ -1,0 +1,17 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	{% for row in posts | batch(3) %}
+		<div class="row">
+			{% for post in row %}
+				{% include ['tease-'~post.post_type~'.twig', 'tease.twig'] %}
+			{% endfor %}
+		</div>
+
+		<div class="ads-wrapper">
+				{{ categoryBanners[ loop.index ] }}
+		</div>
+	{% endfor %}
+
+	{% include 'partial/pagination.twig' with { pagination: posts.pagination({show_all: false, mid_size: 3, end_size: 2}) } %}
+{% endblock %}

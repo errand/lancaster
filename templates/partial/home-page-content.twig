@@ -1,0 +1,122 @@
+{% set verticalCounter = 1 %}
+
+{% if ( HomePageContent ) %}
+	{% for item in HomePageContent %}
+		{% if ( item.type == 'content' ) and ( item.view == 'horizontal' ) %}
+			<div class="article-block article-block__horizontal row">
+				<div class="article-block__media col-12 col-lg-6">
+					{% for post in item.data | slice(0, 1) %}
+						<article class="hero-block">
+							<div class="hero-block__inner">
+								<a href="{{ post.link }}" title="{{post.title}}">
+									<picture class="hero-block__picture">
+										<source srcset="{{ fn('dummy_image_url', post.ID)|resize(355,180, 'top')|towebp }}" type="image/webp" media="(max-width: 640px)">
+										<source srcset="{{ fn('dummy_image_url', post.ID)|resize(355,180, 'top')|tojpg }}" media="(max-width: 640px)">
+										<source srcset="{{ fn('dummy_image_url', post.ID)|resize(736,470, 'top')|towebp }}" type="image/webp" media="(min-width: 641px)">
+										<img src="/wp-content/uploads/2021/06/no-noimage-736x470-c-default.jpg" width="736" height="470" alt="{% if post.thumbnail.alt %}{{ post.thumbnail.alt }}{% else %}{{ post.title }}{% endif %}" loading="lazy" data-src="{{ fn('dummy_image_url', post.ID)|resize(736,470, 'top')|tojpg }}"/>
+									</picture>
+								</a>
+								<div class="hero-block__text">
+									<div class="hero-block__category">
+										<a href="{{ post.terms[0].link }}" title="{{ post.category }}">{{ post.category }}</a>
+									</div>
+									<h2 class="hero-block__title">
+										<a href="{{ post.link }}" title="{{ post.title }}">{{ post.title }}</a>
+									</h2>
+									<div class="read-more">
+										<a href="{{ post.link }}">Читать далее</a>
+									</div>
+								</div>
+							</div>
+						</article>
+					{% endfor %}
+				</div>
+				<div class="article-block__posts col-12 col-lg-6">
+					<h3 class="article-block__main-category">
+						<a href="{{ item.category.link }}">{{ item.category.name }}</a>
+					</h3>
+					{% for post in item.data | slice (1, 3) %}
+						<article class="article-block__inner">
+							<a href="{{ post.link }}" title="{{post.title}}" class="article-block__picture">
+								<picture>
+									<source srcset="{{ fn('dummy_image_url', post.ID)|resize(355,180, 'top')|towebp }}" type="image/webp" media="(max-width: 640px)">
+									<source srcset="{{ fn('dummy_image_url', post.ID)|resize(355,180, 'top')|tojpg }}" media="(max-width: 640px)">
+									<source srcset="{{ fn('dummy_image_url', post.ID)|resize(209,119, 'top')|towebp }}" type="image/webp" media="(min-width: 641px)">
+									<img src="/wp-content/uploads/2021/06/no-noimage-355x180-c-default.jpg" width="355" height="180" alt="{% if post.thumbnail.alt %}{{ post.thumbnail.alt }}{% else %}{{ post.title }}{% endif %}" loading="lazy" data-src="{{ fn('dummy_image_url', post.ID)|resize(355,180, 'top')|tojpg }}"/>
+								</picture>
+							</a>
+							<div class="article-block__text">
+								<h2 class="article-block__title">
+									<a href="{{post.link}}">{{post.title}}</a>
+								</h2>
+								<time class="article-block__date date" datetime="{{ post.post_date | date( 'Y-m-d H:i' ) }}">
+									{{ post.post_date | date( 'd.m.Y H:i' ) }}
+								</time>
+								<div class="article-block__preview">
+									{{ post.preview.length(8).read_more( '' ).force }}
+								</div>
+							</div>
+						</article>
+					{% endfor %}
+				</div>
+			</div>
+		{% elseif ( item.type == 'content' ) and ( item.view == 'vertical' ) %}
+			{%  if verticalCounter == 1 %}
+				<div class="article-row__vertical row">
+					<div class="article-posts__vertical-container col-12 col-md-9">
+					{% endif %}
+					<div class="article-block__vertical">
+						{% for post in item.data | slice(0, 1) %}
+							<h3 class="article-block__main-category">
+								<a href="{{ item.category.link }}">{{ item.category.name }}</a>
+							</h3>
+							<article class="article-block__vertical-inner article-hero">
+								<a href="{{ post.link }}" title="{{post.title}}" class="article-block__picture col-12">
+									<picture>
+										<source srcset="{{ fn('dummy_image_url', post.ID)|resize(355,200, 'top')|towebp }}" type="image/webp" media="(max-width: 640px)">
+										<source srcset="{{ fn('dummy_image_url', post.ID)|resize(355,200, 'top')|tojpg }}" media="(max-width: 640px)">
+										<source srcset="{{ fn('dummy_image_url', post.ID)|resize(486,273, 'top')|towebp }}" type="image/webp" media="(min-width: 641px)">
+										<img src="/wp-content/uploads/2021/06/no-noimage-486x220-c-default.jpg" width="486" height="273" alt="{% if post.thumbnail.alt %}{{ post.thumbnail.alt }}{% else %}{{ post.title }}{% endif %}" loading="lazy" data-src="{{ fn('dummy_image_url', post.ID)|resize(486,273, 'top')|tojpg }}"/>
+									</picture>
+								</a>
+								<h2 class="article-block__title">
+									<a href="{{post.link}}" title="{{ post.title }}">{{post.title}}</a>
+								</h2>
+								<time class="article-block__date date" datetime="{{ post.post_date | date( 'Y-m-d H:i' ) }}">
+									{{ post.post_date | date( 'd.m.Y H:i' ) }}
+								</time>
+								<div class="article-block__preview">
+									{{ post.preview.length(21).read_more( '' ).force }}
+								</div>
+							</article>
+							{% set verticalCounter = 0 %}
+						{% endfor %}
+						{% for post in item.data | slice ( 1, 2 ) %}
+							<article class="article-block__vertical-inner">
+								<h2 class="article-block__title">
+									<a href="{{post.link}}" title="{{ post.title }}">{{post.title}}</a>
+								</h2>
+								<time class="article-block__date date" datetime="{{ post.post_date | date( 'Y-m-d H:i' ) }}">
+									{{ post.post_date | date( 'd.m.Y H:i' ) }}
+								</time>
+								<div class="article-block__preview">
+									{{ post.preview.length(21).read_more( '' ).force }}
+								</div>
+							</article>
+						{% endfor %}
+					</div>
+				{% elseif ( item.type == 'reclam' ) and ( item.view == 'horizontal' ) %}
+					<div class="ads-wrapper horizontal">
+						{{ item.data }}
+					</div>
+			{% elseif ( item.type == 'reclam' ) and ( item.view == 'vertical' ) %}
+				</div>
+				<!-- end of container__vertical -->
+				<div class="ads-wrapper vertical ads-sidebar col-12 col-md-3">
+					{{ item.data }}
+				</div>
+			</div>
+			{% set verticalCounter = 0 %}
+		{% endif %}
+	{% endfor %}
+{% endif %}

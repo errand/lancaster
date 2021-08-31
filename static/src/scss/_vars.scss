@@ -1,0 +1,23 @@
+:root {
+  --wrapper: 1200px;
+  --gutter: 20px;
+
+  @media (min-width: 1300px) {
+    --wrapper: 90%;
+    --gutter: 40px;
+  }
+
+  @media (min-width: 1500px) {
+    --wrapper: 90%;
+    --gutter: 50px;
+  }
+}
+
+$blue-50: #e4f4fd;
+$blue-100: #A2D9F6;
+$blue-200: #0065BD;
+$blue-300: #0A1633;
+
+$grey-100: #f6f6f6;
+$grey-200: #AEADB4;
+$grey-300: #666;

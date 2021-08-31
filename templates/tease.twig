@@ -1,0 +1,16 @@
+<article class="tease tease-{{post.post_type}} article-block block-vertical col-12 col-lg-4" id="tease-{{post.ID}}">
+	{% block content %}
+		<h2 class="h2"><a href="{{post.link}}">{{post.title}}</a></h2>
+		<p>{{post.preview}}</p>
+	<a href="{{ post.link }}" title="{{post.title}}">
+		<picture class="article-block__picture">
+			<source srcset="{{ fn('dummy_image_url', post.ID)|resize(355,180)|towebp }}" type="image/webp" media="(max-width: 640px)">
+			<source srcset="{{ fn('dummy_image_url', post.ID)|resize(355,180)|tojpg }}" media="(max-width: 640px)">
+			<source srcset="{{ fn('dummy_image_url', post.ID)|resize(454,242)|towebp }}" type="image/webp" media="(min-width: 641px)">
+			<img src="{{ fn('dummy_image_url', post.ID)|resize(454,242)|tojpg }}"
+					 width="454" height="242"
+					 alt="{% if post.thumbnail.alt %}{{ post.thumbnail.alt }}{% else %}{{ post.title }}{% endif %}" />
+		</picture>
+	</a>
+	{% endblock %}
+</article>

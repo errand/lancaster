@@ -1,0 +1,36 @@
+<!-- polls -->
+<div class="article-block article-block__horizontal">
+  <div class="row">
+    <div class="article-block__posts col-12 col-lg-6">
+      <h3 class="article-block__main-category">
+        <a href="{{ fn( 'get_category_link', 149 ) }}">Опросы</a>
+      </h3>
+      {% for post in polls %}
+        <article class="article-block__inner">
+          <picture class="article-block__picture col-12 col-lg-4">
+            <source srcset="{{ fn( 'dummy_image_url', post.ID )|resize( 355,180 )|towebp }}" type="image/webp" media="( max-width: 640px )">
+            <source srcset="{{ fn( 'dummy_image_url', post.ID )|resize( 355,180 )|tojpg }}" media="( max-width: 640px )">
+            <source srcset="{{ fn( 'dummy_image_url', post.ID )|resize( 209,119 )|towebp }}" type="image/webp" media="( min-width: 641px )">
+            <img src="{{ fn( 'dummy_image_url', post.ID )|resize(209,119)|tojpg }}" width="209" height="119"
+                 loading="lazy" data-src="{{ fn('dummy_image_url', post.ID)|resize(209,119, 'top')|tojpg }}"
+                 alt="{% if post.thumbnail.alt %}{{ post.thumbnail.alt }}{% else %}{{ post.title }}{% endif %}" />
+          </picture>
+          <div class="article-block__text col-12 col-lg-8">
+            <h2 class="article-block__title">
+              <a href="{{ post.link }}">{{ post.title }}</a>
+            </h2>
+            <time class="article-block__date date" datetime="{{ post.post_date | date( 'Y-m-d H:i' ) }}">
+              {{ post.post_date | date( 'd.m.Y H:i' ) }}
+            </time>
+            <!-- div class="article-block__preview">
+              {# post.preview.length( 21 ).read_more( '' ).force #}
+            </div -->
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+    <div class="article-block__media col-12 col-lg-6">
+      {{ pollsWidget }}
+    </div>
+  </div>
+</div>

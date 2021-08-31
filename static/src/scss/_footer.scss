@@ -1,0 +1,36 @@
+.main-footer {
+  a {
+    color: $blue-100;
+  }
+}
+
+.main-footer__texts {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background: $blue-300;
+  color: white;
+
+  p {
+    margin-top: 0;
+  }
+
+  .copyright-block {
+    display: flex;
+
+    .icon_age18 {
+      margin-right: 1rem;
+      @media (max-width: 641px){
+        display: none;
+      }
+    }
+  }
+}
+
+.main-footer__dates {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background: black;
+  color: white;
+
+  text-align: center;
+}

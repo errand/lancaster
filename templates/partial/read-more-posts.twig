@@ -1,0 +1,10 @@
+<!-- read-more-posts -->
+<section class="read-more-box">
+  <h2 class="read-more-title">Читайте также</h2>
+
+  <div class="row">
+    {% for post in readMorePosts %}
+      {% include ['tease-'~post.post_type~'.twig', 'tease.twig'] %}
+    {% endfor %}
+  </div>
+</section>

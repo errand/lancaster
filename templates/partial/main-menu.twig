@@ -1,0 +1,41 @@
+<nav id="nav-main" class="nav-main">
+  <div class="main-nav__wrapper">
+    <div class="nav-main__nav">
+      {% include "menu.twig" with {'items': menu.get_items} %}
+      <div class="nav-main__regions">
+        <div class="nav-main__regions-trigger">Новости регионов</div>
+      </div>
+    </div>
+
+    <div class="nav-main__regions__list">
+
+      <div class="nav-main__regions__select">
+        <select data-placeholder="Поиск региона" tabindex="1" class="select chosen-select">
+          <option disabled selected>Поиск региона</option>
+          {% for term in regionTerms %}
+            <option class="list-item" value="{{ fn('get_term_link', term.term_id) }}">{{ term.name }}</option>
+          {% endfor %}
+        </select>
+      </div>
+
+      <ul class="list">
+        {% for term in regionTerms %}
+          <li class="list-item"><a href="{{ term.link }}">{{ term.name }}</a> </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  <div class="nav-main__subscribtion-block">
+    <div class="subscribtion-block">
+      <a href="/podpisatsya-na-novosti/">
+        <div class="subscribtion-block__inner">
+          <picture class="icon">
+            <source srcset="{{ theme.link }}/static/img/icon_mail_negative.svg" type="image/svg+xml">
+            <img src="{{ theme.link }}/static/img/icon_mail_negative.png" width="18" height="14" alt="Подписка">
+          </picture>
+          Подписка
+        </div>
+      </a>
+    </div>
+  </div>
+</nav><!-- #nav -->

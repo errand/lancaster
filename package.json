@@ -1,0 +1,38 @@
+{
+  "name": "lancaster",
+  "version": "1.0.0",
+  "description": "http://lanc.shamagir.ru/",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "prod": "cross-env NODE_ENV=production webpack --mode production --progress",
+    "dev": "cross-env NODE_ENV=development webpack --watch --mode development --progress"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org:megadef/lancaster.git"
+  },
+  "keywords": [
+    "timber",
+    "wordpress"
+  ],
+  "author": "Talahassa",
+  "license": "ISC",
+  "homepage": "https://github.com/errand",
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.2.0",
+    "mini-css-extract-plugin": "^2.1.0",
+    "node-sass": "^6.0.1",
+    "postcss": "^8.3.6",
+    "postcss-loader": "^6.1.1",
+    "sass-loader": "^12.1.0",
+    "webpack": "^5.51.1",
+    "webpack-cli": "^4.7.2"
+  },
+  "dependencies": {
+    "social-likes-next": "^1.1.0"
+  }
+}
