@@ -1,5 +1,6 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
 const PATHS = {
     src: path.join(__dirname, 'templates')
@@ -15,7 +16,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test:/\.(s*)css$/,
+                test: /\.(s*)css$/,
                 use: [
                     MiniCssExtractPlugin.loader,
                     {
@@ -33,6 +34,17 @@ module.exports = {
     plugins: [
         new MiniCssExtractPlugin({
             filename: '../style.css',
+        }),
+        new BrowserSyncPlugin({
+            files: [
+                './style.css',
+                './js/scripts.js',
+                './static/*.html',
+                './templates/**/*.twig',
+                '!./node_modules',
+                '!./package.json',
+            ],
+            reloadDelay: 0
         }),
     ],
 
