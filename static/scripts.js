@@ -191,17 +191,7 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", ({\n\tvalue: true\n}));
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _js_openSearch_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./js/openSearch.js */ \"./static/src/js/openSearch.js\");\n/* harmony import */ var _js_openSearch_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_js_openSearch_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var social_likes_next__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! social-likes-next */ \"./node_modules/social-likes-next/lib/index.js\");\n/* harmony import */ var _scss_main_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./scss/main.scss */ \"./static/src/scss/main.scss\");\n\r\n\r\n\r\n\r\n\n\n//# sourceURL=webpack://lancaster/./static/src/index.js?");
-
-/***/ }),
-
-/***/ "./static/src/js/openSearch.js":
-/*!*************************************!*\
-  !*** ./static/src/js/openSearch.js ***!
-  \*************************************/
-/***/ (() => {
-
-eval("((e)=> {\r\n\r\n  console.log('it\\'s working');\r\n\r\n})();\n\n//# sourceURL=webpack://lancaster/./static/src/js/openSearch.js?");
+eval("__webpack_require__.r(__webpack_exports__);\nObject(function webpackMissingModule() { var e = new Error(\"Cannot find module './js/openSearch.js'\"); e.code = 'MODULE_NOT_FOUND'; throw e; }());\n/* harmony import */ var social_likes_next__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! social-likes-next */ \"./node_modules/social-likes-next/lib/index.js\");\n/* harmony import */ var _scss_main_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./scss/main.scss */ \"./static/src/scss/main.scss\");\n\r\n\r\n\r\n\r\n\n\n//# sourceURL=webpack://lancaster/./static/src/index.js?");
 
 /***/ })
 
@@ -232,35 +222,6 @@ eval("((e)=> {\r\n\r\n  console.log('it\\'s working');\r\n\r\n})();\n\n//# sourc
 /******/ 	}
 /******/ 	
 /************************************************************************/
-/******/ 	/* webpack/runtime/compat get default export */
-/******/ 	(() => {
-/******/ 		// getDefaultExport function for compatibility with non-harmony modules
-/******/ 		__webpack_require__.n = (module) => {
-/******/ 			var getter = module && module.__esModule ?
-/******/ 				() => (module['default']) :
-/******/ 				() => (module);
-/******/ 			__webpack_require__.d(getter, { a: getter });
-/******/ 			return getter;
-/******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/define property getters */
-/******/ 	(() => {
-/******/ 		// define getter functions for harmony exports
-/******/ 		__webpack_require__.d = (exports, definition) => {
-/******/ 			for(var key in definition) {
-/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
-/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
-/******/ 				}
-/******/ 			}
-/******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
-/******/ 	(() => {
-/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
-/******/ 	})();
-/******/ 	
 /******/ 	/* webpack/runtime/make namespace object */
 /******/ 	(() => {
 /******/ 		// define __esModule on exports

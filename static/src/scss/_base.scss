@@ -1,0 +1,42 @@
+body{
+  font-family: $OpenSans;
+}
+
+.container{
+  display: block;
+  max-width: 1210px;
+  width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+
+  &.flex-container{
+    display: flex;
+  }
+}
+
+.main{
+  display: block;
+  padding: 50px 0;
+}
+
+.main-wrapper{
+  display: block;
+  max-width: 770px;
+  width: 100%;
+  margin-right: 65px;
+}
+
+.sidebar{
+  display: block;
+  max-width: 335px;
+  min-width: 335px;
+  width: 100%;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+}

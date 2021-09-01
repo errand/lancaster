@@ -1,0 +1,26 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font: $bold 18px/1.3 $OpenSans;
+  color: $white;
+  background-color: $gray-300;
+  border: 0;
+  border-radius: 4px;
+  padding: 13px 15px;
+  margin: 0;
+  @include transition(0.3s);
+  cursor: pointer;
+
+  &:hover{
+    background-color: $red-300;
+  }
+
+  &.btn-rev{
+    background-color: $red-300;
+
+    &:hover{
+      background-color: $gray-300;
+    }
+  }
+}

@@ -1,30 +1,126 @@
-/*! purgecss start ignore */
-.sidebar {
-  background: $grey-100;
+.sidebar{
 
-  @media (min-width: 641px) {
-    padding-left: 15px!important;
-    padding-right: 15px!important;
+  .media-info-widget{
+    display: block;
+    line-height: 0;
+    padding-bottom: 30px;
+
+    a{
+      display: block;
+      line-height: 0;
+    }
   }
 
-  @media (min-width: 961px) {
-    padding-left: 30px!important;
-    padding-right: 40px!important;
+  .publications-widget{
+    display: block;
+    padding-bottom: 30px;
+
+    .widget-title{
+      display: block;
+
+      .title{
+        display: block;
+        font: $regular 30px/1.3 $OpenSans;
+        color: $gray-400;
+      }
+    }
+
+    .publication{
+      display: block;
+      padding-top: 20px;
+
+      .media-link{
+        display: block;
+        line-height: 0;
+      }
+
+      .title{
+        display: block;
+        padding-top: 10px;
+
+        a{
+          display: inline-block;
+          font: $bold 18px/1.2 $OpenSans;
+          color: $gray-400;
+        }
+      }
+    }
   }
 
-  img {
-    max-width: 100%;
-  }
+  .send-widget{
+    display: block;
+    background: $white;
+    border-radius: 4px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+    padding: 25px;
+    margin-bottom: 30px;
 
-  .sidebar-widgets {
-    padding-top: 40px;
-    position: sticky;
-    top: 49px
-  }
-  }
+    .title{
+      display: block;
+      text-align: center;
+      font: $regular 30px/1.3 $TimesNewRoman;
+      color: $gray-500;
+      padding-bottom: 20px;
+    }
 
-.above_sidebar {
-  margin-bottom: calc(var(--bs-gutter-x) * 2);
+    .input-group{
+      display: block;
+      padding-bottom: 10px;
+    }
+
+    input{
+      display: block;
+      width: 100%;
+      height: 42px;
+      font: $regular 14px/1 $OpenSans;
+      color: $gray-400;
+      text-align: center;
+      background: $white;
+      border: 1px solid $gray-800;
+    }
+
+    ::-webkit-input-placeholder {
+      color: rgba(87, 87, 87, 0.51);
+      font-style: italic;
+      opacity: 1;
+      transition: opacity 0.2s ease;
+    }
+    ::-moz-placeholder {
+      color: rgba(87, 87, 87, 0.51);
+      font-style: italic;
+      opacity: 1;
+      transition: opacity 0.2s ease;
+    }
+    :-moz-placeholder {
+      color: rgba(87, 87, 87, 0.51);
+      font-style: italic;
+      opacity: 1;
+      transition: opacity 0.2s ease;
+    }
+    :-ms-input-placeholder {
+      color: $gray-700;
+      opacity: 1;
+      transition: opacity 0.2s ease;
+    }
+    :focus::-webkit-input-placeholder {
+      opacity: 0;
+      transition: opacity 0.2s ease;
+    }
+    :focus::-moz-placeholder {
+      opacity: 0;
+      transition: opacity 0.2s ease;
+    }
+    :focus:-moz-placeholder {
+      opacity: 0;
+      transition: opacity 0.2s ease;
+    }
+    :focus:-ms-input-placeholder {
+      opacity: 0;
+      transition: opacity 0.2s ease;
+    }
+
+    .btn{
+      width: 100%;
+    }
+  }
 }
-
-/*! purgecss end ignore */

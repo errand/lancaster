@@ -8,29 +8,8 @@
 @import "vars";
 @import "mixins";
 @import "icons";
+@import "btns";
 @import "header";
 @import "footer";
-
-//* Global *//
-body{
-  font-family: $OpenSans;
-}
-
-.container{
-  display: block;
-  max-width: 1210px;
-  width: 100%;
-  padding: 0 20px;
-  margin: 0 auto;
-}
-//* End Global *//
-
-/*! purgecss start ignore */
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  clip: rect(1px, 1px, 1px, 1px);
-  overflow: hidden;
-}
-/*! purgecss end ignore */
+@import "base";
+@import "sidebar";
