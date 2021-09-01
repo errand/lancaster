@@ -1,85 +1,28 @@
-.icon_age18 img{
-  width: 24px;
-  height: 24px;
+@font-face {
+  font-family: 'fontello';
+  src: local('☺'), url('static/fonts/fontello.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
-.icon-menu {
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: 'fontello';
+  font-style: normal;
   line-height: 1;
-  border: 0;
-  background-color: transparent;
-  color: #fff;
-  cursor: pointer;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  display: flex;
-  align-items: center;
-
-  @media (min-width: 641px) {
-    margin-right: 50px;
-  }
-
-  /*! purgecss start ignore */
-  .hamburger {
-    position: relative;
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    font-size: 0;
-    margin-right: 14px;
-
-    &:after, &:before, em {
-      position: absolute;
-      left: 0;
-      display: block;
-      width: 100%;
-      height: 2px;
-      background: #fff;
-      border-radius: 2px;
-      opacity: 1;
-      transform: rotate(0deg);
-      transform-origin: left center;
-      transition: transform .25s ease-out;
-    }
-
-    &:after, &:before {
-      content: "";
-    }
-
-    &:before {
-      top: 7px;
-      transition: transform .15s ease,opacity .15s ease-out;
-    }
-
-    &:after {
-      top: 14px;
-    }
-
-    em {
-      top: 0;
-    }
-  }
-
-  .menu-label {
-    font-size: 1.13rem;
-  }
-
-  &.expanded {
-    .hamburger {
-      &:before {
-        opacity: 0;
-        transform: rotate(-45deg) translate3d(-2px,-4px,0);
-      }
-
-      em {
-        width: 18px;
-        transform: translate3d(1px,0,0) rotate(45deg);
-      }
-
-      &:after {
-        width: 18px;
-        transform: translate3d(1px,-1px,0) rotate(-45deg);
-      }
-    }
-  }
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
-/*! purgecss end ignore */
+
+.icon-gab:before { content: '\e800'; }
+.icon-search:before { content: '\e801'; }
+.icon-comment:before { content: '\e802'; }
+.icon-tw:before { content: '\f099'; }
+.icon-fb:before { content: '\f09a'; }
+.icon-rss:before { content: '\f09e'; }
+.icon-telegram:before { content: '\f1d8'; }
