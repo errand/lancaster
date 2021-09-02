@@ -23,9 +23,10 @@ eval("var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;(functio
 /*!***********************************!*\
   !*** ./static/src/scss/main.scss ***!
   \***********************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("throw new Error(\"Module build failed (from ./node_modules/mini-css-extract-plugin/dist/loader.js):\\nModuleError: Module Error (from ./node_modules/sass-loader/dist/cjs.js):\\nCannot find module 'sass'\\nRequire stack:\\n- D:\\\\main\\\\Lancaster\\\\node_modules\\\\sass-loader\\\\dist\\\\utils.js\\n- D:\\\\main\\\\Lancaster\\\\node_modules\\\\sass-loader\\\\dist\\\\index.js\\n- D:\\\\main\\\\Lancaster\\\\node_modules\\\\sass-loader\\\\dist\\\\cjs.js\\n- D:\\\\main\\\\Lancaster\\\\node_modules\\\\webpack\\\\lib\\\\ProgressPlugin.js\\n- D:\\\\main\\\\Lancaster\\\\node_modules\\\\webpack\\\\lib\\\\index.js\\n- D:\\\\main\\\\Lancaster\\\\node_modules\\\\webpack-cli\\\\lib\\\\webpack-cli.js\\n- D:\\\\main\\\\Lancaster\\\\node_modules\\\\webpack-cli\\\\lib\\\\bootstrap.js\\n- D:\\\\main\\\\Lancaster\\\\node_modules\\\\webpack-cli\\\\bin\\\\cli.js\\n- D:\\\\main\\\\Lancaster\\\\node_modules\\\\webpack\\\\bin\\\\webpack.js\\n    at Object.emitError (D:\\\\main\\\\Lancaster\\\\node_modules\\\\webpack\\\\lib\\\\NormalModule.js:570:6)\\n    at getSassImplementation (D:\\\\main\\\\Lancaster\\\\node_modules\\\\sass-loader\\\\dist\\\\utils.js:54:21)\\n    at Object.loader (D:\\\\main\\\\Lancaster\\\\node_modules\\\\sass-loader\\\\dist\\\\index.js:27:59)\");\n\n//# sourceURL=webpack://lancaster/./static/src/scss/main.scss?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://lancaster/./static/src/scss/main.scss?");
 
 /***/ }),
 
@@ -190,7 +191,7 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", ({\n\tvalue: true\n}));
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _js_openSearch_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./js/openSearch.js */ \"./static/src/js/openSearch.js\");\n/* harmony import */ var _js_openSearch_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_js_openSearch_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var social_likes_next__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! social-likes-next */ \"./node_modules/social-likes-next/lib/index.js\");\n/* harmony import */ var _scss_main_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./scss/main.scss */ \"./static/src/scss/main.scss\");\n/* harmony import */ var _scss_main_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_scss_main_scss__WEBPACK_IMPORTED_MODULE_2__);\n\r\n\r\n\r\n\r\n\n\n//# sourceURL=webpack://lancaster/./static/src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _js_openSearch_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./js/openSearch.js */ \"./static/src/js/openSearch.js\");\n/* harmony import */ var _js_openSearch_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_js_openSearch_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var social_likes_next__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! social-likes-next */ \"./node_modules/social-likes-next/lib/index.js\");\n/* harmony import */ var _scss_main_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./scss/main.scss */ \"./static/src/scss/main.scss\");\n\r\n\r\n\r\n\r\n\n\n//# sourceURL=webpack://lancaster/./static/src/index.js?");
 
 /***/ }),
 
@@ -200,7 +201,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _js_
   \*************************************/
 /***/ (() => {
 
-eval("document.querySelector('.search-block .btn-search').addEventListener('click', function () {\r\n  document.querySelector('.search-row').classList.toggle('open-search');\r\n})\n\n//# sourceURL=webpack://lancaster/./static/src/js/openSearch.js?");
+eval("document.querySelector('.search-block .btn-search').addEventListener('click', function () {\r\n  document.querySelector('.search-row').classList.toggle('open-search');\r\n})\r\n\r\ndocument.querySelector('.header .menu').addEventListener('click', function () {\r\n  document.querySelector('.menu-bar').classList.toggle('open-menu-bar');\r\n})\r\n\r\ndocument.querySelector('.menu-bar .btn-close').addEventListener('click', function () {\r\n  document.querySelector('.menu-bar').classList.remove('open-menu-bar');\r\n})\n\n//# sourceURL=webpack://lancaster/./static/src/js/openSearch.js?");
 
 /***/ })
 

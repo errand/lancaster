@@ -1,5 +1,6 @@
 body{
   font-family: $OpenSans;
+  background: #F8F8F8;
 }
 
 .container{
@@ -26,13 +27,6 @@ body{
   margin-right: 65px;
 }
 
-.sidebar{
-  display: block;
-  max-width: 335px;
-  min-width: 335px;
-  width: 100%;
-}
-
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -42,7 +36,20 @@ body{
 }
 
 .more-rows{
-  .btn{
+  display: flex;
+  justify-content: center;
 
+  .btn{
+    min-width: 310px;
+  }
+}
+
+.title-rows{
+  display: block;
+
+  .title{
+    display: block;
+    font: $regular 30px/1.3 $OpenSans;
+    color: $gray-400;
   }
 }
