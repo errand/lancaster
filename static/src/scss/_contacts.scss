@@ -1,0 +1,75 @@
+.shared-row{
+  display: block;
+  border-bottom: 1px solid $gray-700;
+  padding-bottom: 30px;
+
+  .list{
+    display: flex;
+    margin-right: -10px;
+  }
+
+  .item{
+    display: block;
+    padding-right: 10px;
+  }
+
+  .link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    background-color: $gray-700;
+
+    &.link-telegram{
+      background-color: #43d854;
+    }
+
+    &.link-gab{
+      background-color: #49B04D;
+    }
+
+    &.link-fb{
+      background-color: #3b5998;
+    }
+
+    &.link-tw{
+      background-color: #55acee;
+    }
+
+    &.link-whatsapp{
+      background-color: #43d854;
+    }
+
+    &.link-email{
+      background-color: $gray-700;
+    }
+
+    &.link-print{
+      background-color: $gray-700;
+    }
+  }
+
+  .icon{
+    display: inline-block;
+    font-size: 20px;
+    color: $white;
+
+    &.icon-gab{
+      font-size: 14px;
+    }
+
+    &.icon-tw{
+      font-size: 22px;
+    }
+
+    &.icon-email{
+      color: $red-300;
+    }
+
+    &.icon-print{
+      font-size: 18px;
+      color: $black;
+    }
+  }
+}
