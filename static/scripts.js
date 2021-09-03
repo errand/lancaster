@@ -201,7 +201,8 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _js_
   \*************************************/
 /***/ (() => {
 
-eval("document.querySelector('.search-block .btn-search').addEventListener('click', function () {\r\n  document.querySelector('.search-row').classList.toggle('open-search');\r\n})\r\n\r\ndocument.querySelector('.header .menu').addEventListener('click', function () {\r\n  document.querySelector('.menu-bar').classList.toggle('open-menu-bar');\r\n})\r\n\r\ndocument.querySelector('.menu-bar .btn-close').addEventListener('click', function () {\r\n  document.querySelector('.menu-bar').classList.remove('open-menu-bar');\r\n})\n\n//# sourceURL=webpack://lancaster/./static/src/js/openSearch.js?");
+"use strict";
+eval("\r\n\r\n(() => {\r\n\r\n  document.querySelector('.search-block .btn-search').addEventListener('click', function () {\r\n    document.querySelector('.search-row').classList.toggle('open-search');\r\n  })\r\n\r\n  document.querySelector('.header .menu').addEventListener('click', function () {\r\n    document.querySelector('.menu-bar').classList.toggle('open-menu-bar');\r\n  })\r\n\r\n  document.querySelector('.menu-bar .btn-close').addEventListener('click', function () {\r\n    document.querySelector('.menu-bar').classList.remove('open-menu-bar');\r\n  })\r\n})();\r\n\r\n\n\n//# sourceURL=webpack://lancaster/./static/src/js/openSearch.js?");
 
 /***/ })
 
