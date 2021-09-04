@@ -4,7 +4,6 @@ add_filter( 'timber_context', 'add_to_context' );
 
 function add_to_context( $data ) {
   // Add widgets
-  $data[ 'sidebar' ]        = Timber::get_widgets( 'sidebar' );
   $data[ 'day_mem' ]        = Timber::get_widgets( 'day_mem' );
   $data[ 'featured_posts' ] = Timber::get_widgets( 'featured_posts' );
   $data[ 'subscribe' ]      = Timber::get_widgets( 'subscribe' );

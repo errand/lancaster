@@ -176,15 +176,6 @@ class StarterSite extends Timber\Site {
   public function register_sidebares() {
 
     register_sidebar( array(
-      'name'          => 'Sidebar',
-      'id'            => 'sidebar',
-      'before_widget' => '<div id="%1$s" class="widget %2$s">',
-      'after_widget'  => '</div>',
-      'before_title'  => '<h4>',
-      'after_title'   => '</h4>',
-    ) );
-
-    register_sidebar( array(
       'name'          => 'Mem of the day',
       'id'            => 'day_mem',
       'before_widget' => '<div id="%1$s" class="widget %2$s">',
@@ -259,4 +250,4 @@ class StarterSite extends Timber\Site {
 
 new StarterSite();
 
-//include( 'functions/inclusions.php' );
+include( 'functions/inclusions.php' );
