@@ -173,7 +173,7 @@ class StarterSite extends Timber\Site {
     return $twig;
   }
 
-  public function register_sidebars() {
+  public function register_sidebares() {
 
     register_sidebar( array(
       'name'          => 'Sidebar',
