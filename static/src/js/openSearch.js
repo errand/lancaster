@@ -26,7 +26,6 @@ window.onload = () => {
 
   });
 
-
   menuClose.addEventListener('click', function () {
     menuBar.classList.remove('open-menu-bar');
   })
