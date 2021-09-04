@@ -68,7 +68,6 @@ class StarterSite extends Timber\Site {
     add_filter( 'timber/twig', array( $this, 'add_to_twig' ) );
 
     add_action( 'wp_enqueue_scripts', array( $this, 'site_static') );
-    //add_action( 'clean_url', array( $this, 'defer_parsing_of_js'), 1, 11 );
 
     add_action( 'init', array( $this, 'register_sidebares' ) );
 
@@ -105,19 +104,11 @@ class StarterSite extends Timber\Site {
   }
 
   function site_static() {
-    wp_scripts()->add_data( 'jquery', 'group', 1 );
-    wp_scripts()->add_data( 'jquery-core', 'group', 1 );
-    wp_scripts()->add_data( 'jquery-migrate', 'group', 1 );
-    wp_enqueue_script('scripts', get_template_directory_uri() . '/static/scripts.js', 'jquery', '', true);
+    wp_enqueue_script('scripts', get_template_directory_uri() . '/static/scripts.js', '', '', true);
     wp_dequeue_style( 'wp-block-library' );
     wp_dequeue_style( 'wp-block-library-theme' );
   }
 
-  function defer_parsing_of_js ( $url ) {
-    if ( FALSE === strpos( $url, '.js' ) ) return $url;
-    if ( strpos( $url, 'jquery.js' ) ) return $url;
-    return "$url' defer ";
-  }
 
   public function theme_supports() {
     // Add default posts and comments RSS feed links to head.
