@@ -1,7 +1,7 @@
 <?php
 
 function dummy_image_url ( $id ){
-	  $category        = get_the_category( $id );
+	$category        = get_the_category( $id );
     $cat_id          = $category[0]->cat_ID;
     $category_arg    = 'category_' . $cat_id;
 
