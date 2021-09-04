@@ -5,8 +5,8 @@ function my_acf_init() {
 	if( function_exists('acf_add_options_page') ) {
 		
 		acf_add_options_page(array(
-			'page_title' 	  => 'Основные настройки',
-			'menu_title'	  => 'Настройки темы',
+			'page_title' 	  => 'Theme General Settings',
+			'menu_title'	  => 'Theme settings',
 			'menu_slug' 	  => 'theme-general-settings',
 			'capability'	  => 'edit_posts',
 			'update_button'   => __( 'Обновить', 'acf' ),
@@ -15,20 +15,11 @@ function my_acf_init() {
 		));
 
 		acf_add_options_sub_page(array(
-			'page_title' 	  => 'Настройки главной страницы',
-			'menu_title'	  => 'Главная страница',
+			'page_title' 	  => 'Settings of the Main Page',
+			'menu_title'	  => 'Main Page',
 			'parent_slug'	  => 'theme-general-settings',
 			'update_button'   => __( 'Обновить', 'acf' ),
 			'updated_message' => __('Изменения сохранены', 'acf'),
 		));
-
-		acf_add_options_sub_page(array(
-			'page_title' 	  => 'Рекламные банеры',
-			'menu_title'	  => 'Реклама',
-			'parent_slug'	  => 'theme-general-settings',
-			'update_button'   => __( 'Обновить', 'acf' ),
-			'updated_message' => __('Изменения сохранены', 'acf'),
-		));
-
 	}
 }

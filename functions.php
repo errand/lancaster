@@ -185,16 +185,7 @@ class StarterSite extends Timber\Site {
   public function register_sidebares() {
 
     register_sidebar( array(
-      'name'          => 'Над шапкой',
-      'id'            => 'over_header',
-      'before_widget' => '<div id="%1$s" class="widget %2$s">',
-      'after_widget'  => '</div>',
-      'before_title'  => '<h4>',
-      'after_title'   => '</h4>',
-    ) );
-
-    register_sidebar( array(
-      'name'          => 'Боковая панель',
+      'name'          => 'Sidebar',
       'id'            => 'sidebar',
       'before_widget' => '<div id="%1$s" class="widget %2$s">',
       'after_widget'  => '</div>',
@@ -203,8 +194,8 @@ class StarterSite extends Timber\Site {
     ) );
 
     register_sidebar( array(
-      'name'          => 'Над лентой новостей в сайдбаре',
-      'id'            => 'above_sidebar',
+      'name'          => 'Mem of the day',
+      'id'            => 'day_mem',
       'before_widget' => '<div id="%1$s" class="widget %2$s">',
       'after_widget'  => '</div>',
       'before_title'  => '<h4>',
@@ -212,7 +203,34 @@ class StarterSite extends Timber\Site {
     ) );
 
     register_sidebar( array(
-      'name'          => 'Закреплённые посты',
+      'name'          => 'Featured posts',
+      'id'            => 'featured_posts',
+      'before_widget' => '<div id="%1$s" class="widget %2$s">',
+      'after_widget'  => '</div>',
+      'before_title'  => '<h4>',
+      'after_title'   => '</h4>',
+    ) );
+
+    register_sidebar( array(
+      'name'          => 'Subscribe',
+      'id'            => 'subscribe',
+      'before_widget' => '<div id="%1$s" class="widget %2$s">',
+      'after_widget'  => '</div>',
+      'before_title'  => '<h4>',
+      'after_title'   => '</h4>',
+    ) );
+
+    register_sidebar( array(
+      'name'          => 'Popular posts',
+      'id'            => 'popular_posts',
+      'before_widget' => '<div id="%1$s" class="widget %2$s">',
+      'after_widget'  => '</div>',
+      'before_title'  => '<h4>',
+      'after_title'   => '</h4>',
+    ) );
+
+    register_sidebar( array(
+      'name'          => 'Front sticky posts',
       'id'            => 'front-sticky-posts',
       'before_widget' => '<div id="%1$s" class="widget %2$s">',
       'after_widget'  => '</div>',
@@ -221,8 +239,8 @@ class StarterSite extends Timber\Site {
     ) );
 
     register_sidebar( array(
-      'name'          => 'Справа от тела статьи',
-      'id'            => 'article_sidebar',
+      'name'          => 'Over the post body',
+      'id'            => 'over_post',
       'before_widget' => '<div id="%1$s" class="widget %2$s">',
       'after_widget'  => '</div>',
       'before_title'  => '<h4>',
@@ -230,26 +248,8 @@ class StarterSite extends Timber\Site {
     ) );
 
     register_sidebar( array(
-      'name'          => 'Под телом статьи',
-      'id'            => 'bellow_body',
-      'before_widget' => '<div id="%1$s" class="widget %2$s">',
-      'after_widget'  => '</div>',
-      'before_title'  => '<h4>',
-      'after_title'   => '</h4>',
-    ) );
-
-    register_sidebar( array(
-      'name'          => 'Под новостью',
+      'name'          => 'Bellow the post body',
       'id'            => 'bellow_post',
-      'before_widget' => '<div id="%1$s" class="widget %2$s">',
-      'after_widget'  => '</div>',
-      'before_title'  => '<h4>',
-      'after_title'   => '</h4>',
-    ) );
-
-    register_sidebar( array(
-      'name'          => 'В опросах',
-      'id'            => 'in_polls',
       'before_widget' => '<div id="%1$s" class="widget %2$s">',
       'after_widget'  => '</div>',
       'before_title'  => '<h4>',
@@ -268,4 +268,4 @@ class StarterSite extends Timber\Site {
 
 new StarterSite();
 
-include( 'functions/inclusions.php' );
+//include( 'functions/inclusions.php' );
