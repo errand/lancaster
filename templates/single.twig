@@ -5,7 +5,7 @@
 	<div class="content-wrapper row">
 		<header class="article-header">
 			<ul class="breadcrumbs list">
-				<li class="list-item"><a href="{{ site.link }}" title="{{ site.name }}" class="item-link">Главная</a></li>
+				<li class="list-item"><a href="{{ site.link }}" title="{{ site.name }}" class="item-link">Home</a></li>
 				{% for term in post.categories %}
 					<li class="list-item"><a href="{{ term.link }}" class="item-link">{{ term.name }}</a></li>
 				{% endfor %}
@@ -22,13 +22,18 @@
 							 alt="{% if post.thumbnail.alt %}{{ post.thumbnail.alt }}{% else %}{{ post.title }}{% endif %}" />
 				</picture>
 			{% endif %}
+			{% if over_post %}
+				<div class="widgets over_post">
+					{{ over_post }}
+				</div>
+			{% endif %}
 			<div class="article-body">
-				{{post.content}}
+				{{ post.content }}
 			</div>
 		</article>
 		{% if not post.meta('hide_article_ads') %}
 			<aside class="col-12 col-md-3 ads-wrapper">
-				<div class="ads-block">{{ article_sidebar }}</div>
+				<div class="ads-block">{{ sidebar }}</div>
 			</aside>
 		{% endif %}
 	</div><!-- /content-wrapper -->
