@@ -1,4 +1,4 @@
-.all-publications{
+.all-post{
   display: block;
 
   .title-rows{
@@ -6,12 +6,12 @@
   }
 }
 
-.topic-all-publications{
+.topic-all-post{
   display: block;
   padding: 40px 0 50px;
 }
 
-.publication-full{
+.post-full{
   display: block;
   position: relative;
   margin-bottom: 30px;
@@ -65,7 +65,7 @@
     padding: 20px 15px;
     z-index: 2;
 
-    .publication-link{
+    .post-link{
       display: block;
       font: $bold 18px/1.2 $OpenSans;
       color: $white;
@@ -73,7 +73,7 @@
   }
 }
 
-.publications-horizontally{
+.post-row{
   display: flex;
   padding-bottom: 30px;
   margin-bottom: 30px;
@@ -87,7 +87,7 @@
     line-height: 0;
   }
 
-  .publications-desc{
+  .post-desc{
     display: block;
     padding-left: 30px;
   }
@@ -96,7 +96,7 @@
     display: block;
     padding-bottom: 10px;
 
-    .publication-link{
+    .post-link{
       font: $bold 18px/1.2 $OpenSans;
       color: $gray-400;
     }
