@@ -1,7 +1,10 @@
-.media-info-widget{
+.widget{
   display: block;
+  margin-bottom: 30px;
+}
+
+.media-info-widget{
   line-height: 0;
-  padding-bottom: 30px;
 
   a{
     display: block;
@@ -10,8 +13,6 @@
 }
 
 .post-widget{
-  display: block;
-  padding-bottom: 30px;
 
   .post{
     display: block;
@@ -36,12 +37,10 @@
 }
 
 .send-widget{
-  display: block;
   background: $white;
   border-radius: 4px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
   padding: 25px;
-  margin-bottom: 30px;
 
   .title{
     display: block;

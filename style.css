@@ -285,12 +285,13 @@ body {
 .about {
   display: block;
   padding: 40px 0 50px; }
-  .about .text-row {
-    border-bottom: 1px solid #C4C4C4;
-    padding: 30px 0;
-    margin-bottom: 30px; }
-  .about .comment-row {
-    padding-top: 30px; }
+
+hr {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #C4C4C4;
+  margin: 30px 0; }
 
 @font-face {
   font-family: 'fontello';
@@ -704,38 +705,35 @@ body {
   width: 100%;
   padding: 50px 0; }
 
-.media-info-widget {
+.widget {
   display: block;
-  line-height: 0;
-  padding-bottom: 30px; }
+  margin-bottom: 30px; }
+
+.media-info-widget {
+  line-height: 0; }
   .media-info-widget a {
     display: block;
     line-height: 0; }
 
-.post-widget {
+.post-widget .post {
   display: block;
-  padding-bottom: 30px; }
-  .post-widget .post {
+  padding-top: 20px; }
+  .post-widget .post .media-link {
     display: block;
-    padding-top: 20px; }
-    .post-widget .post .media-link {
-      display: block;
-      line-height: 0; }
-    .post-widget .post .title {
-      display: block;
-      padding-top: 10px; }
-      .post-widget .post .title a {
-        display: inline-block;
-        font: 700 18px/1.2 "Open Sans", sans-serif;
-        color: #414141; }
+    line-height: 0; }
+  .post-widget .post .title {
+    display: block;
+    padding-top: 10px; }
+    .post-widget .post .title a {
+      display: inline-block;
+      font: 700 18px/1.2 "Open Sans", sans-serif;
+      color: #414141; }
 
 .send-widget {
-  display: block;
   background: #ffffff;
   border-radius: 4px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
-  padding: 25px;
-  margin-bottom: 30px; }
+  padding: 25px; }
   .send-widget .title {
     display: block;
     text-align: center;
@@ -943,10 +941,32 @@ body {
       background-color: #CCCCCC;
       padding: 3px 7px; }
 
+.article {
+  display: block; }
+  .article .article-head {
+    display: block; }
+    .article .article-head .title {
+      display: block;
+      font: 400 32px/1.3 "Open Sans", sans-serif;
+      color: #414141; }
+    .article .article-head .sub-title {
+      display: block;
+      font: 400 19px/1.3 "Open Sans", sans-serif;
+      color: #414141;
+      font-style: italic;
+      padding-top: 15px; }
+  .article .article-media {
+    display: block;
+    line-height: 0; }
+    .article .article-media .media-desc {
+      display: block;
+      font: 400 14px/1.3 "Open Sans", sans-serif;
+      color: #444444;
+      font-style: italic;
+      padding-top: 10px; }
+
 .shared-row {
-  display: block;
-  border-bottom: 1px solid #C4C4C4;
-  padding-bottom: 30px; }
+  display: block; }
   .shared-row .list {
     display: flex;
     margin-right: -10px; }
@@ -989,7 +1009,8 @@ body {
       color: #000000; }
 
 .comment-row {
-  display: block; }
+  display: block;
+  margin-top: 30px; }
   .comment-row .comment-form {
     display: block;
     border-top: 1px solid #C4C4C4;
