@@ -20,39 +20,6 @@ $context['posts'] = new Timber\PostQuery();
 $templates        = array( 'index.twig' );
 
 if ( is_home() ) {
-
-  $args = [
-    'type'           => 'posts',
-    'post_status'    => 'publish',
-    'posts_per_page' => 1,
-    'posts_orderby ' => 'date',
-    'order'          => 'DESC',
-    'meta_key'       => 'pinToHomePage',
-    'meta_value'     => 1,
-    'meta_key'       => 'bolshaya_fotografiya',
-    'meta_value'     => 1,
-  ];
-  $context[ 'firtsPostOnHomePage' ] = new Timber\PostQuery( $args );
-  
-  //Get the ID for exclude
-  $posts     = get_posts($args);
-  $excludeID = $posts[0]->ID;
-  wp_reset_postdata();
-
-  $args = [
-    'type'           => 'posts',
-    'post_status'    => 'publish',
-    'posts_per_page' =>  3,
-    'post__not_in'   => [ $excludeID ],
-    'posts_orderby ' => 'date',
-    'order'          => 'DESC',
-    'meta_key'		   => 'pinToHomePage',
-    'meta_value'	   => 1,
-  ];
-  $context[ 'pinToHomePage' ] = new Timber\PostQuery( $args );
-
-  include( 'functions/home_page_content.php');
-
 	array_unshift( $templates, 'home.twig' );
 }
 
