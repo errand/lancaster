@@ -1,4 +1,3 @@
-{% apply spaceless %}
 {% block html_head_container %}
 
 	{% include 'html-header.twig' %}
@@ -98,8 +97,8 @@
 	id="content" class="content-wrapper">
 
 	{#
-		      # Берём content-wrapper__inner как отсечку для шапки и рекламы, которые позиционированы абсолютно
-		      #}
+			      # Берём content-wrapper__inner как отсечку для шапки и рекламы, которые позиционированы абсолютно
+			      #}
 
 	<div class="content-wrapper__inner {{sidebar_class}}">
 		<div class="row content-wrapper__inner-row g-0">
@@ -138,4 +137,4 @@
 		{% include 'footer.twig' %}
 	</footer>
 	{{ function('wp_footer') }}
-{% endblock %}</body></html>{% endapply %}
+{% endblock %}</body></html>
