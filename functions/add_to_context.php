@@ -13,7 +13,6 @@ function add_to_context( $data ) {
   
   // Add content to home page
   if( is_front_page() ){
-    $data[ 'frontStickyPostsWidget' ] = Timber::get_widgets( 'front-sticky-posts' );
   }
 
   // Add content to archives

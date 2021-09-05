@@ -212,15 +212,6 @@ class StarterSite extends Timber\Site {
     ) );
 
     register_sidebar( array(
-      'name'          => 'Front sticky posts',
-      'id'            => 'front-sticky-posts',
-      'before_widget' => '<div id="%1$s" class="widget %2$s">',
-      'after_widget'  => '</div>',
-      'before_title'  => '<h4>',
-      'after_title'   => '</h4>',
-    ) );
-
-    register_sidebar( array(
       'name'          => 'Over the post body',
       'id'            => 'over_post',
       'before_widget' => '<div id="%1$s" class="widget %2$s">',
