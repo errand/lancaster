@@ -202,7 +202,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _js_
 /***/ (() => {
 
 "use strict";
-eval("\r\n\r\nwindow.onload = () => {\r\n// Писать код отсюда\r\n\r\nconst lionsBuner = document.querySelector('.media-info-widget'),\r\n    heroBlock = document.querySelector('.hero-publications');\r\n\r\nif(window.innerWidth < 760) {\r\n  heroBlock.append(lionsBuner);\r\n}\r\n\r\n\r\n// Писать код до сюда\r\n}\n\n//# sourceURL=webpack://lancaster/./static/src/js/mobileSidebar.js?");
+eval("\r\n\r\nwindow.onload = () => {\r\n// Писать код отсюда\r\n\r\nconst lionsBuner = document.querySelector('.media-info-widget'),\r\n      heroBlock = document.querySelector('.hero-publications'),\r\n      allPublications = document.querySelector('.all-publications');\r\n\r\nif(window.innerWidth < 760) {\r\n  heroBlock.append(lionsBuner);\r\n\r\n  console.log(heroBlock.querySelectorAll('.publication-full')[1])\r\n  allPublications.querySelector('.title-rows').after(heroBlock.querySelectorAll('.publication-full')[1])\r\n}\r\n\r\n\r\n// Писать код до сюда\r\n}\n\n//# sourceURL=webpack://lancaster/./static/src/js/mobileSidebar.js?");
 
 /***/ }),
 
