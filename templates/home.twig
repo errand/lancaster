@@ -2,8 +2,15 @@
 
 {% block content %}
 
-	<div class="posts sticky-posts">
-		{% include( 'partial/front-sticky-posts.twig' ) %}
-	</div>
+	{% for post in posts [:2] %}
+		{{ post.link }}
+		{{ post.title }}
+		{{ post.post_date | date( 'd.m.Y H:i' ) }}
+		{{ post.thumbnail.src }}
+	{% endfor %}
+
+	{% for post in posts [2:] %}
+		{% include ('tease-post.twig') %}
+	{% endfor %}
 
 {% endblock %}
