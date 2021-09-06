@@ -11,7 +11,7 @@
 
   function loadMore() {
     let data = {
-      action: loadMorePosts,
+      action: 'loadMorePosts',
       page  : page,
       offset: offset,
     };
