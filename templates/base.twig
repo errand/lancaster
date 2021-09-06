@@ -19,7 +19,9 @@
 				</a>
 				<p class="quotes">
 					{% set quote = random( quotes ) %}
-					{{ quote.text }} - {{ quote.source }}
+					{{ quote.text }}
+					-
+					{{ quote.source }}
 				</p>
 			</div>
 			<div class="contact-block">
@@ -96,25 +98,25 @@
 	{% endblock %}
 </header>
 
-	<main class="main">
-		<div class="container flex-container">
-			<div class="main-wrapper">
-				{% block title %}
-					{% if title %}
-						<h1 class="page-title">{{title}}</h1>
-					{% endif %}
-				{% endblock %}
-				{% block content %}
-					Sorry, no content
-				{% endblock %}
-			</div>
-			<aside class="sidebar">
-					<div class="sidebar-widgets">
-						{% include 'sidebar.twig' %}
-					</div>
-			</aside>
+<main class="main">
+	<div class="container flex-container">
+		<div class="main-wrapper">
+			{% block title %}
+				{% if title %}
+					<h1 class="page-title">{{title}}</h1>
+				{% endif %}
+			{% endblock %}
+			{% block content %}
+				Sorry, no content
+			{% endblock %}
 		</div>
-	</main>
+		<aside class="sidebar">
+			<div class="sidebar-widgets">
+				{% include 'sidebar.twig' %}
+			</div>
+		</aside>
+	</div>
+</main>
 
 {% block footer %}
 	<footer class="footer">

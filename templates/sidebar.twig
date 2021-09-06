@@ -1,20 +1,14 @@
-<picture class="picture">
-	<source srcset="{{ day_mem.url|resize(355, 305)|towebp }}" type="image/webp">
-	<img src="{{ day_mem.url|resize(355, 305) }}" width="day_mem.width" height="day_mem.hight" alt="">
-</picture>
-
-
 <h3>Featured</h3>
 {% for post in featured_posts %}
 	{% if post.thumbnail.src %}
 		<a href="{{ post.link }}" title="{{ post.title }}" class="media-link">
 			<picture class="picture">
 				<source srcset="{{ post.thumbnail.src|resize(265, 150)|towebp }}" type="image/webp">
-				<img src="{{ post.thumbnail.src|resize(265, 150) }}" width="265" he0ght="152" alt="{{ post.title }}">
+				<img src="{{ post.thumbnail.src|resize(265, 150) }}" width="265" height="152" alt="{{ post.title }}">
 			</picture>
 		</a>
 	{% endif %}
-		<a href="{{ post.link }}" title="{{ post.title }}" class="media-link">{{ post.title }}</a>
+	<a href="{{ post.link }}" title="{{ post.title }}" class="media-link">{{ post.title }}</a>
 {% endfor %}
 
 {{ subscribe }}
@@ -29,6 +23,5 @@
 			</picture>
 		</a>
 	{% endif %}
-		<a href="{{ post.link }}" title="{{ post.title }}" class="media-link">{{ post.title }}</a>
+	<a href="{{ post.link }}" title="{{ post.title }}" class="media-link">{{ post.title }}</a>
 {% endfor %}
-
