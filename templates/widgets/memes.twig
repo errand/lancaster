@@ -1,16 +1,18 @@
 {{ args.before_widget|raw }}
 {{ args.before_title|raw }}{{ instance.title|apply_filters('widget_title') }}{{ args.after_title|raw }}
 
-{% if meme %}
-	{{dump(meme)}}
+{% if memes %}
 	<div class="string">
 		<span class="text">{{ instance.title }}</span>
-
 	</div>
 
+	{% set firstMeme = memes|first %}
+
+
 	<picture class="picture">
-		<source srcset="{{ day_mem.url|resize(355)|towebp }}" type="image/webp">
-		<img src="{{ day_mem.url|resize(355) }}" width="355" alt="">
+		<source srcset="{{ firstMeme.url|resize(355)|towebp }}" type="image/webp">
+
+		<img src="{{ firstMeme.url|resize(355) }}" width="355" alt="">
 
 	</picture>
 
