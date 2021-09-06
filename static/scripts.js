@@ -201,7 +201,8 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _js_
   \***********************************/
 /***/ (() => {
 
-eval("\n\n//# sourceURL=webpack://lancaster/./static/src/js/loadMore.js?");
+"use strict";
+eval("\n\n(() => {\n\n  const page    = document.querySelector( '.all-post' ).dataset.page;\n  const offset  = document.querySelector( '.all-post' ).dataset.offset;\n  const loadMoreButton = document.querySelector( '.btn' );\n  const request = new XMLHttpRequest();\n\n  loadMoreButton.addEventListener( 'click', loadMore );\n\n  function loadMore() {\n    let data = {\n      action: loadMorePosts,\n      page  : page,\n      offset: offset,\n    };\n\n    request.open( 'POST', '/wp-admin/admin-ajax.php', true );\n    request.setRequestHeader( 'Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8' );\n    request.send( data );\n\n    request.onprogress = () => {\n      console.log( 'The request is in progress' );\n    };\n    request.onload     = () => {\n      if (request.status != 200) {\n        console.log( `Error ${ request.status }: ${ request.statusText }` );\n      } else {\n        console.log( request.response );\n      }\n    };\n    request.onerror    = () => {\n      console.log( 'The request failed' );\n    };\n  } \n\n})();\n\n//# sourceURL=webpack://lancaster/./static/src/js/loadMore.js?");
 
 /***/ }),
 
