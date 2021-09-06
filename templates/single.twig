@@ -8,9 +8,9 @@
 				{{ post.title }}
 			</h1>
 			{% if post.meta('subheadline') %}
-			<h2 class="sub-title">
-			{{ post.meta('subheadline') }}
-			</h2>
+				<h2 class="sub-title">
+					{{ post.meta('subheadline') }}
+				</h2>
 			{% endif %}
 		</div>
 		{{ fn('getReadingTime', post.id) }}
@@ -22,9 +22,13 @@
 					<img src="{{ post.thumbnail.src|resize(570) }}" width="570" alt="{% if post.thumbnail.alt %}{{ post.thumbnail.alt }}{% else %}{{ post.title }}{% endif %}">
 				</picture>
 				{% if post.thumbnail.caption or post.thumbnail.alt %}
-				<p class="media-desc">
-			{% if post.thumbnail.caption %} {{ post.thumbnail.caption }} {% else %}{{ post.thumbnail.alt }}{% endif %}
-				</p>
+					<p class="media-desc">
+						{% if post.thumbnail.caption %}
+							{{ post.thumbnail.caption }}
+						{% else %}
+							{{ post.thumbnail.alt }}
+						{% endif %}
+					</p>
 				{% endif %}
 			</div>
 			<hr>
@@ -43,29 +47,31 @@
 	</div>
 	<hr>
 
-	<section class="comment-row">
+	<section
+		class="comment-row">
 		<!-- comments -->
 		{% if post.comments.count > 0 %}
-		<div class="comments">
-			{% if post.comments %}
-				<div class="title-rows">
-					<h2 class="title">Comments</h2>
-				</div>
-				{% for cmt in post.comments %}
-					{% include "comment.twig" with {comment:cmt} %}
-				{% endfor %}
-			{% endif %}
-		</div>
+			<div class="comments">
+				{% if post.comments %}
+					<div class="title-rows">
+						<h2 class="title">Comments</h2>
+					</div>
+					{% for cmt in post.comments %}
+						{% include "comment.twig" with {comment:cmt} %}
+					{% endfor %}
+				{% endif %}
+			</div>
 
 		{% endif %}
 
 		{% if post.comment_status == "closed" %}
-			<p> comments for this post are closed </p>
+			<p>
+				comments for this post are closed
+			</p>
 		{% else %}
 			<!-- comment form -->
 			{% include "comment-form.twig" %}
 		{% endif %}
 	</section>
-</div>
 
 {% endblock %}
