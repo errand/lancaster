@@ -191,7 +191,17 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", ({\n\tvalue: true\n}));
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _js_openSearch_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./js/openSearch.js */ \"./static/src/js/openSearch.js\");\n/* harmony import */ var _js_openSearch_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_js_openSearch_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _js_mobileSidebar_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js/mobileSidebar.js */ \"./static/src/js/mobileSidebar.js\");\n/* harmony import */ var _js_mobileSidebar_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_js_mobileSidebar_js__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var social_likes_next__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! social-likes-next */ \"./node_modules/social-likes-next/lib/index.js\");\n/* harmony import */ var _scss_main_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./scss/main.scss */ \"./static/src/scss/main.scss\");\n\r\n\r\n\r\n\r\n\r\n\n\n//# sourceURL=webpack://lancaster/./static/src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _js_openSearch_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./js/openSearch.js */ \"./static/src/js/openSearch.js\");\n/* harmony import */ var _js_openSearch_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_js_openSearch_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _js_mobileSidebar_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js/mobileSidebar.js */ \"./static/src/js/mobileSidebar.js\");\n/* harmony import */ var _js_mobileSidebar_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_js_mobileSidebar_js__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _js_loadMore_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./js/loadMore.js */ \"./static/src/js/loadMore.js\");\n/* harmony import */ var _js_loadMore_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_js_loadMore_js__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var social_likes_next__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! social-likes-next */ \"./node_modules/social-likes-next/lib/index.js\");\n/* harmony import */ var _scss_main_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./scss/main.scss */ \"./static/src/scss/main.scss\");\n\n\n\n\n\n\n\n\n//# sourceURL=webpack://lancaster/./static/src/index.js?");
+
+/***/ }),
+
+/***/ "./static/src/js/loadMore.js":
+/*!***********************************!*\
+  !*** ./static/src/js/loadMore.js ***!
+  \***********************************/
+/***/ (() => {
+
+eval("\n\n//# sourceURL=webpack://lancaster/./static/src/js/loadMore.js?");
 
 /***/ }),
 
@@ -202,7 +212,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _js_
 /***/ (() => {
 
 "use strict";
-eval("\r\n\r\n(() => {\r\n// Писать код отсюда\r\n\r\nconst lionsBuner = document.querySelector('.media-info-widget'),\r\n      heroBlock = document.querySelector('.hero-publications'),\r\n      allPublications = document.querySelector('.all-publications');\r\n\r\nif(window.innerWidth < 760) {\r\n  heroBlock.append(lionsBuner);\r\n\r\n  console.log(heroBlock.querySelectorAll('.publication-full')[1])\r\n  allPublications.querySelector('.title-rows').after(heroBlock.querySelectorAll('.publication-full')[1])\r\n}\r\n\r\n\r\n// Писать код до сюда\r\n})();\n\n//# sourceURL=webpack://lancaster/./static/src/js/mobileSidebar.js?");
+eval("\n\n(() => {\n// Писать код отсюда\n\nconst lionsBuner = document.querySelector('.media-info-widget'),\n      heroBlock = document.querySelector('.hero-publications'),\n      allPublications = document.querySelector('.all-publications');\n\nif(window.innerWidth < 760) {\n  heroBlock.append(lionsBuner);\n\n  console.log(heroBlock.querySelectorAll('.publication-full')[1])\n  allPublications.querySelector('.title-rows').after(heroBlock.querySelectorAll('.publication-full')[1])\n}\n\n\n// Писать код до сюда\n})();\n\n//# sourceURL=webpack://lancaster/./static/src/js/mobileSidebar.js?");
 
 /***/ }),
 
@@ -213,7 +223,7 @@ eval("\r\n\r\n(() => {\r\n// Писать код отсюда\r\n\r\nconst lions
 /***/ (() => {
 
 "use strict";
-eval("\r\n(() => {\r\n// Писать код отсюда\r\n  const openSearch = document.querySelector('.search-block .icon-search'),\r\n      searchRow = document.querySelector('.search-row'),\r\n      openMenu = document.querySelector('.header .menu'),\r\n      menuBar = document.querySelector('.menu-bar'),\r\n      menuClose = document.querySelector('.menu-bar .btn-close');\r\n\r\n  window.addEventListener('click', (e) => {\r\n\r\n    if (e.target ===  openSearch) {\r\n      searchRow.classList.add('open-search');\r\n      //TODO Add focus\r\n    } else if(!e.target.closest('.search-row')) {\r\n      searchRow.classList.remove('open-search');\r\n    }\r\n\r\n    if(e.target ===  openMenu || e.target.closest('.header .menu') === openMenu) {\r\n      menuBar.classList.add('open-menu-bar');\r\n    } else if(!e.target.closest('.menu-bar')) {\r\n      menuBar.classList.remove('open-menu-bar');\r\n    }\r\n\r\n  });\r\n\r\n  menuClose.addEventListener('click', function () {\r\n    menuBar.classList.remove('open-menu-bar');\r\n  })\r\n\r\n// Писать код до сюда\r\n})();\r\n\n\n//# sourceURL=webpack://lancaster/./static/src/js/openSearch.js?");
+eval("\n(() => {\n// Писать код отсюда\n  const openSearch = document.querySelector('.search-block .icon-search'),\n      searchRow = document.querySelector('.search-row'),\n      openMenu = document.querySelector('.header .menu'),\n      menuBar = document.querySelector('.menu-bar'),\n      menuClose = document.querySelector('.menu-bar .btn-close');\n\n  window.addEventListener('click', (e) => {\n\n    if (e.target ===  openSearch) {\n      searchRow.classList.add('open-search');\n      //TODO Add focus\n    } else if(!e.target.closest('.search-row')) {\n      searchRow.classList.remove('open-search');\n    }\n\n    if(e.target ===  openMenu || e.target.closest('.header .menu') === openMenu) {\n      menuBar.classList.add('open-menu-bar');\n    } else if(!e.target.closest('.menu-bar')) {\n      menuBar.classList.remove('open-menu-bar');\n    }\n\n  });\n\n  menuClose.addEventListener('click', function () {\n    menuBar.classList.remove('open-menu-bar');\n  })\n\n// Писать код до сюда\n})();\n\n\n//# sourceURL=webpack://lancaster/./static/src/js/openSearch.js?");
 
 /***/ })
 
