@@ -69,7 +69,7 @@ class StarterSite extends Timber\Site {
 
     add_action( 'wp_enqueue_scripts', array( $this, 'site_static') );
 
-    add_action( 'init', array( $this, 'register_sidebares' ) );
+    add_action( 'init', array( $this, 'register_sidebars' ) );
 
     add_action('after_setup_theme', array( $this, 'remove_admin_bar' ));
 
@@ -173,7 +173,7 @@ class StarterSite extends Timber\Site {
     return $twig;
   }
 
-  public function register_sidebares() {
+  public function register_sidebars() {
 
    register_sidebar( array(
       'name'          => 'Subscribe',
