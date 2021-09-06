@@ -1,6 +1,10 @@
 .header{
   display: block;
   background-color: $white;
+
+  .open-nav &{
+    background-color: $gray-600;
+  }
 }
 
 .header_wrap{
@@ -13,6 +17,10 @@
   @include media(desktop){
     flex-wrap: wrap;
     padding: 16px 80px 6px;
+  }
+
+  @include media(mobile){
+    padding: 10px 50px;
   }
 
   .btn-menu{
@@ -41,7 +49,7 @@
     transition: transform 250ms ease;
     cursor: pointer;
 
-    @include media(desktop){
+    @include media(mobile){
       display: none;
     }
 
@@ -109,7 +117,7 @@
     transition: transform 250ms ease;
     cursor: pointer;
 
-    @include media(desktop){
+    @include media(mobile){
       display: flex;
     }
 
@@ -182,12 +190,20 @@
     .item{
       display: inline-block;
       padding: 10px;
+
+      @include media(mobile){
+        padding: 0 7px;
+      }
     }
 
     .contact-link{
       display: inline-block;
       color: $gray-400;
       @include transition(0.2s);
+
+      .open-nav &{
+        color: $white;
+      }
 
       &:hover{
         color: $red-300;
@@ -197,6 +213,10 @@
     .icon{
       display: inline-block;
       font-size: 22px;
+
+      @include media(mobile){
+        font-size: 18px;
+      }
     }
 
     .icon-tw{
@@ -205,6 +225,10 @@
 
     .icon-fb{
       font-size: 20px;
+
+      @include media(mobile){
+        font-size: 18px;
+      }
     }
   }
 
@@ -221,6 +245,10 @@
     @include media(desktop){
       right: 5px;
     }
+
+    @include media(mobile){
+      border: 0;
+    }
   }
 
   .btn-search{
@@ -232,6 +260,10 @@
     padding: 0;
     margin: 0;
     cursor: pointer;
+
+    .open-nav &{
+      color: $white;
+    }
   }
 
   .search-row{
@@ -274,6 +306,10 @@
       background-color: transparent;
       padding: 0 30px 0 0;
       margin: 0;
+
+      @include media(mobile){
+        font-size: 24px;
+      }
     }
 
     .btn-block{
@@ -283,6 +319,10 @@
       width: 60px;
       height: 60px;
       border-left: 2px solid $gray-700;
+
+      @include media(mobile){
+        border: 0;
+      }
     }
 
     ::-webkit-input-placeholder {
@@ -339,6 +379,26 @@
     @include media(desktop){
       max-width: 382px;
     }
+
+    @include media(mobile){
+      max-width: 212px;
+    }
+  }
+
+  .logo-d{
+    display: block;
+
+    .open-nav &{
+      display: none;
+    }
+  }
+
+  .logo-w{
+    display: none;
+
+    .open-nav &{
+      display: block;
+    }
   }
 
   .quotes{
@@ -347,6 +407,14 @@
     color: $gray-400;
     letter-spacing: 0.5px;
     padding: 5px 0 0;
+
+    @include media(mobile){
+      font-size: 7px;
+    }
+
+    .open-nav &{
+      color: $white;
+    }
   }
 }
 
@@ -434,6 +502,12 @@
 
   &.open-menu-bar{
     left: 0;
+  }
+
+  .open-nav &{
+    position: static;
+    left: inherit;
+    top: inherit;
   }
 
   .cross{
