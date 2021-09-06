@@ -94,34 +94,19 @@
 	{% endblock %}
 </header>
 
-<main
-	id="content" class="content-wrapper">
-
-	{#
-			      # Берём content-wrapper__inner как отсечку для шапки и рекламы, которые позиционированы абсолютно
-			      #}
-
-	<div class="content-wrapper__inner {{sidebar_class}}">
-		<div class="row content-wrapper__inner-row g-0">
-			<div class="main col-12 col-md-9">
-				<div class="main__wrapper">
-					{% block title %}
-						{% if title %}
-							<h1 class="page-title">{{title}}</h1>
-						{% endif %}
-					{% endblock %}
-					{% block content %}
-						Sorry, no content
-					{% endblock %}
-				</div>
+	<main class="main">
+		<div class="container flex-container">
+			<div class="main-wrapper">
+				{% block title %}
+					{% if title %}
+						<h1 class="page-title">{{title}}</h1>
+					{% endif %}
+				{% endblock %}
+				{% block content %}
+					Sorry, no content
+				{% endblock %}
 			</div>
-			<aside class="sidebar col-12 col-md-3">
-				{% if above_sidebar %}
-					<div class="widgets above_sidebar"></div>
-				{% endif %}
-				<div class="news-timeline">
-					{% include 'partial/news-right-column-listing.twig' %}
-				</div>
+			<aside class="sidebar">
 				{% if sidebar %}
 					<div class="sidebar-widgets">
 						{% include 'sidebar.twig' %}
@@ -129,9 +114,7 @@
 				{% endif %}
 			</aside>
 		</div>
-	</div>
-
-</main>
+	</main>
 
 {% block footer %}
 	<footer id="footer" class="main-footer">

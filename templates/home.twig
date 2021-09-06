@@ -2,12 +2,385 @@
 
 {% block content %}
 
-	{% for post in posts [:2] %}
-		{{ post.link }}
-		{{ post.title }}
-		{{ post.post_date | date( 'd.m.Y H:i' ) }}
-		{{ post.thumbnail.src }}
-	{% endfor %}
+	<div class="hero-post">
+		{% for post in posts [:2] %}
+			<div class="post-full">
+				<div class="category">
+					<a href="{{ post.category.link }}" class="category-link">{{ post.category }}</a>
+				</div>
+				<a href="{{post.link}}" class="media-link">
+					<picture class="picture">
+						<source srcset="{{ post.thumbnail.src|resize(370, 243)|towebp }}" type="image/webp">
+						<img src="{{ post.thumbnail.src|resize(370, 243) }}" width="370" height="243" alt="{{ post.title }}">
+					</picture>
+				</a>
+				<h2 class="title">
+					<a href="{{post.link}}" class="post-link">{{post.title}}</a>
+				</h2>
+			</div>
+		{% endfor %}
+
+
+	</div>
+	<div class="all-post">
+		<div class="title-rows">
+			<h2 class="title">Latest News</h2>
+		</div>
+		<div class="post-row">
+			<a href="#" class="media-link">
+				<picture class="picture">
+					<img src="img/post/all-post-1.png" width="" height="" alt="img">
+				</picture>
+			</a>
+			<div class="post-desc">
+				<h2 class="title">
+					<a href="#" class="post-link">
+						Virginia school district passes controversial policy forcing teachers to use trans pronouns
+					</a>
+				</h2>
+				<p class="preview-text">
+					Parents protest at local school board. Local DA files lawsuits. Media blackout continues.
+				</p>
+				<div class="basement">
+					<div class="author">
+						<a href="#" class="name-link">John Johnson</a>
+						<a href="#" class="edition-link">Zerohedge</a>
+					</div>
+					<div class="date">
+						<span class="number">Tue, Aug 17</span>
+					</div>
+					<div class="comments">
+						<a href="#">
+							<i class="icon icon-comment"></i>
+							<span class="number">155</span>
+						</a>
+					</div>
+					<div class="category">
+						<a href="#" class="category-link">Politics</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="post-row">
+			<a href="#" class="media-link">
+				<picture class="picture">
+					<img src="img/post/all-post-2.png" width="" height="" alt="img">
+				</picture>
+			</a>
+			<div class="post-desc">
+				<h2 class="title">
+					<a href="#" class="post-link">
+						Former Mormon missionary finds Jesus after attempting to convert Baptist pastor
+					</a>
+				</h2>
+				<p class="preview-text">
+					Growing up, Micah Wilder was the model Mormon. From rigorously observing the laws of his religion to serving in leadership positions in The Church of Jesus Christ of ...
+				</p>
+				<div class="basement">
+					<div class="author">
+						<a href="#" class="name-link">John Johnson</a>
+						<a href="#" class="edition-link">Zerohedge</a>
+					</div>
+					<div class="date">
+						<span class="number">Tue, Aug 17</span>
+					</div>
+					<div class="comments">
+						<a href="#">
+							<i class="icon icon-comment"></i>
+							<span class="number">155</span>
+						</a>
+					</div>
+					<div class="category">
+						<a href="#" class="category-link">Politics</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="post-row">
+			<a href="#" class="media-link">
+				<picture class="picture">
+					<img src="img/post/all-post-3.png" width="" height="" alt="img">
+				</picture>
+			</a>
+			<div class="post-desc">
+				<h2 class="title">
+					<a href="#" class="post-link">
+						Former Mormon missionary finds Jesus after attempting to convert Baptist pastor
+					</a>
+				</h2>
+				<p class="preview-text">
+					Growing up, Micah Wilder was the model Mormon. From rigorously observing the laws of his religion to serving in leadership positions in The Church of Jesus Christ of ...
+				</p>
+				<div class="basement">
+					<div class="author">
+						<a href="#" class="name-link">John Johnson</a>
+						<a href="#" class="edition-link">Zerohedge</a>
+					</div>
+					<div class="date">
+						<span class="number">Tue, Aug 17</span>
+					</div>
+					<div class="comments">
+						<a href="#">
+							<i class="icon icon-comment"></i>
+							<span class="number">155</span>
+						</a>
+					</div>
+					<div class="category">
+						<a href="#" class="category-link">Politics</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="post-row">
+			<a href="#" class="media-link">
+				<picture class="picture">
+					<img src="img/post/all-post-1.png" width="" height="" alt="img">
+				</picture>
+			</a>
+			<div class="post-desc">
+				<h2 class="title">
+					<a href="#" class="post-link">
+						Virginia school district passes controversial policy forcing teachers to use trans pronouns
+					</a>
+				</h2>
+				<p class="preview-text">
+					Parents protest at local school board. Local DA files lawsuits. Media blackout continues.
+				</p>
+				<div class="basement">
+					<div class="author">
+						<a href="#" class="name-link">John Johnson</a>
+						<a href="#" class="edition-link">Zerohedge</a>
+					</div>
+					<div class="date">
+						<span class="number">Tue, Aug 17</span>
+					</div>
+					<div class="comments">
+						<a href="#">
+							<i class="icon icon-comment"></i>
+							<span class="number">155</span>
+						</a>
+					</div>
+					<div class="category">
+						<a href="#" class="category-link">Politics</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="post-row">
+			<a href="#" class="media-link">
+				<picture class="picture">
+					<img src="img/post/all-post-1.png" width="" height="" alt="img">
+				</picture>
+			</a>
+			<div class="post-desc">
+				<h2 class="title">
+					<a href="#" class="post-link">
+						Virginia school district passes controversial policy forcing teachers to use trans pronouns
+					</a>
+				</h2>
+				<p class="preview-text">
+					Parents protest at local school board. Local DA files lawsuits. Media blackout continues.
+				</p>
+				<div class="basement">
+					<div class="author">
+						<a href="#" class="name-link">John Johnson</a>
+						<a href="#" class="edition-link">Zerohedge</a>
+					</div>
+					<div class="date">
+						<span class="number">Tue, Aug 17</span>
+					</div>
+					<div class="comments">
+						<a href="#">
+							<i class="icon icon-comment"></i>
+							<span class="number">155</span>
+						</a>
+					</div>
+					<div class="category">
+						<a href="#" class="category-link">Politics</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="post-row">
+			<a href="#" class="media-link">
+				<picture class="picture">
+					<img src="img/post/all-post-2.png" width="" height="" alt="img">
+				</picture>
+			</a>
+			<div class="post-desc">
+				<h2 class="title">
+					<a href="#" class="post-link">
+						Former Mormon missionary finds Jesus after attempting to convert Baptist pastor
+					</a>
+				</h2>
+				<p class="preview-text">
+					Growing up, Micah Wilder was the model Mormon. From rigorously observing the laws of his religion to serving in leadership positions in The Church of Jesus Christ of ...
+				</p>
+				<div class="basement">
+					<div class="author">
+						<a href="#" class="name-link">John Johnson</a>
+						<a href="#" class="edition-link">Zerohedge</a>
+					</div>
+					<div class="date">
+						<span class="number">Tue, Aug 17</span>
+					</div>
+					<div class="comments">
+						<a href="#">
+							<i class="icon icon-comment"></i>
+							<span class="number">155</span>
+						</a>
+					</div>
+					<div class="category">
+						<a href="#" class="category-link">Politics</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="post-row">
+			<a href="#" class="media-link">
+				<picture class="picture">
+					<img src="img/post/all-post-3.png" width="" height="" alt="img">
+				</picture>
+			</a>
+			<div class="post-desc">
+				<h2 class="title">
+					<a href="#" class="post-link">
+						Former Mormon missionary finds Jesus after attempting to convert Baptist pastor
+					</a>
+				</h2>
+				<p class="preview-text">
+					Growing up, Micah Wilder was the model Mormon. From rigorously observing the laws of his religion to serving in leadership positions in The Church of Jesus Christ of ...
+				</p>
+				<div class="basement">
+					<div class="author">
+						<a href="#" class="name-link">John Johnson</a>
+						<a href="#" class="edition-link">Zerohedge</a>
+					</div>
+					<div class="date">
+						<span class="number">Tue, Aug 17</span>
+					</div>
+					<div class="comments">
+						<a href="#">
+							<i class="icon icon-comment"></i>
+							<span class="number">155</span>
+						</a>
+					</div>
+					<div class="category">
+						<a href="#" class="category-link">Politics</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="post-row">
+			<a href="#" class="media-link">
+				<picture class="picture">
+					<img src="img/post/all-post-1.png" width="" height="" alt="img">
+				</picture>
+			</a>
+			<div class="post-desc">
+				<h2 class="title">
+					<a href="#" class="post-link">
+						Virginia school district passes controversial policy forcing teachers to use trans pronouns
+					</a>
+				</h2>
+				<p class="preview-text">
+					Parents protest at local school board. Local DA files lawsuits. Media blackout continues.
+				</p>
+				<div class="basement">
+					<div class="author">
+						<a href="#" class="name-link">John Johnson</a>
+						<a href="#" class="edition-link">Zerohedge</a>
+					</div>
+					<div class="date">
+						<span class="number">Tue, Aug 17</span>
+					</div>
+					<div class="comments">
+						<a href="#">
+							<i class="icon icon-comment"></i>
+							<span class="number">155</span>
+						</a>
+					</div>
+					<div class="category">
+						<a href="#" class="category-link">Politics</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="post-row">
+			<a href="#" class="media-link">
+				<picture class="picture">
+					<img src="img/post/all-post-2.png" width="" height="" alt="img">
+				</picture>
+			</a>
+			<div class="post-desc">
+				<h2 class="title">
+					<a href="#" class="post-link">
+						Former Mormon missionary finds Jesus after attempting to convert Baptist pastor
+					</a>
+				</h2>
+				<p class="preview-text">
+					Growing up, Micah Wilder was the model Mormon. From rigorously observing the laws of his religion to serving in leadership positions in The Church of Jesus Christ of ...
+				</p>
+				<div class="basement">
+					<div class="author">
+						<a href="#" class="name-link">John Johnson</a>
+						<a href="#" class="edition-link">Zerohedge</a>
+					</div>
+					<div class="date">
+						<span class="number">Tue, Aug 17</span>
+					</div>
+					<div class="comments">
+						<a href="#">
+							<i class="icon icon-comment"></i>
+							<span class="number">155</span>
+						</a>
+					</div>
+					<div class="category">
+						<a href="#" class="category-link">Politics</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="post-row">
+			<a href="#" class="media-link">
+				<picture class="picture">
+					<img src="img/post/all-post-3.png" width="" height="" alt="img">
+				</picture>
+			</a>
+			<div class="post-desc">
+				<h2 class="title">
+					<a href="#" class="post-link">
+						Former Mormon missionary finds Jesus after attempting to convert Baptist pastor
+					</a>
+				</h2>
+				<p class="preview-text">
+					Growing up, Micah Wilder was the model Mormon. From rigorously observing the laws of his religion to serving in leadership positions in The Church of Jesus Christ of ...
+				</p>
+				<div class="basement">
+					<div class="author">
+						<a href="#" class="name-link">John Johnson</a>
+						<a href="#" class="edition-link">Zerohedge</a>
+					</div>
+					<div class="date">
+						<span class="number">Tue, Aug 17</span>
+					</div>
+					<div class="comments">
+						<a href="#">
+							<i class="icon icon-comment"></i>
+							<span class="number">155</span>
+						</a>
+					</div>
+					<div class="category">
+						<a href="#" class="category-link">Politics</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="more-rows">
+			<button class="btn" type="button">MORE</button>
+		</div>
+	</div>
+
 
 	{% for post in posts [2:] %}
 		{% include ( 'tease-post.twig' ) %}
