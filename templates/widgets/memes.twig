@@ -8,13 +8,12 @@
 
 	{% set firstMeme = memes|first %}
 
-	{{dump(firstMeme)}}
-
 
 	<picture class="picture">
-		<source srcset="{{ firstMeme.url|resize(355)|towebp }}" type="image/webp">
+		<source srcset="{{ firstMeme.image.url|resize(355)|towebp }}" type="image/webp">
 
-		<img src="{{ firstMeme.url|resize(355) }}" width="355" alt="">
+		<img src="{{ firstMeme.image.url|resize(355) }}" width="355" alt="">
+
 
 	</picture>
 
