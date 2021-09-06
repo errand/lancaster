@@ -2,10 +2,10 @@
 (() => {
 // Писать код отсюда
   const openSearch = document.querySelector('.search-block .icon-search'),
-      searchRow = document.querySelector('.search-row'),
-      openMenu = document.querySelector('.header .menu'),
-      menuBar = document.querySelector('.menu-bar'),
-      menuClose = document.querySelector('.menu-bar .btn-close');
+        searchRow = document.querySelector('.search-row'),
+        openMenu = document.querySelector('.header .menu'),
+        menuBar = document.querySelector('.menu-bar'),
+        menuClose = document.querySelector('.menu-bar .btn-close');
 
   window.addEventListener('click', (e) => {
 
