@@ -21,6 +21,10 @@ body{
 
 .main{
   display: block;
+
+  @include media(mobile){
+    padding-top: 95px;
+  }
 }
 
 .main-wrapper{
