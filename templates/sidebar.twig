@@ -7,8 +7,8 @@
 	{% if post.thumbnail.src %}
 		<a href="{{ post.link }}" title="{{ post.title }}" class="media-link">
 			<picture class="picture">
-				<source srcset="{{ post.thumbnail.src|resize(270, 152)|towebp }}" type="image/webp">
-				<img src="{{ post.thumbnail.src|resize(270, 152) }}" width="270" height="152" alt="{{ post.title }}">
+				<source srcset="{{ post.thumbnail.src|resize(265, 150)|towebp }}" type="image/webp">
+				<img src="{{ post.thumbnail.src|resize(265, 150) }}" width="265" he0ght="152" alt="{{ post.title }}">
 			</picture>
 		</a>
 	{% endif %}
@@ -21,8 +21,8 @@
 	{% if post.thumbnail.src %}
 		<a href="{{ post.link }}" title="{{ post.title }}" class="media-link">
 			<picture class="picture">
-				<source srcset="{{ post.thumbnail.src|resize(270, 152)|towebp }}" type="image/webp">
-				<img src="{{ post.thumbnail.src|resize(270, 152) }}" width="270" height="152" alt="{{ post.title }}">
+				<source srcset="{{ post.thumbnail.src|resize(265, 150)|towebp }}" type="image/webp">
+				<img src="{{ post.thumbnail.src|resize(265, 150) }}" width="265" he0ght="152" alt="{{ post.title }}">
 			</picture>
 		</a>
 	{% endif %}
