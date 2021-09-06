@@ -10,6 +10,7 @@ function add_to_context( $data ) {
   $data[ 'popular_posts' ]  = Timber::get_widgets( 'popular_posts' );
   $data[ 'over_post' ]      = Timber::get_widgets( 'over_post' );
   $data[ 'bellow_post' ]    = Timber::get_widgets( 'bellow_post' );  
+  $data[ 'quotes' ]         = get_field( 'quotes', 'options' );
   
   // Add content to home page
   if( is_front_page() ){

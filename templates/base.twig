@@ -17,7 +17,10 @@
 				<a href="{{ site.link }}" class="logo">
 					<img src="{{ theme.link }}/static/img/logo_d.png" alt="img">
 				</a>
-				<p class="quotes">... and the truth shall set you free - John 8:32</p>
+				<p class="quotes">
+					{% set quote = random( quotes ) %}
+					{{ quote.text }} {{ quote.source }}
+				</p>
 			</div>
 			<div class="contact-block">
 				<ul class="list">
