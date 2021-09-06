@@ -5,7 +5,9 @@
         searchRow = document.querySelector('.search-row'),
         openMenu = document.querySelector('.header .menu'),
         menuBar = document.querySelector('.menu-bar'),
-        menuClose = document.querySelector('.menu-bar .btn-close');
+        menuClose = document.querySelector('.menu-bar .btn-close'),
+        openNav = document.querySelector('.header .menu_m'),
+        activeNav = document.querySelector('body');
 
   window.addEventListener('click', (e) => {
 
@@ -22,10 +24,17 @@
       menuBar.classList.remove('open-menu-bar');
     }
 
+    if(e.target ===  openNav || e.target.closest('.header .menu_m') === openNav) {
+      activeNav.classList.toggle('open-nav');
+    } else if(!e.target.closest('.header_nav')) {
+      activeNav.classList.remove('open-nav');
+    }
+
   });
 
   menuClose.addEventListener('click', function () {
     menuBar.classList.remove('open-menu-bar');
+    activeNav.classList.remove('open-nav');
   })
 
 // Писать код до сюда

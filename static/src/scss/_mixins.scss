@@ -10,7 +10,7 @@
   transform: rotate($deg);
 }
 
-$sizes: ("small":480px, "mobile":640px, "phone":768px, "tablet":960px, "desktop":1100px, "full-desktop":1250px);
+$sizes: ("small":480px, "mobile":640px, "phone":768px, "tablet":960px, "desktop":1200px);
 
 @mixin media($media) {
   @each $size, $resolution in $sizes {
