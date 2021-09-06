@@ -19,6 +19,142 @@
     }
   }
 
+  .article-meta{
+    display: block;
+
+    .meta-row{
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      padding-bottom: 20px;
+      margin: 0 -15px -5px 0;
+
+      &:last-child{
+        padding-bottom: 0;
+      }
+    }
+
+    .author{
+      display: block;
+      border-right: 1px solid $gray-400;
+      padding-right: 15px;
+      margin: 0 15px 5px 0;
+
+      .name-link{
+        display: inline-block;
+        font: $regular 16px/1.2 $OpenSans;
+        color: $red-300;
+      }
+
+      .edition-link{
+        display: inline-block;
+        position: relative;
+        font: $regular 16px/1.2 $OpenSans;
+        color: $red-300;
+
+        &:before{
+          content: '(';
+          display: inline-block;
+          position: relative;
+          color: $gray-500;
+        }
+
+        &:after{
+          content: ')';
+          display: inline-block;
+          position: relative;
+          color: $gray-500;
+        }
+      }
+    }
+
+    .words{
+      display: block;
+      border-right: 1px solid $gray-400;
+      padding-right: 15px;
+      margin: 0 15px 5px 0;
+
+      .number{
+        display: inline-block;
+        font: $regular 16px/1.2 $OpenSans;
+        color: $gray-400;
+      }
+    }
+
+    .read{
+      display: block;
+      padding-right: 15px;
+      margin-bottom: 5px;
+
+      .number{
+        display: inline-block;
+        font: $regular 16px/1.2 $OpenSans;
+        color: $gray-400;
+      }
+    }
+
+    .comments{
+      display: flex;
+      align-items: center;
+      padding-right: 15px;
+      margin-bottom: 5px;
+
+      a{
+        display: flex;
+        align-items: center;
+      }
+
+      .icon{
+        display: inline-block;
+        font-size: 16px;
+        color: $gray-200;
+        padding-right: 5px;
+      }
+
+      .number{
+        display: inline-block;
+        font: $regular 16px/1.2 $OpenSans;
+        color: $gray-500;
+      }
+    }
+
+    .date{
+      display: block;
+      padding-right: 15px;
+      margin-bottom: 5px;
+
+      .number{
+        display: inline-block;
+        font: $regular 14px/1.2 $OpenSans;
+        color: $gray-500;
+      }
+    }
+
+    .category{
+      display: flex;
+      flex-wrap: wrap;
+      margin-right: -15px;
+
+      .category-link{
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font: $regular 12px/1.2 $OpenSans;
+        color: $black;
+        text-align: center;
+        text-transform: uppercase;
+        border-radius: 4px;
+        background-color: $gray-100;
+        padding: 3px 7px;
+        margin: 0 15px 5px 0;
+      }
+    }
+
+    .shared-row{
+      padding-bottom: 20px;
+    }
+  }
+
   .article-media{
     display: block;
     line-height: 0;
