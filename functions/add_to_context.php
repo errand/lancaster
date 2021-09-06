@@ -13,7 +13,7 @@ function add_to_context( $data ) {
   
   //Add content to sidebar
   $allMems = get_field( 'dayMem', 'options' );
-  $data[ 'day_mem' ]        = $allMems[0];
+  $data[ 'day_mem' ]        = $allMems[0]['image'];
   $data[ 'featured_posts' ] = getPosts('featured');
   $data[ 'popular_posts' ]  = getPosts('popular');
 

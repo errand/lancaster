@@ -1,4 +1,7 @@
-{{ day_mem }}
+<picture class="picture">
+	<source srcset="{{ day_mem.url|resize(355, 305)|towebp }}" type="image/webp">
+	<img src="{{ day_mem.url|resize(355, 305) }}" width="day_mem.width" height="day_mem.hight" alt="">
+</picture>
 
 {% for post in featured_posts %}
 	{% if post.thumbnail.src %}
