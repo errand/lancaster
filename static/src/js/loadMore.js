@@ -4,7 +4,7 @@
 
   const page    = document.querySelector( '.all-post' ).dataset.page;
   const offset  = document.querySelector( '.all-post' ).dataset.offset;
-  const loadMoreButton = document.querySelector( '.btn' );
+  const loadMoreButton = document.getElementById( 'loadMore' );
   const request = new XMLHttpRequest();
 
   loadMoreButton.addEventListener( 'click', loadMore );
