@@ -955,6 +955,100 @@ hr {
       color: #414141;
       font-style: italic;
       padding-top: 15px; }
+  .article .article-meta {
+    display: block; }
+    .article .article-meta .meta-row {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      padding-bottom: 20px;
+      margin: 0 -15px -5px 0; }
+      .article .article-meta .meta-row:last-child {
+        padding-bottom: 0; }
+    .article .article-meta .author {
+      display: block;
+      border-right: 1px solid #414141;
+      padding-right: 15px;
+      margin: 0 15px 5px 0; }
+      .article .article-meta .author .name-link {
+        display: inline-block;
+        font: 400 16px/1.2 "Open Sans", sans-serif;
+        color: #BF0000; }
+      .article .article-meta .author .edition-link {
+        display: inline-block;
+        position: relative;
+        font: 400 16px/1.2 "Open Sans", sans-serif;
+        color: #BF0000; }
+        .article .article-meta .author .edition-link:before {
+          content: '(';
+          display: inline-block;
+          position: relative;
+          color: #444444; }
+        .article .article-meta .author .edition-link:after {
+          content: ')';
+          display: inline-block;
+          position: relative;
+          color: #444444; }
+    .article .article-meta .words {
+      display: block;
+      border-right: 1px solid #414141;
+      padding-right: 15px;
+      margin: 0 15px 5px 0; }
+      .article .article-meta .words .number {
+        display: inline-block;
+        font: 400 16px/1.2 "Open Sans", sans-serif;
+        color: #414141; }
+    .article .article-meta .read {
+      display: block;
+      padding-right: 15px;
+      margin-bottom: 5px; }
+      .article .article-meta .read .number {
+        display: inline-block;
+        font: 400 16px/1.2 "Open Sans", sans-serif;
+        color: #414141; }
+    .article .article-meta .comments {
+      display: flex;
+      align-items: center;
+      padding-right: 15px;
+      margin-bottom: 5px; }
+      .article .article-meta .comments a {
+        display: flex;
+        align-items: center; }
+      .article .article-meta .comments .icon {
+        display: inline-block;
+        font-size: 16px;
+        color: #848484;
+        padding-right: 5px; }
+      .article .article-meta .comments .number {
+        display: inline-block;
+        font: 400 16px/1.2 "Open Sans", sans-serif;
+        color: #444444; }
+    .article .article-meta .date {
+      display: block;
+      padding-right: 15px;
+      margin-bottom: 5px; }
+      .article .article-meta .date .number {
+        display: inline-block;
+        font: 400 14px/1.2 "Open Sans", sans-serif;
+        color: #444444; }
+    .article .article-meta .category {
+      display: flex;
+      flex-wrap: wrap;
+      margin-right: -15px; }
+      .article .article-meta .category .category-link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font: 400 12px/1.2 "Open Sans", sans-serif;
+        color: #000000;
+        text-align: center;
+        text-transform: uppercase;
+        border-radius: 4px;
+        background-color: #CCCCCC;
+        padding: 3px 7px;
+        margin: 0 15px 5px 0; }
+    .article .article-meta .shared-row {
+      padding-bottom: 20px; }
   .article .article-media {
     display: block;
     line-height: 0; }
