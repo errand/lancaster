@@ -35,20 +35,37 @@
 		<hr>
 	</article>
 	<div class="shared-row">
-
 		<ul class="list social-likes" data-url="{{ post.link }}" data-title="{{ post.title }}">
-			<li class="item" data-service="vkontakte">
-			</li>
-			<li class="item" data-service="odnoklassniki">
-			</li>
-			<li class="item" data-service="telegram">
-			</li>
-			<li class="item" data-service="facebook">
-			</li>
-			<li class="item" data-service="twitter" >
-			</li>
+			<li class="item" data-service="telegram"></li>
+			<li class="item" data-service="facebook"></li>
+			<li class="item" data-service="twitter" ></li>
 		</ul>
 	</div>
+	<hr>
+
+	<section class="comment-row">
+		<!-- comments -->
+		{% if post.comments.count > 0 %}
+		<div class="comments">
+			{% if post.comments %}
+				<div class="title-rows">
+					<h2 class="title">Comments</h2>
+				</div>
+				{% for cmt in post.comments %}
+					{% include "comment.twig" with {comment:cmt} %}
+				{% endfor %}
+			{% endif %}
+		</div>
+
+		{% endif %}
+
+		{% if post.comment_status == "closed" %}
+			<p> comments for this post are closed </p>
+		{% else %}
+			<!-- comment form -->
+			{% include "comment-form.twig" %}
+		{% endif %}
+	</section>
 </div>
 
 {% endblock %}
