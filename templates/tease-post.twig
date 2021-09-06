@@ -3,12 +3,14 @@
 {% block content %}
 
 	<div class="post-row">
-		<a href="{{ post.link }}" title="{{ post.title }}" class="media-link">
-			<picture class="picture">
-				<source srcset="{{ post.thumbnail.src|resize(270, 152)|towebp }}" type="image/webp">
-				<img src="{{ post.thumbnail.src|resize(270, 152) }}" width="270" height="152" alt="{{ post.title }}">
-			</picture>
-		</a>
+		{% if post.thumbnail.src %}
+			<a href="{{ post.link }}" title="{{ post.title }}" class="media-link">
+				<picture class="picture">
+					<source srcset="{{ post.thumbnail.src|resize(270, 152)|towebp }}" type="image/webp">
+					<img src="{{ post.thumbnail.src|resize(270, 152) }}" width="270" height="152" alt="{{ post.title }}">
+				</picture>
+			</a>
+		{% endif %}
 		<div class="post-desc">
 			<h2 class="title">
 				<a href="{{ post.link }}" class="post-link">

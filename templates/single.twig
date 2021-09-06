@@ -2,68 +2,53 @@
 
 {% block content %}
 
-	<div class="content-wrapper row">
-		<header class="article-header">
-			<ul class="breadcrumbs list">
-				<li class="list-item"><a href="{{ site.link }}" title="{{ site.name }}" class="item-link">Home</a></li>
-				{% for term in post.categories %}
-					<li class="list-item"><a href="{{ term.link }}" class="item-link">{{ term.name }}</a></li>
-				{% endfor %}
-			</ul>
-			<h1 class="article-h1">{{ post.title }}</h1>
-		</header>
-		<article class="post-type-{{ post.post_type }} col-12 offset-md-1 col-md-8" id="post-{{ post.ID }}">
-			{% if post.thumbnail and post.meta('hideImageOnPage') == false %}
-				<picture class="article-block__picture">
-					<source srcset="{{ post.thumbnail.src|resize(355|towebp) }}" type="image/webp" media="(max-width: 640px)">
-					<source srcset="{{ post.thumbnail.src|resize(355|tojpg) }}" media="(max-width: 640px)">
-					<source srcset="{{ post.thumbnail.src|resize(886|towebp) }}" type="image/webp" media="(min-width: 641px)">
-					<img src="{{ post.thumbnail.src|resize(886)|tojpg }}" width="886"
-							 alt="{% if post.thumbnail.alt %}{{ post.thumbnail.alt }}{% else %}{{ post.title }}{% endif %}" />
+	<article id="post-{{ post.ID }}" class="article post-type-{{ post.post_type }}">
+		<div class="article-head">
+			<h1 class="title">
+				{{ post.title }}
+			</h1>
+			{% if post.meta('subheadline') %}
+			<h2 class="sub-title">
+			{{ post.meta('subheadline') }}
+			</h2>
+			{% endif %}
+		</div>
+		{{ fn('getReadingTime', post.id) }}
+		<hr>{{ post.date }}
+		{% if post.thumbnail.src %}
+			<div class="article-media">
+				<picture class="picture">
+					<source srcset="{{ post.thumbnail.src|resize(886)|towebp }}" type="image/webp">
+					<img src="{{ post.thumbnail.src|resize(570) }}" width="570" alt="{% if post.thumbnail.alt %}{{ post.thumbnail.alt }}{% else %}{{ post.title }}{% endif %}">
 				</picture>
-			{% endif %}
-			{% if over_post %}
-				<div class="widgets over_post">
-					{{ over_post }}
-				</div>
-			{% endif %}
-			<div class="article-body">
-				{{ post.content }}
+				{% if post.thumbnail.caption or post.thumbnail.alt %}
+				<p class="media-desc">
+			{% if post.thumbnail.caption %} {{ post.thumbnail.caption }} {% else %}{{ post.thumbnail.alt }}{% endif %}
+				</p>
+				{% endif %}
 			</div>
-		</article>
-		{% if not post.meta('hide_article_ads') %}
-			<aside class="col-12 col-md-3 ads-wrapper">
-				<div class="ads-block">{{ sidebar }}</div>
-			</aside>
+			<hr>
 		{% endif %}
-	</div><!-- /content-wrapper -->
-	<footer class="article-footer">
-		<time class="news-timeline__date date" datetime="{{ post.post_date | date( 'Y-m-d H:i' ) }}">
-			{{ post.post_date | date( 'd.m.Y H:i' ) }}
-		</time>
-		<div class="share-block"><label class="label">Поделиться в социальных сетях</label>
-
-			<div class="social-likes" data-url="{{ post.link }}" data-title="{{ post.title }}">
-
-				<div data-service="vkontakte" title="Поделиться в VK"></div>
-				<div data-service="odnoklassniki" title="Поделиться в Odnoklassniki"></div>
-				<div data-service="telegram" title="Поделиться в Telegram"></div>
-				<div data-service="facebook" title="Поделиться в Facebook"></div>
-				<div data-service="twitter" title="Поделиться в Twitter"></div>
-
-			</div>
+		<div class="text-row">
+			{{ post.content }}
 		</div>
-	</footer>
-	{% if not post.meta('hide_article_ads') %}
-	<div class="ads-wrapper ads-horisontal ads-bellow-article">
-		{{ bellow_body }}
+		<hr>
+	</article>
+	<div class="shared-row">
+
+		<ul class="list social-likes" data-url="{{ post.link }}" data-title="{{ post.title }}">
+			<li class="item" data-service="vkontakte">
+			</li>
+			<li class="item" data-service="odnoklassniki">
+			</li>
+			<li class="item" data-service="telegram">
+			</li>
+			<li class="item" data-service="facebook">
+			</li>
+			<li class="item" data-service="twitter" >
+			</li>
+		</ul>
 	</div>
-	{% endif %}
-	{% include "partial/read-more-posts.twig" %}
+</div>
 
-	{% if bellow_post %}
-		<div class="widgets bellow_post">
-		{{bellow_post}}
-		</div>
-	{% endif %}
 {% endblock %}

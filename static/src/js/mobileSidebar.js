@@ -1,6 +1,6 @@
 'use strict';
 
-window.onload = () => {
+(() => {
 // Писать код отсюда
 
 const lionsBuner = document.querySelector('.media-info-widget'),
@@ -16,4 +16,4 @@ if(window.innerWidth < 760) {
 
 
 // Писать код до сюда
-}
+})();

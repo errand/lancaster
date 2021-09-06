@@ -1,4 +1,3 @@
-{% apply spaceless %}
 {% block html_head_container %}
 
 	{% include 'html-header.twig' %}
@@ -15,7 +14,7 @@
 				</button>
 			</div>
 			<div class="header_logo">
-				<a href="index.html" class="logo">
+				<a href="{{ site.link }}" class="logo">
 					<img src="{{ theme.link }}/static/img/logo_d.png" alt="img">
 				</a>
 				<p class="quotes">... and the truth shall set you free - John 8:32</p>
@@ -117,8 +116,50 @@
 	</main>
 
 {% block footer %}
-	<footer id="footer" class="main-footer">
-		{% include 'footer.twig' %}
+	<footer class="footer">
+		<div class="container">
+			<div class="footer_logo">
+				<a href="{{ site.link }}" class="logo">
+					<img src="{{ theme.link }}/static/img/logo_w.png" width="364" height="55" alt="{{ site.name }}">
+				</a>
+				<p class="quotes">... and the truth shall set you free - John 8:32</p>
+			</div>
+			{% include 'footer.twig' %}
+
+			<div class="footer_nav">
+				<ul class="list">
+					<li class="item">
+						<a href="#" class="nav-link">About</a>
+					</li>
+					<li class="item">
+						<a href="#" class="nav-link">Write an article</a>
+					</li>
+					<li class="item">
+						<a href="#" class="nav-link">Donate</a>
+					</li>
+					<li class="item">
+						<a href="#" class="nav-link">Send us an idea, tip, or lead</a>
+					</li>
+					<li class="item">
+						<a href="#" class="nav-link">Topics</a>
+					</li>
+					<li class="item">
+						<a href="#" class="nav-link">Contacts</a>
+					</li>
+				</ul>
+			</div>
+			<div class="footer_basement">
+				<p class="copyright">© 2021 The Lancaster Christian</p>
+				<ul class="list">
+					<li class="item">
+						<a href="#" class="link">Privacy Policy</a>
+					</li>
+					<li class="item">
+						<a href="#" class="link">Terms of Service</a>
+					</li>
+				</ul>
+			</div>
+		</div>
 	</footer>
 	{{ function('wp_footer') }}
-{% endblock %}</body></html>{% endapply %}
+{% endblock %}</body></html>

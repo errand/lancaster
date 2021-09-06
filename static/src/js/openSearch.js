@@ -1,8 +1,6 @@
 'use strict';
-
-window.onload = () => {
+(() => {
 // Писать код отсюда
-
   const openSearch = document.querySelector('.search-block .icon-search'),
       searchRow = document.querySelector('.search-row'),
       openMenu = document.querySelector('.header .menu'),
@@ -31,4 +29,4 @@ window.onload = () => {
   })
 
 // Писать код до сюда
-}
+})();

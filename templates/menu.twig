@@ -1,7 +1,7 @@
 {% if menu %}
 	<ul class="list">
 		{% for item in items %}
-			<li class="list-item {{ item.classes | join(' ') }}">
+			<li class="item {{ item.classes | join(' ') }}">
 				<a class="nav-link" {% if item.target %} target="{{ item.target }}" {% endif%} href="{{ item.link }}">{{ item.title }}</a>
 				{% if item.children %}
 					{% include "menu.twig" with {'items': item.children} %}

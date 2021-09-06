@@ -242,3 +242,14 @@ class StarterSite extends Timber\Site {
 new StarterSite();
 
 include( 'functions/inclusions.php' );
+
+
+
+function getWordsCount($id){
+  $text = trim( strip_tags( get_the_content(null, false, $id) ) );
+  return substr_count( "$text ", ' ' );
+}
+
+function getReadingTime($id){
+  return getWordsCount($id) / 120;
+}
