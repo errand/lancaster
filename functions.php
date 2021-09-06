@@ -175,36 +175,9 @@ class StarterSite extends Timber\Site {
 
   public function register_sidebares() {
 
-    register_sidebar( array(
-      'name'          => 'Mem of the day',
-      'id'            => 'day_mem',
-      'before_widget' => '<div id="%1$s" class="widget %2$s">',
-      'after_widget'  => '</div>',
-      'before_title'  => '<h4>',
-      'after_title'   => '</h4>',
-    ) );
-
-    register_sidebar( array(
-      'name'          => 'Featured posts',
-      'id'            => 'featured_posts',
-      'before_widget' => '<div id="%1$s" class="widget %2$s">',
-      'after_widget'  => '</div>',
-      'before_title'  => '<h4>',
-      'after_title'   => '</h4>',
-    ) );
-
-    register_sidebar( array(
+   register_sidebar( array(
       'name'          => 'Subscribe',
       'id'            => 'subscribe',
-      'before_widget' => '<div id="%1$s" class="widget %2$s">',
-      'after_widget'  => '</div>',
-      'before_title'  => '<h4>',
-      'after_title'   => '</h4>',
-    ) );
-
-    register_sidebar( array(
-      'name'          => 'Popular posts',
-      'id'            => 'popular_posts',
       'before_widget' => '<div id="%1$s" class="widget %2$s">',
       'after_widget'  => '</div>',
       'before_title'  => '<h4>',

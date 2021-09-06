@@ -1,8 +1,28 @@
 {{ day_mem }}
 
-{{ featured_posts }}
+{% for post in featured_posts %}
+	{% if post.thumbnail.src %}
+		<a href="{{ post.link }}" title="{{ post.title }}" class="media-link">
+			<picture class="picture">
+				<source srcset="{{ post.thumbnail.src|resize(270, 152)|towebp }}" type="image/webp">
+				<img src="{{ post.thumbnail.src|resize(270, 152) }}" width="270" height="152" alt="{{ post.title }}">
+			</picture>
+		</a>
+	{% endif %}
+		<a href="{{ post.link }}" title="{{ post.title }}" class="media-link">{{ post.title }}</a>
+{% endfor %}
 
 {{ subscribe }}
 
-{{ popular_posts }}
+{% for post in popular_posts %}
+	{% if post.thumbnail.src %}
+		<a href="{{ post.link }}" title="{{ post.title }}" class="media-link">
+			<picture class="picture">
+				<source srcset="{{ post.thumbnail.src|resize(270, 152)|towebp }}" type="image/webp">
+				<img src="{{ post.thumbnail.src|resize(270, 152) }}" width="270" height="152" alt="{{ post.title }}">
+			</picture>
+		</a>
+	{% endif %}
+		<a href="{{ post.link }}" title="{{ post.title }}" class="media-link">{{ post.title }}</a>
+{% endfor %}
 
