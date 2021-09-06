@@ -3,6 +3,8 @@
 	<img src="{{ day_mem.url|resize(355, 305) }}" width="day_mem.width" height="day_mem.hight" alt="">
 </picture>
 
+
+<h3>Featured</h3>
 {% for post in featured_posts %}
 	{% if post.thumbnail.src %}
 		<a href="{{ post.link }}" title="{{ post.title }}" class="media-link">
@@ -17,6 +19,7 @@
 
 {{ subscribe }}
 
+<h3>Popular</h3>
 {% for post in popular_posts %}
 	{% if post.thumbnail.src %}
 		<a href="{{ post.link }}" title="{{ post.title }}" class="media-link">
