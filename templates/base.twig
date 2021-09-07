@@ -7,15 +7,13 @@
 	{% block header %}
 		<div class="header_wrap">
 			<div class="btn-menu">
-				<button class="menu" type="button">
-					<span></span>
-					<span></span>
-					<span></span>
-				</button>
+				<button class="menu" type="button"><span></span><span></span><span></span></button>
+				<button class="menu_m" type="button"><span></span><span></span><span></span></button>
 			</div>
 			<div class="header_logo">
 				<a href="{{ site.link }}" class="logo">
-					<img src="{{ theme.link }}/static/img/logo_d.png" alt="img">
+					<img class="logo-d" src="{{ theme.link }}/static/img/logo_d.png" alt="{{ site.name }}">
+					<img class="logo-w" src="{{ theme.link }}/static/img/logo_w.png" alt="{{ site.name }}">
 				</a>
 				<p class="quotes">
 					{% set quote = random( quotes ) %}
@@ -70,35 +68,11 @@
 			</div>
 		</div>
 		{% include 'partial/main-menu.twig' %}
-
-		<div class="menu-bar">
-			<button class="cross btn-close" type="button"></button>
-			<ul class="list">
-				<li class="item">
-					<a href="#" class="menu-link">About</a>
-				</li>
-				<li class="item">
-					<a href="#" class="menu-link">Write an article</a>
-				</li>
-				<li class="item">
-					<a href="#" class="menu-link">
-						Donate</a>
-				</li>
-				<li class="item">
-					<a href="#" class="menu-link">Send us an idea, tip, or lead</a>
-				</li>
-				<li class="item">
-					<a href="#" class="menu-link">Topics</a>
-				</li>
-				<li class="item">
-					<a href="#" class="menu-link">Contacts</a>
-				</li>
-			</ul>
-		</div>
 	{% endblock %}
 </header>
 
 <main class="main">
+	{% block main %}
 	<div class="container flex-container">
 		<div class="main-wrapper">
 			{% block title %}
@@ -116,53 +90,12 @@
 			</div>
 		</aside>
 	</div>
+	{% endblock %}
 </main>
 
 {% block footer %}
 	<footer class="footer">
-		<div class="container">
-			<div class="footer_logo">
-				<a href="{{ site.link }}" class="logo">
-					<img src="{{ theme.link }}/static/img/logo_w.png" width="364" height="55" alt="{{ site.name }}">
-				</a>
-				<p class="quotes">... and the truth shall set you free - John 8:32</p>
-			</div>
 			{% include 'footer.twig' %}
-
-			<div class="footer_nav">
-				<ul class="list">
-					<li class="item">
-						<a href="#" class="nav-link">About</a>
-					</li>
-					<li class="item">
-						<a href="#" class="nav-link">Write an article</a>
-					</li>
-					<li class="item">
-						<a href="#" class="nav-link">Donate</a>
-					</li>
-					<li class="item">
-						<a href="#" class="nav-link">Send us an idea, tip, or lead</a>
-					</li>
-					<li class="item">
-						<a href="#" class="nav-link">Topics</a>
-					</li>
-					<li class="item">
-						<a href="#" class="nav-link">Contacts</a>
-					</li>
-				</ul>
-			</div>
-			<div class="footer_basement">
-				<p class="copyright">© 2021 The Lancaster Christian</p>
-				<ul class="list">
-					<li class="item">
-						<a href="#" class="link">Privacy Policy</a>
-					</li>
-					<li class="item">
-						<a href="#" class="link">Terms of Service</a>
-					</li>
-				</ul>
-			</div>
-		</div>
 	</footer>
 	{{ function('wp_footer') }}
 {% endblock %}</body></html>

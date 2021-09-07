@@ -940,22 +940,22 @@ hr {
   display: block;
   margin-bottom: 30px; }
 
-.widget_lanc_memes_widget .string {
+.media-widget .string {
   display: block;
   background-color: #006DAB;
   text-align: center;
   padding: 10px 15px; }
-  .widget_lanc_memes_widget .string .text {
+  .media-widget .string .text {
     display: block;
     font: 700 23px/1.3 "Open Sans", sans-serif;
     color: #ffffff;
     text-transform: uppercase; }
-  .widget_lanc_memes_widget .string .link {
+  .media-widget .string .link {
     display: block;
     font: 400 16px/1.3 "Open Sans", sans-serif;
     color: #ffffff; }
 
-.widget_lanc_memes_widget .picture {
+.media-widget .picture {
   display: block;
   line-height: 0; }
 
