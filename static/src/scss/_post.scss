@@ -20,6 +20,12 @@
   position: relative;
   margin-bottom: 30px;
 
+  @include media(mobile){
+    border-bottom: 1px solid $gray-700;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+
   .hero-category{
     position: absolute;
     top: 7px;
@@ -52,6 +58,15 @@
     @include media(phone){
       margin-bottom: 20px;
     }
+
+    //Удалить после наполнения картинками
+    img{
+
+      @include media(mobile){
+        width: 100%;
+      }
+    }
+    //Это
 
     &:after{
       content: '';
