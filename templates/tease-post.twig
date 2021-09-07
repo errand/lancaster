@@ -22,14 +22,14 @@
 			</p>
 			<div class="basement">
 				<div class="author">
-					<a href="/{{ post.terms( { query:{ taxonomy:'creator' }} )[0].slug }}" class="name-link">
+					<a href="{% if ( post.terms( { query:{ taxonomy:'creator' }} )) %}/creators/{{ post.terms( { query:{ taxonomy:'creator' }} )[0].slug }}{% else %}#0{% endif %}" class="name-link">
 						{% if ( post.terms( { query:{ taxonomy:'creator' }} )) %}
 							{{ post.terms( { query:{ taxonomy:'creator' }} )[0] }}
 						{% else %}
 							John Johnson
 						{% endif %}
 					</a>
-					<a href="/{{ post.terms( { query:{ taxonomy:'publication' }} )[0].slug }}" class="edition-link">
+					<a href="{% if ( post.terms( { query:{ taxonomy:'publication' }} )) %}/publications/{{ post.terms( { query:{ taxonomy:'publication' }} )[0].slug }}{% else %}#0{% endif %}" class="edition-link">
 						{% if ( post.terms( { query:{ taxonomy:'publication' }} )) %}
 							{{ post.terms( { query:{ taxonomy:'publication' }} )[0] }}
 						{% else %}
