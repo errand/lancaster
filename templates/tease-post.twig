@@ -22,8 +22,20 @@
 			</p>
 			<div class="basement">
 				<div class="author">
-					<a href="#" class="name-link">John Johnson</a>
-					<a href="#" class="edition-link">Zerohedge</a>
+					<a href="/{{ post.terms( { query:{ taxonomy:'creator' }} )[0].slug }}" class="name-link">
+						{% if ( post.terms( { query:{ taxonomy:'creator' }} )) %}
+							{{ post.terms( { query:{ taxonomy:'creator' }} )[0] }}
+						{% else %}
+							John Johnson
+						{% endif %}
+					</a>
+					<a href="/{{ post.terms( { query:{ taxonomy:'publication' }} )[0].slug }}" class="edition-link">
+						{% if ( post.terms( { query:{ taxonomy:'publication' }} )) %}
+							{{ post.terms( { query:{ taxonomy:'publication' }} )[0] }}
+						{% else %}
+							Zerohedge
+						{% endif %}
+					</a>
 				</div>
 				<time class="date" datetime="{{ post.post_date | date( 'Y-m-d H:i' ) }}">
 					<span class="number">{{ post.post_date | date( 'd.m.Y H:i' ) }}</span>
