@@ -4,7 +4,7 @@ add_action( 'wp_ajax_nopriv_loadMorePosts', 'loadMorePosts' );
 
 function loadMorePosts(){
 	$paged    = $_POST[ 'paged' ] ? intval( $_POST[ 'paged' ]) : 1;
-	$offset = $_POST[ 'offset' ] ? intval( $_POST[ 'offset' ]) : 0;
+	$offset   = $_POST[ 'offset' ] ? intval( $_POST[ 'offset' ]) : 0;
 
 	$args = array(
 		'post_type'      => $post_type,
@@ -23,6 +23,7 @@ function loadMorePosts(){
 		$data  = array(
 			'total' => $posts->found_posts,
 			'posts' => Timber::compile( array( 'tease-ajax.twig' ), $context ),
+			'offset' => $offset,
 		);
 
 	wp_send_json( $data );
