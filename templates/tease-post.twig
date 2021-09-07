@@ -46,9 +46,13 @@
 						<span class="number">{{ post.comments.count }}</span>
 					</a>
 				</div>
-				<div class="category">
-					<a href="{{ post.category.link }}" class="category-link">{{ post.category }}</a>
-				</div>
+				{% if post.categories %}
+					{% for category in post.terms('category')%}
+						<div class="category">
+							<a href="{{ category.link }}" class="category-link">{{ category.name }}</a>
+						</div>
+					{% endfor %}
+				{% endif %}
 			</div>
 		</div>
 	</div>

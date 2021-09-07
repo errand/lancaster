@@ -81,12 +81,13 @@
 				<div class="date">
 					<span class="number">Tue, Aug 17, 2021</span>
 				</div>
-				{% if post.categories %}{% endif %}
-				<div class="category">
-					<a href="#" class="category-link">Politics</a>
-					<a href="#" class="category-link">FBI ABUSE</a>
-					<a href="#" class="category-link">CENSORSHIP</a>
-				</div>
+				{% if post.categories %}
+					{% for category in post.terms('category')%}
+						<div class="category">
+							<a href="{{ category.link }}" class="category-link">{{ category.name }}</a>
+						</div>
+					{% endfor %}
+				{% endif %}
 			</div>
 		</div>
 		<hr>
