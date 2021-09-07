@@ -987,7 +987,12 @@ hr {
 
 @media screen and (max-width: 768px) {
   .media-widget {
+    width: calc(50% - 15px);
     margin: 0 0 30px; } }
+
+@media screen and (max-width: 640px) {
+  .media-widget {
+    width: auto; } }
 
 .media-widget .string {
   display: block;
@@ -1139,8 +1144,14 @@ hr {
 .hero-post {
   display: flex;
   justify-content: space-between; }
+  @media screen and (max-width: 640px) {
+    .hero-post {
+      flex-wrap: wrap; } }
   .hero-post .post-full {
     width: calc(50% - 15px); }
+    @media screen and (max-width: 640px) {
+      .hero-post .post-full {
+        width: 100%; } }
 
 .all-post {
   display: block; }
@@ -1184,6 +1195,9 @@ hr {
     @media screen and (max-width: 768px) {
       .post-full .media-link {
         margin-bottom: 20px; } }
+    @media screen and (max-width: 640px) {
+      .post-full .media-link img {
+        width: 100%; } }
     .post-full .media-link:after {
       content: '';
       position: absolute;

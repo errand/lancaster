@@ -53,6 +53,15 @@
       margin-bottom: 20px;
     }
 
+    //Удалить после наполнения картинками
+    img{
+
+      @include media(mobile){
+        width: 100%;
+      }
+    }
+    //Это
+
     &:after{
       content: '';
       position: absolute;
