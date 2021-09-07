@@ -11,12 +11,13 @@ function add_to_context( $data ) {
   $data[ 'quotes' ]         = get_field( 'quotes', 'options' );
   
 
-/*  // Add content to home page
+  // Add content to home page
   if( is_front_page() ){
+    $data[ 'posts_per_page' ] = get_field('front_page_articles', 'options');
   }
 
   // Add content to archives
-  if(  is_category() || is_search() ) {
+ /*if(  is_category() || is_search() ) {
   
   }*/
 

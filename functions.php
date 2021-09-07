@@ -106,6 +106,7 @@ class StarterSite extends Timber\Site {
 
   function site_static() {
     wp_enqueue_script('scripts', get_template_directory_uri() . '/static/scripts.js', '', '', true);
+    wp_localize_script('scripts', 'my_ajax_url', ['ajax_url' => admin_url('admin-ajax.php')]);
     wp_dequeue_style( 'wp-block-library' );
     wp_dequeue_style( 'wp-block-library-theme' );
   }

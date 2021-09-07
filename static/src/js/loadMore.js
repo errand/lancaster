@@ -2,21 +2,20 @@
 
 (() => {
 
-  const page    = document.querySelector( '.all-post' ).dataset.page;
-  const offset  = document.querySelector( '.all-post' ).dataset.offset;
+  const container = document.querySelector('.all-post');
   const loadMoreButton = document.getElementById( 'loadMore' );
-  const request = new XMLHttpRequest();
+  const request      = new XMLHttpRequest();
+  const postsPerPage = container.dataset.postsPerPage;
+
+  let paged  = container.dataset.paged;
+  let offset = container.dataset.offset;
 
   loadMoreButton.addEventListener( 'click', loadMore );
 
   function loadMore() {
-    let data = {
-      action: 'loadMorePosts',
-      paged : paged,
-      offset: offset,
-    };
+    let data = `paged=${ paged }&offset=${offset}`;
 
-    request.open( 'POST', '/wp-admin/admin-ajax.php', true );
+    request.open( 'POST', `${ my_ajax_url.ajax_url }?action=loadMorePosts`, true );
     request.setRequestHeader( 'Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8' );
     request.send( data );
 
@@ -24,13 +23,24 @@
       console.log( 'The request is in progress' );
     };
     request.onload     = () => {
-      if (request.status != 200) {
+      if ( request.status != 200 ) {
         console.log( `Error ${ request.status }: ${ request.statusText }` );
       } else {
-        console.log( request.response );
+        paged  = container.dataset.paged;
+        offset = container.dataset.offset;
+        
+        let postsArray  = Array.from( container.querySelectorAll('.post-row') );
+        let lastPost    = postsArray[ postsArray.length - 1 ];
+        let content     = JSON.parse(request.response);
+        let total = content[ 'total' ];
+          content = content[ 'posts' ].replace( /[\n\r\t]/g, '' );
+        
+        lastPost.insertAdjacentHTML( 'afterEnd', content );
+        container.dataset.paged  = parseInt( paged ) + 1;
+        container.dataset.offset = parseInt( offset ) + parseInt( postsPerPage );
       }
     };
-    request.onerror    = () => {
+    request.onerror = () => {
       console.log( 'The request failed' );
     };
   } 

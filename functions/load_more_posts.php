@@ -1,6 +1,8 @@
 <?php
-function loadMorePosts(){
+add_action( 'wp_ajax_loadMorePosts', 'loadMorePosts' );
+add_action( 'wp_ajax_nopriv_loadMorePosts', 'loadMorePosts' );
 
+function loadMorePosts(){
 	$paged    = $_POST[ 'paged' ] ? intval( $_POST[ 'paged' ]) : 1;
 	$offset = $_POST[ 'offset' ] ? intval( $_POST[ 'offset' ]) : 0;
 
