@@ -992,7 +992,8 @@ hr {
 
 @media screen and (max-width: 640px) {
   .media-widget {
-    width: auto; } }
+    width: auto;
+    margin: 0 auto 30px; } }
 
 .media-widget .string {
   display: block;
@@ -1169,6 +1170,11 @@ hr {
   display: block;
   position: relative;
   margin-bottom: 30px; }
+  @media screen and (max-width: 640px) {
+    .post-full {
+      border-bottom: 1px solid #C4C4C4;
+      padding-bottom: 20px;
+      margin-bottom: 20px; } }
   .post-full .hero-category {
     position: absolute;
     top: 7px;
