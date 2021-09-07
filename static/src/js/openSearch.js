@@ -7,7 +7,7 @@
         menuBar = document.querySelector('.menu-bar'),
         menuClose = document.querySelector('.menu-bar .btn-close'),
         openNav = document.querySelector('.header .menu_m'),
-        activeNav = document.querySelector('body');
+        activeNav = document.querySelector('html');
 
   window.addEventListener('click', (e) => {
 

@@ -209,6 +209,9 @@ textarea {
   font: inherit;
   /* 2 */ }
 
+html.open-nav {
+  overflow: hidden; }
+
 body {
   font-family: "Open Sans", sans-serif;
   background: #F8F8F8;
@@ -762,7 +765,8 @@ hr {
         .header_nav .item:after {
           width: 1px;
           height: 20px;
-          left: 0;
+          right: 0;
+          left: inherit;
           top: 50%;
           background-color: #8C8C8C;
           transform: translate(0%, -50%); } }
@@ -871,6 +875,9 @@ hr {
     @media screen and (max-width: 640px) {
       .menu-bar .menu-link {
         font-size: 18px; } }
+    @media screen and (max-width: 480px) {
+      .menu-bar .menu-link {
+        font-size: 16px; } }
 
 .footer {
   display: block;
