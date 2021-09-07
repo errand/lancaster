@@ -5,7 +5,14 @@
 <div class="post-widget">
   {% for post in featured %}
 <div class="post">
-
+    {% if post.thumbnail.src %}
+      <a href="{{ post.link }}" title="{{ post.title }}" class="media-link">
+        <picture class="picture">
+          <source srcset="{{ post.thumbnail.src|resize(265, 150)|towebp }}" type="image/webp">
+          <img src="{{ post.thumbnail.src|resize(265, 150) }}" width="265" height="152" alt="{{ post.title }}">
+        </picture>
+      </a>
+    {% endif %}
   <h3 class="title">
     <a href="{{post.link}}" class="post-link">
       {{ post.title }}
