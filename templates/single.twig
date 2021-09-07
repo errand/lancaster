@@ -13,8 +13,82 @@
 				</h2>
 			{% endif %}
 		</div>
-		{{ fn('getReadingTime', post.id) }}
-		<hr>{{ post.date }}
+
+		<hr>
+		<div class="article-meta">
+			<div class="meta-row">
+				<div class="author">
+					<a href="#" class="name-link">John Johnson</a>
+					<a href="#" class="edition-link">Zerohedge</a>
+				</div>
+				<div class="words">
+					<span class="number">{{ fn('getWordsCount', post.id) }}
+						words</span>
+
+				</div>
+				<div class="read">
+					<span class="number">{{ fn('getReadingTime', post.id) }}
+						minute read</span>
+
+				</div>
+				<div class="comments">
+					<a href="#comments">
+						<i class="icon icon-comment"></i>
+						<span class="number">{{post.comments.count}}</span>
+					</a>
+				</div>
+			</div>
+			<div class="shared-row">
+				<ul class="list">
+					<li class="item">
+						<a href="#" class="link link-telegram">
+							<i class="icon icon-telegram"></i>
+						</a>
+					</li>
+					<li class="item">
+						<a href="#" class="link link-gab">
+							<i class="icon icon-gab"></i>
+						</a>
+					</li>
+					<li class="item">
+						<a href="#" class="link link-fb">
+							<i class="icon icon-fb"></i>
+						</a>
+					</li>
+					<li class="item">
+						<a href="#" class="link link-tw">
+							<i class="icon icon-tw"></i>
+						</a>
+					</li>
+					<li class="item">
+						<a href="#" class="link link-whatsapp">
+							<i class="icon icon-whatsapp"></i>
+						</a>
+					</li>
+					<li class="item">
+						<a href="#" class="link link-email">
+							<i class="icon icon-email"></i>
+						</a>
+					</li>
+					<li class="item">
+						<a href="#" class="link link-print">
+							<i class="icon icon-print"></i>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="meta-row">
+				<div class="date">
+					<span class="number">Tue, Aug 17, 2021</span>
+				</div>
+				<div class="category">
+					<a href="#" class="category-link">Politics</a>
+					<a href="#" class="category-link">FBI ABUSE</a>
+					<a href="#" class="category-link">CENSORSHIP</a>
+				</div>
+			</div>
+		</div>
+		<hr>
 		{% if post.thumbnail.src %}
 			<div class="article-media">
 				<picture class="picture">
@@ -45,10 +119,9 @@
 			<li class="item" data-service="twitter"></li>
 		</ul>
 	</div>
-	<hr>
 
 	<section
-		class="comment-row">
+		id="comments" class="comment-row">
 		<!-- comments -->
 		{% if post.comments.count > 0 %}
 			<div class="comments">
