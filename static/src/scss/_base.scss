@@ -90,6 +90,7 @@ body{
 
 .title-rows{
   display: block;
+  width: 100%;
 
   .title{
     display: block;
@@ -141,5 +142,9 @@ hr{
   height: 1px;
   background-color: $gray-700;
   margin: 30px 0;
+
+  @include media(mobile){
+    margin: 20px 0;
+  }
 }
 

@@ -4,4 +4,10 @@
   min-width: 335px;
   width: 100%;
   padding: 50px 0;
+
+  @include media(desktop){
+    max-width: 100%;
+    min-width: auto;
+    padding: 0 0 50px;
+  }
 }
