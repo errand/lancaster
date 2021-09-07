@@ -100,6 +100,7 @@ class StarterSite extends Timber\Site {
   public function add_to_context( $context ) {
     $context['menu']  = new Timber\Menu();
     $context['site']  = $this;
+    $context['sidebar'] = Timber::get_widgets('sidebar');
     return $context;
   }
 
@@ -176,21 +177,12 @@ class StarterSite extends Timber\Site {
   public function register_sidebars() {
 
    register_sidebar( array(
-      'name'          => 'Subscribe',
-      'id'            => 'subscribe',
+      'name'          => 'Sidebar',
+      'id'            => 'sidebar',
       'before_widget' => '<div id="%1$s" class="widget %2$s">',
       'after_widget'  => '</div>',
-      'before_title'  => '<h4>',
-      'after_title'   => '</h4>',
-    ) );
-
-    register_sidebar( array(
-      'name'          => 'Popular posts',
-      'id'            => 'popular_posts',
-      'before_widget' => '<div id="%1$s" class="widget %2$s">',
-      'after_widget'  => '</div>',
-      'before_title'  => '<h4>',
-      'after_title'   => '</h4>',
+      'before_title'  => '<div class="title-rows"><h2 class="title">',
+      'after_title'   => '</h2></div>',
     ) );
 
     register_sidebar( array(
@@ -198,8 +190,8 @@ class StarterSite extends Timber\Site {
       'id'            => 'over_post',
       'before_widget' => '<div id="%1$s" class="widget %2$s">',
       'after_widget'  => '</div>',
-      'before_title'  => '<h4>',
-      'after_title'   => '</h4>',
+      'before_title'  => '<div class="title-rows"><h2 class="title">',
+      'after_title'   => '</h2></div>',
     ) );
 
     register_sidebar( array(
@@ -207,8 +199,8 @@ class StarterSite extends Timber\Site {
       'id'            => 'bellow_post',
       'before_widget' => '<div id="%1$s" class="widget %2$s">',
       'after_widget'  => '</div>',
-      'before_title'  => '<h4>',
-      'after_title'   => '</h4>',
+      'before_title'  => '<div class="title-rows"><h2 class="title">',
+      'after_title'   => '</h2></div>',
     ) );
 
   }

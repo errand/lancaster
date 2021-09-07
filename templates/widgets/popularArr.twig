@@ -1,0 +1,25 @@
+{{ args.before_widget|raw }}
+{{ args.before_title|raw }}{{ instance.title|apply_filters('widget_title') }}{{ args.after_title|raw }}
+
+{% if popular %}
+  <div class="post-widget">
+    {% for post in popular %}
+      <div class="post">
+        {% if fn('get_the_post_thumbnail_url', post.ID) %}
+          <a href="{{ fn('get_permalink', post.ID) }}" title="{{ post.post_title }}" class="media-link">
+            <picture class="picture">
+              <source srcset="{{ fn('get_the_post_thumbnail_url', post.ID)|resize(265, 150)|towebp }}" type="image/webp">
+              <img src="{{ fn('get_the_post_thumbnail_url', post.ID)|resize(265, 150) }}" width="265" height="152" alt="{{ post.post_title }}">
+            </picture>
+          </a>
+        {% endif %}
+        <h3 class="title">
+          <a href="{{fn('get_permalink', post.ID)}}" class="post-link">
+            {{ post.post_title }}
+          </a>
+        </h3>
+      </div>
+    {% endfor %}
+  </div>
+{% endif %}
+{{ args.after_widget|raw }}
