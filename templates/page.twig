@@ -1,14 +1,101 @@
 {% extends "base.twig" %}
 
-{% block content %}
-	<div class="content-wrapper">
-		<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
-			<section class="article-content">
-				<h1 class="article-h1">{{post.title}}</h1>
-				<div class="article-body">
-					{{post.content}}
+{% block main %}
+	<div class="title-page">
+		<div class="container small-container">
+			<h1 class="title">{{post.title}}</h1>
+
+		</div>
+	</div>
+
+	{% block content %}
+		<div class="container small-container">
+			<div class="about">
+				<div class="shared-row">
+					<ul class="list">
+						<li class="item">
+							<a href="#" class="link link-telegram">
+								<i class="icon icon-telegram"></i>
+							</a>
+						</li>
+						<li class="item">
+							<a href="#" class="link link-gab">
+								<i class="icon icon-gab"></i>
+							</a>
+						</li>
+						<li class="item">
+							<a href="#" class="link link-fb">
+								<i class="icon icon-fb"></i>
+							</a>
+						</li>
+						<li class="item">
+							<a href="#" class="link link-tw">
+								<i class="icon icon-tw"></i>
+							</a>
+						</li>
+						<li class="item">
+							<a href="#" class="link link-whatsapp">
+								<i class="icon icon-whatsapp"></i>
+							</a>
+						</li>
+						<li class="item">
+							<a href="#" class="link link-email">
+								<i class="icon icon-email"></i>
+							</a>
+						</li>
+						<li class="item">
+							<a href="#" class="link link-print">
+								<i class="icon icon-print"></i>
+							</a>
+						</li>
+					</ul>
 				</div>
-			</section>
-		</article>
-	</div><!-- /content-wrapper -->
+				<hr>
+				<div class="text-row">
+					{{ post.content }}
+				</div>
+				<hr>
+				<div class="shared-row">
+					<ul class="list">
+						<li class="item">
+							<a href="#" class="link link-telegram">
+								<i class="icon icon-telegram"></i>
+							</a>
+						</li>
+						<li class="item">
+							<a href="#" class="link link-gab">
+								<i class="icon icon-gab"></i>
+							</a>
+						</li>
+						<li class="item">
+							<a href="#" class="link link-fb">
+								<i class="icon icon-fb"></i>
+							</a>
+						</li>
+						<li class="item">
+							<a href="#" class="link link-tw">
+								<i class="icon icon-tw"></i>
+							</a>
+						</li>
+						<li class="item">
+							<a href="#" class="link link-whatsapp">
+								<i class="icon icon-whatsapp"></i>
+							</a>
+						</li>
+						<li class="item">
+							<a href="#" class="link link-email">
+								<i class="icon icon-email"></i>
+							</a>
+						</li>
+						<li class="item">
+							<a href="#" class="link link-print">
+								<i class="icon icon-print"></i>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+	{% endblock %}
 {% endblock %}
