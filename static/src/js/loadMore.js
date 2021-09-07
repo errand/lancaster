@@ -28,7 +28,7 @@
       } else {
         paged  = container.dataset.paged;
         offset = container.dataset.offset;
-        
+
         let postsArray  = Array.from( container.querySelectorAll('.post-row') );
         let lastPost    = postsArray[ postsArray.length - 1 ];
         let content     = JSON.parse(request.response);
@@ -38,6 +38,9 @@
         lastPost.insertAdjacentHTML( 'afterEnd', content );
         container.dataset.paged  = parseInt( paged ) + 1;
         container.dataset.offset = parseInt( offset ) + parseInt( postsPerPage );
+        if ( total - offset <= 0) {
+          loadMoreButton.style.display = 'none';
+        }
       }
     };
     request.onerror = () => {
