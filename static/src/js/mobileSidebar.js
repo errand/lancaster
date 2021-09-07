@@ -11,12 +11,10 @@
   if (window.innerWidth < 769) {
     heroBlock.append(lionsBuner);
 
-    console.log(heroBlock.querySelectorAll('.post-full')[1])
     allPublications.querySelector('.title-rows').after(heroBlock.querySelectorAll('.post-full')[1]);
-    heroBlock.querySelectorAll('.post-full')[1].classList.remove('.post-full');
-    heroBlock.querySelectorAll('.post-full')[1].classList.add('.post-row');
+    allPublications.querySelector('.post-full').classList.add('post-row');
+    allPublications.querySelector('.post-full').classList.remove('post-full');
   }
-
 
   // Писать код до сюда
 })();
