@@ -1,0 +1,40 @@
+{% for post in posts %}
+	<div class="post-row">
+		{% if post.thumbnail.src %}
+			<a href="{{ post.link }}" title="{{ post.title }}" class="media-link">
+				<picture class="picture">
+					<source srcset="{{ post.thumbnail.src|resize(270, 152)|towebp }}" type="image/webp">
+					<img src="{{ post.thumbnail.src|resize(270, 152) }}" width="270" height="152" alt="{{ post.title }}">
+				</picture>
+			</a>
+		{% endif %}
+		<div class="post-desc">
+			<h2 class="title">
+				<a href="{{ post.link }}" class="post-link">
+					{{ post.title }}
+				</a>
+			</h2>
+			<p class="preview-text">
+				{{ post.preview.length(21).read_more( '' ).force }}
+			</p>
+			<div class="basement">
+				<div class="author">
+					<a href="#" class="name-link">John Johnson</a>
+					<a href="#" class="edition-link">Zerohedge</a>
+				</div>
+				<time class="date" datetime="{{ post.post_date | date( 'Y-m-d H:i' ) }}">
+					{{ post.post_date | date( 'd.m.Y H:i' ) }}
+				</time>
+				<div class="comments">
+					<a href="{{ post.link }}#comments">
+						<i class="icon icon-comment"></i>
+						<span class="number">{{ post.comments.count }}</span>
+					</a>
+				</div>
+				<div class="category">
+					<a href="{{ post.category.link }}" class="category-link">{{ post.category }}</a>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endfor %}

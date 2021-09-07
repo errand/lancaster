@@ -12,7 +12,7 @@
   function loadMore() {
     let data = {
       action: 'loadMorePosts',
-      page  : page,
+      paged : paged,
       offset: offset,
     };
 
