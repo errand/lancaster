@@ -8,6 +8,10 @@
       display: block;
       font: $regular 32px/1.3 $OpenSans;
       color: $gray-400;
+
+      @include media(mobile){
+        font-size: 24px;
+      }
     }
 
     .sub-title{
@@ -16,6 +20,10 @@
       color: $gray-400;
       font-style: italic;
       padding-top: 15px;
+
+      @include media(mobile){
+        font-size: 17px;
+      }
     }
   }
 
