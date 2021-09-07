@@ -1,4 +1,5 @@
-html{
+html{  
+  scroll-behavior:smooth
   &.open-nav{
     overflow: hidden;
   }
