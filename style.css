@@ -211,7 +211,8 @@ textarea {
 
 body {
   font-family: "Open Sans", sans-serif;
-  background: #F8F8F8; }
+  background: #F8F8F8;
+  overflow-x: hidden; }
 
 .container {
   display: block;
@@ -221,6 +222,9 @@ body {
   margin: 0 auto; }
   .container.flex-container {
     display: flex; }
+    @media screen and (max-width: 1200px) {
+      .container.flex-container {
+        flex-wrap: wrap; } }
   .container.small-container {
     max-width: 810px; }
 
@@ -229,6 +233,9 @@ body {
   @media screen and (max-width: 640px) {
     .main {
       padding-top: 95px; } }
+  @media screen and (max-width: 1200px) {
+    .main .container {
+      max-width: 810px; } }
 
 .main-wrapper {
   display: block;
@@ -236,6 +243,11 @@ body {
   width: 100%;
   padding: 50px 0;
   margin-right: 65px; }
+  @media screen and (max-width: 1200px) {
+    .main-wrapper {
+      max-width: 100%;
+      padding: 50px 30px;
+      margin: 0; } }
 
 .visually-hidden {
   position: absolute;
@@ -250,10 +262,16 @@ body {
   justify-content: center;
   background-color: #E4E4E4;
   padding: 40px 0; }
+  @media screen and (max-width: 640px) {
+    .title-page {
+      padding: 22px 0; } }
   .title-page .title {
     display: block;
     font: 400 30px/1.3 "Open Sans", sans-serif;
     color: #414141; }
+    @media screen and (max-width: 640px) {
+      .title-page .title {
+        font-size: 24px; } }
   .title-page strong {
     display: inline-block;
     font-weight: 700;
@@ -282,6 +300,9 @@ body {
     font: 400 18px/1.5 "Georgia", "Times New Roman", serif;
     color: #444444;
     padding-bottom: 30px; }
+    @media screen and (max-width: 640px) {
+      .text-row p {
+        font-size: 16px; } }
     .text-row p:last-child {
       padding-bottom: 0; }
 
@@ -1064,6 +1085,9 @@ hr {
 .topic-all-post {
   display: block;
   padding: 40px 0 50px; }
+  @media screen and (max-width: 640px) {
+    .topic-all-post {
+      padding: 30px 0 60px; } }
 
 .post-full {
   display: block;
@@ -1119,35 +1143,60 @@ hr {
   padding-bottom: 30px;
   margin-bottom: 30px;
   border-bottom: 1px solid #C4C4C4; }
+  @media screen and (max-width: 640px) {
+    .post-row {
+      flex-wrap: wrap;
+      padding-bottom: 20px;
+      margin-bottom: 20px; } }
   .post-row .media-link {
     display: block;
     max-width: 270px;
     min-width: 270px;
     width: 100%;
     line-height: 0; }
+    @media screen and (max-width: 640px) {
+      .post-row .media-link {
+        max-width: 100%;
+        min-width: auto;
+        margin-bottom: 20px; } }
+    @media screen and (max-width: 640px) {
+      .post-row .media-link img {
+        width: 100%; } }
   .post-row .post-desc {
     display: block;
     padding-left: 30px; }
+    @media screen and (max-width: 640px) {
+      .post-row .post-desc {
+        padding-left: 0;
+        width: 100%; } }
   .post-row .title {
     display: block;
     padding-bottom: 10px; }
     .post-row .title .post-link {
       font: 700 18px/1.2 "Open Sans", sans-serif;
       color: #414141; }
+      @media screen and (max-width: 640px) {
+        .post-row .title .post-link {
+          font-size: 16px; } }
   .post-row .preview-text {
     display: block;
     font: 400 16px/1.2 "Open Sans", sans-serif;
     color: #444444;
     font-style: italic;
     padding-bottom: 15px; }
+    @media screen and (max-width: 640px) {
+      .post-row .preview-text {
+        font-size: 14px; } }
   .post-row .basement {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    margin-right: -15px; }
+    margin-right: -15px;
+    margin-bottom: -5px; }
   .post-row .author {
     display: block;
-    padding-right: 15px; }
+    padding-right: 15px;
+    margin-bottom: 5px; }
     .post-row .author .name-link {
       display: inline-block;
       font: 400 14px/1.2 "Open Sans", sans-serif;
@@ -1169,7 +1218,8 @@ hr {
         color: #444444; }
   .post-row .date {
     display: block;
-    padding-right: 15px; }
+    padding-right: 15px;
+    margin-bottom: 5px; }
     .post-row .date .number {
       display: inline-block;
       font: 400 14px/1.2 "Open Sans", sans-serif;
@@ -1177,7 +1227,8 @@ hr {
   .post-row .comments {
     display: flex;
     align-items: center;
-    padding-right: 15px; }
+    padding-right: 15px;
+    margin-bottom: 5px; }
     .post-row .comments a {
       display: flex;
       align-items: center; }
@@ -1192,7 +1243,8 @@ hr {
       color: #444444; }
   .post-row .category {
     display: block;
-    padding-right: 15px; }
+    padding-right: 15px;
+    padding-bottom: 5px; }
     .post-row .category .category-link {
       display: inline-flex;
       align-items: center;

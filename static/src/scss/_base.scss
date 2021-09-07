@@ -1,6 +1,7 @@
 body{
   font-family: $OpenSans;
   background: #F8F8F8;
+  overflow-x: hidden;
 }
 
 .container{
@@ -12,6 +13,10 @@ body{
 
   &.flex-container{
     display: flex;
+
+    @include media(desktop){
+      flex-wrap: wrap;
+    }
   }
 
   &.small-container{
@@ -25,6 +30,12 @@ body{
   @include media(mobile){
     padding-top: 95px;
   }
+
+  .container{
+    @include media(desktop){
+      max-width: 810px;
+    }
+  }
 }
 
 .main-wrapper{
@@ -33,6 +44,12 @@ body{
   width: 100%;
   padding: 50px 0;
   margin-right: 65px;
+
+  @include media(desktop){
+    max-width: 100%;
+    padding: 50px 30px;
+    margin: 0;
+  }
 }
 
 .visually-hidden {
@@ -50,10 +67,18 @@ body{
   background-color: $gray-900;
   padding: 40px 0;
 
+  @include media(mobile){
+    padding: 22px 0;
+  }
+
   .title{
     display: block;
     font: $regular 30px/1.3 $OpenSans;
     color: $gray-400;
+
+    @include media(mobile){
+      font-size: 24px;
+    }
   }
 
   strong{
@@ -94,6 +119,10 @@ body{
     font: $regular 18px/1.5 $TimesNewRoman;
     color: $gray-500;
     padding-bottom: 30px;
+
+    @include media(mobile){
+      font-size: 16px;
+    }
 
     &:last-child{
       padding-bottom: 0;
