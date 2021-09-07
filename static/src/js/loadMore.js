@@ -12,7 +12,7 @@
   function loadMore() {
     let paged  = container.dataset.paged;
     let offset = container.dataset.offset;
-    let data   = `paged=${ paged }&offset=${offset}`;
+    let data   = `paged=${ paged }&offset=${ offset }`;
 
     request.open( 'POST', `${ my_ajax_url.ajax_url }?action=loadMorePosts`, true );
     request.setRequestHeader( 'Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8' );
