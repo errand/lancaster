@@ -32,10 +32,12 @@
 
   });
 
-  menuClose.addEventListener('click', function () {
-    menuBar.classList.remove('open-menu-bar');
-    activeNav.classList.remove('open-nav');
-  })
+  if(menuClose !== null) {
+    menuClose.addEventListener('click', function () {
+      menuBar.classList.remove('open-menu-bar');
+      activeNav.classList.remove('open-nav');
+    })
+  }
 
 // Писать код до сюда
 })();
