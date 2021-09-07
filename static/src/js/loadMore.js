@@ -2,10 +2,10 @@
 
 (() => {
 
-  const container = document.querySelector('.all-post');
+  const container      = document.querySelector('.all-post');
   const loadMoreButton = document.getElementById( 'loadMore' );
-  const request      = new XMLHttpRequest();
-  const postsPerPage = container.dataset.postsPerPage;
+  const request        = new XMLHttpRequest();
+  const postsPerPage   = container.dataset.postsPerPage;
 
   loadMoreButton.addEventListener( 'click', loadMore );
 
