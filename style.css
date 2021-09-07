@@ -246,7 +246,7 @@ body {
   @media screen and (max-width: 1200px) {
     .main-wrapper {
       max-width: 100%;
-      padding: 50px 30px;
+      padding: 50px 0 30px;
       margin: 0; } }
 
 .visually-hidden {
