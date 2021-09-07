@@ -5,6 +5,11 @@
 
 .media-widget{
 
+  @include media(desktop){
+    max-width: 335px;
+    margin: 0 auto 30px;
+  }
+
   .string {
     display: block;
     background-color: $blue-100;

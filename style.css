@@ -980,6 +980,11 @@ hr {
   display: block;
   margin-bottom: 30px; }
 
+@media screen and (max-width: 1200px) {
+  .media-widget {
+    max-width: 335px;
+    margin: 0 auto 30px; } }
+
 .media-widget .string {
   display: block;
   background-color: #006DAB;
