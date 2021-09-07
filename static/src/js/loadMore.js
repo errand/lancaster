@@ -25,7 +25,6 @@
       if ( request.status != 200 ) {
         console.log( `Error ${ request.status }: ${ request.statusText }` );
       } else {
-        console.log(request.response)
         let postsArray  = Array.from( container.querySelectorAll('.post-row') );
         let lastPost    = postsArray[ postsArray.length - 1 ];
         let content     = JSON.parse(request.response);
