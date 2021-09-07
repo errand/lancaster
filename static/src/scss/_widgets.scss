@@ -10,6 +10,10 @@
     margin: 0 auto 30px;
   }
 
+  @include media(phone){
+    margin: 0 0 30px;
+  }
+
   .string {
     display: block;
     background-color: $blue-100;

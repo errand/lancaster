@@ -213,7 +213,7 @@ eval("\r\n\r\n(() => {\r\n\r\n  const container = document.querySelector('.all-p
 /***/ (() => {
 
 "use strict";
-eval("\r\n\r\n(() => {\r\n  // Писать код отсюда\r\n\r\n  const lionsBuner = document.querySelector('.widget_lanc_memes_widget'),\r\n    heroBlock = document.querySelector('.hero-post'),\r\n    allPublications = document.querySelector('.all-post'),\r\n    linkWidget = document.querySelector('.link-widget');\r\n\r\n  if (window.innerWidth < 769) {\r\n    heroBlock.append(lionsBuner);\r\n\r\n    allPublications.querySelector('.title-rows').after(heroBlock.querySelectorAll('.post-full')[1]);\r\n    allPublications.querySelector('.post-full').classList.add('post-row');\r\n    allPublications.querySelector('.post-full').classList.remove('post-full');\r\n  }\r\n\r\n  // Писать код до сюда\r\n})();\n\n//# sourceURL=webpack://lancaster/./static/src/js/mobileSidebar.js?");
+eval("\r\n\r\n(() => {\r\n  // Писать код отсюда\r\n\r\n  const lionsBuner = document.querySelector('.widget_lanc_memes_widget'),\r\n    heroBlock = document.querySelector('.hero-post'),\r\n    allPublications = document.querySelector('.all-post'),\r\n    linkWidget = document.querySelector('.link-widget');\r\n\r\n  if (window.innerWidth < 769) {\r\n    heroBlock.append(lionsBuner);\r\n\r\n    console.log(heroBlock.querySelectorAll('.post-full')[1])\r\n    allPublications.querySelector('.title-rows').after(heroBlock.querySelectorAll('.post-full')[1]);\r\n    heroBlock.querySelectorAll('.post-full')[1].classList.remove('.post-full');\r\n    heroBlock.querySelectorAll('.post-full')[1].classList.add('.post-row');\r\n  }\r\n\r\n\r\n  // Писать код до сюда\r\n})();\n\n//# sourceURL=webpack://lancaster/./static/src/js/mobileSidebar.js?");
 
 /***/ }),
 
