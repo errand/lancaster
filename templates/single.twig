@@ -81,6 +81,7 @@
 				<div class="date">
 					<span class="number">Tue, Aug 17, 2021</span>
 				</div>
+				{% if post.categories %}{% endif %}
 				<div class="category">
 					<a href="#" class="category-link">Politics</a>
 					<a href="#" class="category-link">FBI ABUSE</a>
@@ -110,7 +111,6 @@
 		<div class="text-row">
 			{{ post.content }}
 		</div>
-		<hr>
 	</article>
 	<div class="shared-row">
 		<ul class="list social-likes" data-url="{{ post.link }}" data-title="{{ post.title }}">
