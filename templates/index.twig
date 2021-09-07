@@ -1,17 +1,30 @@
 {% extends "base.twig" %}
 
+{% block main %}
+	<div class="title-page">
+		<div class="container small-container">
+			{% block title %}
+				{% if title %}
+					<h1 class="title">
+						<strong>Topic:</strong>
+						{{title}}
+					</h1>
+				{% endif %}
+			{% endblock %}
+		</div>
+	</div>
 {% block content %}
-	{% for row in posts | batch(3) %}
-		<div class="row">
-			{% for post in row %}
-				{% include ['tease-'~post.post_type~'.twig', 'tease.twig'] %}
+	<div class="container small-container">
+		<div class="all-post topic-all-post">
+			{% for post in posts %}
+						{% include ['tease-'~post.post_type~'.twig', 'tease.twig'] %}
 			{% endfor %}
+			{# include 'partial/pagination.twig' with { pagination: posts.pagination({show_all: false, mid_size: 3, end_size: 2}) } #}
+			<div class="more-rows">
+				<button id="loadMore" class="btn" type="button">MORE</button>
+			</div>
 		</div>
+	</div>
 
-		<div class="ads-wrapper">
-				{{ categoryBanners[ loop.index ] }}
-		</div>
-	{% endfor %}
-
-	{% include 'partial/pagination.twig' with { pagination: posts.pagination({show_all: false, mid_size: 3, end_size: 2}) } %}
+{% endblock %}
 {% endblock %}

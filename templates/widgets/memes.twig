@@ -3,6 +3,7 @@
 {{ args.after_title|raw }}
 
 {% if memes %}
+	<div class="media-widget">
 	<div class="string">
 		<span class="text">{{ instance.title }}</span>
 	</div>
@@ -20,6 +21,7 @@
 
 	<div class="string">
 		<a href="{{instance.link}}" class="link">{{instance.subtitle}}</a>
+	</div>
 	</div>
 {% endif %}
 {{ args.after_widget|raw }}
