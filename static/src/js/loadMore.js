@@ -38,7 +38,8 @@
         lastPost.insertAdjacentHTML( 'afterEnd', content );
         container.dataset.paged  = parseInt( paged ) + 1;
         container.dataset.offset = parseInt( offset ) + parseInt( postsPerPage );
-        if ( total - offset <= 0) {
+        console.log( total - offset ); 
+        if ( total - offset < postsPerPage ) {
           loadMoreButton.style.display = 'none';
         }
       }
