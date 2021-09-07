@@ -5,8 +5,9 @@
 	<div class="hero-post">
 		{% for post in posts [:2] %}
 			<div class="post-full">
-				<div class="category">
+				<div class="hero-category">
 					<a href="{{ post.category.link }}" class="category-link">{{ post.category }}</a>
+
 				</div>
 				<a href="{{post.link}}" class="media-link">
 					<picture class="picture">
@@ -14,14 +15,38 @@
 						<img src="{{ post.thumbnail.src|resize(370, 243) }}" width="370" height="243" alt="{{ post.title }}">
 					</picture>
 				</a>
-				<h2 class="title">
-					<a href="{{post.link}}" class="post-link">{{post.title}}</a>
-				</h2>
+
+				<div class="post-desc">
+					<h2 class="title">
+						<a href="{{ post.link }}" class="post-link">{{ post.title }}</a>
+					</h2>
+					<p class="preview-text">
+						{{ post.preview.length(21).read_more( '' ).force }}
+					</p>
+					<div class="basement">
+						<div class="author">
+							<a href="#" class="name-link">John Johnson</a>
+							<a href="#" class="edition-link">Zerohedge</a>
+						</div>
+						<div class="date">
+							<span class="number">{{ post.date }}</span>
+						</div>
+						<div class="comments">
+							<a href="#">
+								<i class="icon icon-comment"></i>
+								<span class="number">{{ post.comment.count }}</span>
+							</a>
+						</div>
+						<div class="category">
+							<a href="{{ post.category.link }}" class="category-link">{{ post.category }}</a>
+
+						</div>
+					</div>
+				</div>
 			</div>
 		{% endfor %}
-
-
 	</div>
+
 	<div class="all-post" data-paged="1" data-offset="{{ posts_per_page }}" data-posts-per-page="{{ posts_per_page }}">
 		<div class="title-rows">
 			<h2 class="title">Latest News</h2>
