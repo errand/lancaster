@@ -26,7 +26,7 @@
 					<a href="#" class="edition-link">Zerohedge</a>
 				</div>
 				<time class="date" datetime="{{ post.post_date | date( 'Y-m-d H:i' ) }}">
-					{{ post.post_date | date( 'd.m.Y H:i' ) }}
+					<span class="number">{{ post.post_date | date( 'd.m.Y H:i' ) }}</span>
 				</time>
 				<div class="comments">
 					<a href="{{ post.link }}#comments">
