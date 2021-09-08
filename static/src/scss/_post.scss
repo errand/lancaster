@@ -152,6 +152,7 @@
 
     .author{
       display: block;
+      color: $gray-500;
       padding-right: 15px;
       margin-bottom: 5px;
 
@@ -166,20 +167,6 @@
         position: relative;
         font: $regular 14px/1.2 $OpenSans;
         color: $red-300;
-
-        &:before{
-          content: '(';
-          display: inline-block;
-          position: relative;
-          color: $gray-500;
-        }
-
-        &:after{
-          content: ')';
-          display: inline-block;
-          position: relative;
-          color: $gray-500;
-        }
       }
     }
 
@@ -326,6 +313,7 @@
 
   .author{
     display: block;
+    color: $gray-500;
     padding-right: 15px;
     margin-bottom: 5px;
 
@@ -340,20 +328,6 @@
       position: relative;
       font: $regular 14px/1.2 $OpenSans;
       color: $red-300;
-
-      &:before{
-        content: '(';
-        display: inline-block;
-        position: relative;
-        color: $gray-500;
-      }
-
-      &:after{
-        content: ')';
-        display: inline-block;
-        position: relative;
-        color: $gray-500;
-      }
     }
   }
 

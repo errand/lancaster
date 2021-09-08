@@ -44,6 +44,7 @@
 
     .author{
       display: block;
+      color: $gray-500;
       border-right: 1px solid $gray-400;
       padding-right: 15px;
       margin: 0 15px 5px 0;
@@ -59,20 +60,6 @@
         position: relative;
         font: $regular 16px/1.2 $OpenSans;
         color: $red-300;
-
-        &:before{
-          content: '(';
-          display: inline-block;
-          position: relative;
-          color: $gray-500;
-        }
-
-        &:after{
-          content: ')';
-          display: inline-block;
-          position: relative;
-          color: $gray-500;
-        }
       }
     }
 
