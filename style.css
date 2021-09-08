@@ -209,9 +209,10 @@ textarea {
   font: inherit;
   /* 2 */ }
 
-scroll-behavior:smooth
-html.open-nav {
-  overflow: hidden; }
+html {
+  scroll-behavior: smooth; }
+  html.open-nav {
+    overflow: hidden; }
 
 body {
   font-family: "Open Sans", sans-serif;
