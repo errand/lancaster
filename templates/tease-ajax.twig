@@ -29,7 +29,7 @@
 					{% endif %}
 				</div>
 				<time class="date" datetime="{{ post.post_date | date( 'Y-m-d H:i' ) }}">
-					{{ post.post_date | date( 'd.m.Y H:i' ) }}
+					{{ post.post_date | date( 'D, M  d' ) }}
 				</time>
 				<div class="comments">
 					<a href="{{ post.link }}#comments">
