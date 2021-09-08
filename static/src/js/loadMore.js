@@ -26,8 +26,7 @@ if( document.querySelector( '.all-post' )) {
       tax   = 'publication';
       terms = container.dataset.publication
     }
-
-    console.log( total, postsPerPage );
+    
     if( total < parseInt( postsPerPage )) { 
       loadMoreButton.style.display = 'none';
     }
