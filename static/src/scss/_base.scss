@@ -1,5 +1,5 @@
 html{  
-  scroll-behavior:smooth
+  scroll-behavior:smooth;
   &.open-nav{
     overflow: hidden;
   }
@@ -145,6 +145,49 @@ body{
 .about{
   display: block;
   padding: 40px 0 50px;
+}
+
+.author{
+  display: block;
+  color: $gray-500;
+  padding-right: 15px;
+  margin-bottom: 5px;
+
+  .name-link{
+    display: inline-block;
+    font: $regular 14px/1.2 $OpenSans;
+    color: $red-300;
+  }
+
+  .edition-link{
+    display: inline-block;
+    position: relative;
+    font: $regular 14px/1.2 $OpenSans;
+    color: $red-300;
+
+    &:before, &:after{
+      content: '(';
+      display: inline-block;
+      position: relative;
+      color: $gray-500;
+    }
+
+    &:after{
+      content: ')';
+    }
+  }
+}
+
+.date{
+  display: block;
+  padding-right: 15px;
+  margin-bottom: 5px;
+
+  .number{
+    display: inline-block;
+    font: $regular 14px/1.2 $OpenSans;
+    color: $gray-500;
+  }
 }
 
 hr{
