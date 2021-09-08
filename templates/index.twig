@@ -15,9 +15,17 @@
 	</div>
 {% block content %}
 	<div class="container small-container">
-		<div class="all-post topic-all-post">
+		<div class="all-post topic-all-post" data-total="{{ total }}" data-paged="1" data-offset="{{ posts_per_page }}" 
+		data-posts-per-page="{{ posts_per_page }}" 
+			{% if category_id %}
+				data-category="{{ category_id }}"
+			{% endif %}
+			{% if tax %}
+				data-{{ tax }}="{% for term in terms %}{{ term.term_id }}{{ not loop.last ? ',' }}{% endfor %}"
+			{% endif %} 
+		>
 			{% for post in posts %}
-						{% include ['tease-'~post.post_type~'.twig', 'tease.twig'] %}
+				{% include ['tease-'~post.post_type~'.twig', 'tease.twig'] %}
 			{% endfor %}
 			{# include 'partial/pagination.twig' with { pagination: posts.pagination({show_all: false, mid_size: 3, end_size: 2}) } #}
 			<div class="more-rows">
