@@ -107,7 +107,7 @@ class StarterSite extends Timber\Site {
   function site_static() {
     wp_enqueue_script('scripts', get_template_directory_uri() . '/static/scripts.js', '', '', true);
 
-    if(is_single() || is_post()){
+    if(is_singular()){
       wp_enqueue_script('addthis', '//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-557076b75c0df144', '', '', true);
     }
 
