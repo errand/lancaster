@@ -150,38 +150,6 @@
       }
     }
 
-    .author{
-      display: block;
-      color: $gray-500;
-      padding-right: 15px;
-      margin-bottom: 5px;
-
-      .name-link{
-        display: inline-block;
-        font: $regular 14px/1.2 $OpenSans;
-        color: $red-300;
-      }
-
-      .edition-link{
-        display: inline-block;
-        position: relative;
-        font: $regular 14px/1.2 $OpenSans;
-        color: $red-300;
-      }
-    }
-
-    .date{
-      display: block;
-      padding-right: 15px;
-      margin-bottom: 5px;
-
-      .number{
-        display: inline-block;
-        font: $regular 14px/1.2 $OpenSans;
-        color: $gray-500;
-      }
-    }
-
     .comments{
       display: flex;
       align-items: center;
@@ -309,38 +277,6 @@
     flex-wrap: wrap;
     margin-right: -15px;
     margin-bottom: -5px;
-  }
-
-  .author{
-    display: block;
-    color: $gray-500;
-    padding-right: 15px;
-    margin-bottom: 5px;
-
-    .name-link{
-      display: inline-block;
-      font: $regular 14px/1.2 $OpenSans;
-      color: $red-300;
-    }
-
-    .edition-link{
-      display: inline-block;
-      position: relative;
-      font: $regular 14px/1.2 $OpenSans;
-      color: $red-300;
-    }
-  }
-
-  .date{
-    display: block;
-    padding-right: 15px;
-    margin-bottom: 5px;
-
-    .number{
-      display: inline-block;
-      font: $regular 14px/1.2 $OpenSans;
-      color: $gray-500;
-    }
   }
 
   .comments{

@@ -319,6 +319,37 @@ body {
   display: block;
   padding: 40px 0 50px; }
 
+.author {
+  display: block;
+  color: #444444;
+  padding-right: 15px;
+  margin-bottom: 5px; }
+  .author .name-link {
+    display: inline-block;
+    font: 400 14px/1.2 "Open Sans", sans-serif;
+    color: #BF0000; }
+  .author .edition-link {
+    display: inline-block;
+    position: relative;
+    font: 400 14px/1.2 "Open Sans", sans-serif;
+    color: #BF0000; }
+    .author .edition-link:before, .author .edition-link:after {
+      content: '(';
+      display: inline-block;
+      position: relative;
+      color: #444444; }
+    .author .edition-link:after {
+      content: ')'; }
+
+.date {
+  display: block;
+  padding-right: 15px;
+  margin-bottom: 5px; }
+  .date .number {
+    display: inline-block;
+    font: 400 14px/1.2 "Open Sans", sans-serif;
+    color: #444444; }
+
 hr {
   display: block;
   width: 100%;
@@ -1267,28 +1298,6 @@ hr {
       @media screen and (max-width: 768px) {
         .post-full .post-desc .basement {
           display: flex; } }
-    .post-full .post-desc .author {
-      display: block;
-      color: #444444;
-      padding-right: 15px;
-      margin-bottom: 5px; }
-      .post-full .post-desc .author .name-link {
-        display: inline-block;
-        font: 400 14px/1.2 "Open Sans", sans-serif;
-        color: #BF0000; }
-      .post-full .post-desc .author .edition-link {
-        display: inline-block;
-        position: relative;
-        font: 400 14px/1.2 "Open Sans", sans-serif;
-        color: #BF0000; }
-    .post-full .post-desc .date {
-      display: block;
-      padding-right: 15px;
-      margin-bottom: 5px; }
-      .post-full .post-desc .date .number {
-        display: inline-block;
-        font: 400 14px/1.2 "Open Sans", sans-serif;
-        color: #444444; }
     .post-full .post-desc .comments {
       display: flex;
       align-items: center;
@@ -1379,28 +1388,6 @@ hr {
     flex-wrap: wrap;
     margin-right: -15px;
     margin-bottom: -5px; }
-  .post-row .author {
-    display: block;
-    color: #444444;
-    padding-right: 15px;
-    margin-bottom: 5px; }
-    .post-row .author .name-link {
-      display: inline-block;
-      font: 400 14px/1.2 "Open Sans", sans-serif;
-      color: #BF0000; }
-    .post-row .author .edition-link {
-      display: inline-block;
-      position: relative;
-      font: 400 14px/1.2 "Open Sans", sans-serif;
-      color: #BF0000; }
-  .post-row .date {
-    display: block;
-    padding-right: 15px;
-    margin-bottom: 5px; }
-    .post-row .date .number {
-      display: inline-block;
-      font: 400 14px/1.2 "Open Sans", sans-serif;
-      color: #444444; }
   .post-row .comments {
     display: flex;
     align-items: center;
@@ -1465,20 +1452,12 @@ hr {
       .article .article-meta .meta-row:last-child {
         padding-bottom: 0; }
     .article .article-meta .author {
-      display: block;
-      color: #444444;
       border-right: 1px solid #414141;
-      padding-right: 15px;
       margin: 0 15px 5px 0; }
       .article .article-meta .author .name-link {
-        display: inline-block;
-        font: 400 16px/1.2 "Open Sans", sans-serif;
-        color: #BF0000; }
+        font: 400 16px/1.2 "Open Sans", sans-serif; }
       .article .article-meta .author .edition-link {
-        display: inline-block;
-        position: relative;
-        font: 400 16px/1.2 "Open Sans", sans-serif;
-        color: #BF0000; }
+        font: 400 16px/1.2 "Open Sans", sans-serif; }
     .article .article-meta .words {
       display: block;
       border-right: 1px solid #414141;
@@ -1512,14 +1491,6 @@ hr {
       .article .article-meta .comments .number {
         display: inline-block;
         font: 400 16px/1.2 "Open Sans", sans-serif;
-        color: #444444; }
-    .article .article-meta .date {
-      display: block;
-      padding-right: 15px;
-      margin-bottom: 5px; }
-      .article .article-meta .date .number {
-        display: inline-block;
-        font: 400 14px/1.2 "Open Sans", sans-serif;
         color: #444444; }
     .article .article-meta .category {
       display: flex;

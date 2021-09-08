@@ -43,23 +43,15 @@
     }
 
     .author{
-      display: block;
-      color: $gray-500;
       border-right: 1px solid $gray-400;
-      padding-right: 15px;
       margin: 0 15px 5px 0;
 
       .name-link{
-        display: inline-block;
         font: $regular 16px/1.2 $OpenSans;
-        color: $red-300;
       }
 
       .edition-link{
-        display: inline-block;
-        position: relative;
         font: $regular 16px/1.2 $OpenSans;
-        color: $red-300;
       }
     }
 
@@ -109,18 +101,6 @@
       .number{
         display: inline-block;
         font: $regular 16px/1.2 $OpenSans;
-        color: $gray-500;
-      }
-    }
-
-    .date{
-      display: block;
-      padding-right: 15px;
-      margin-bottom: 5px;
-
-      .number{
-        display: inline-block;
-        font: $regular 14px/1.2 $OpenSans;
         color: $gray-500;
       }
     }
