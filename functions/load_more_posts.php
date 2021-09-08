@@ -34,10 +34,10 @@ function loadMorePosts(){
 	$posts = new Timber\PostQuery( $args );
 	$context[ 'posts' ] = $posts;
 	
-		$data  = array(
-			'total'  => $posts->found_posts,
-			'posts'  => Timber::compile( array( 'tease-ajax.twig' ), $context ),
-		);
+	$data  = array(
+		'total'  => $posts->found_posts,
+		'posts'  => Timber::compile( array( 'tease-ajax.twig' ), $context ),
+	);
 
 	wp_send_json( $data );
 	wp_die();
