@@ -21,22 +21,19 @@
 				{{ post.preview.length(21).read_more( '' ).force }}
 			</p>
 			<div class="basement">
+				{% if (post.terms('creator') or post.terms('publication')) %}
 				<div class="author">
-					<a href="{% if ( post.terms( { query:{ taxonomy:'creator' }} )) %}/creators/{{ post.terms( { query:{ taxonomy:'creator' }} )[0].slug }}{% else %}#0{% endif %}" class="name-link">
-						{% if ( post.terms( { query:{ taxonomy:'creator' }} )) %}
-							{{ post.terms( { query:{ taxonomy:'creator' }} )[0] }}
-						{% else %}
-							John Johnson
-						{% endif %}
-					</a>
-					<a href="{% if ( post.terms( { query:{ taxonomy:'publication' }} )) %}/publications/{{ post.terms( { query:{ taxonomy:'publication' }} )[0].slug }}{% else %}#0{% endif %}" class="edition-link">
-						{% if ( post.terms( { query:{ taxonomy:'publication' }} )) %}
-							{{ post.terms( { query:{ taxonomy:'publication' }} )[0] }}
-						{% else %}
-							Zerohedge
-						{% endif %}
-					</a>
+					{% for term in post.terms('creator') %}
+					<a href="{{ fn('get_term_link', term.ID) }}" class="name-link">{{ term.name }}</a>
+					{% endfor %}
+					{% if post.terms('publication') %}
+					{% for term in post.terms('publication') %}
+						<a href="{{ fn('get_term_link', term.ID) }}" class="edition-link">{{ term.name }}</a>
+					{% endfor %}
+					{% endif %}
 				</div>
+				{% endif %}
+
 				<time class="date" datetime="{{ post.post_date | date( 'Y-m-d H:i' ) }}">
 					<span class="number">{{ post.post_date | date( 'd.m.Y H:i' ) }}</span>
 				</time>
