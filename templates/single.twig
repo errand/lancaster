@@ -23,9 +23,11 @@
 							<a href="{{ fn('get_term_link', term.ID) }}" class="name-link">{{ term.name }}</a>
 						{% endfor %}
 						{% if post.terms('publication') %}
+							(
 							{% for term in post.terms('publication') %}
 								<a href="{{ fn('get_term_link', term.ID) }}" class="edition-link">{{ term.name }}</a>
 							{% endfor %}
+							)
 						{% endif %}
 					</div>
 				{% endif %}
@@ -54,11 +56,11 @@
 					<span class="number">{{ post.post_date | date( 'D, M  d' ) }}</span>
 				</time>
 				{% if post.categories %}
+					<div class="category">
 					{% for category in post.terms('category')%}
-						<div class="category">
 							<a href="{{ category.link }}" class="category-link">{{ category.name }}</a>
-						</div>
 					{% endfor %}
+					</div>
 				{% endif %}
 			</div>
 		</div>
