@@ -21,7 +21,7 @@
 				data-category="{{ category_id }}"
 			{% endif %}
 			{% if tax %}
-				data-{{ tax }}="{% for term in terms %}{{ term.term_id }}{{ not loop.last ? ',' }}{% endfor %}"
+				data-{{ tax }}="{{ term_id }}"
 			{% endif %} 
 		>
 			{% for post in posts %}

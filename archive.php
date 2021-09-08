@@ -42,12 +42,8 @@ if ( is_day() ) {
 	array_unshift( $templates, 'archive-' . get_post_type() . '.twig' );
 } elseif ( is_tax() ) {
     $context['title'] = single_cat_title( '', false );
-    $context[ 'tax' ] = $term_page->taxonomy;
-
-    $context[ 'terms' ] = get_terms( [
-        'taxonomy'   => $term_page->taxonomy,
-        'hide_empty' => false,
-    ] );
+    $context[ 'tax' ]  = $term_page->taxonomy;
+    $context[ 'term_id' ] = get_queried_object()->term_id;
 }
 
 $context[ 'total' ] = $context['posts']->found_posts;

@@ -11,22 +11,22 @@ if( document.querySelector( '.all-post' )) {
 
     let catId;
     let tax;
-    let terms;
+    let term;
 
     if( container.dataset.category ) {
       catId = container.dataset.category;
     }
 
     if( container.dataset.creator ) {
-      tax   = 'creator';
-      terms = container.dataset.creator
+      tax  = 'creator';
+      term = container.dataset.creator
     }
 
     if( container.dataset.publication ) {
-      tax   = 'publication';
-      terms = container.dataset.publication
+      tax  = 'publication';
+      term = container.dataset.publication
     }
-    
+
     if( total < parseInt( postsPerPage )) { 
       loadMoreButton.style.display = 'none';
     }
@@ -37,7 +37,7 @@ if( document.querySelector( '.all-post' )) {
       let paged  = container.dataset.paged;
       let offset = container.dataset.offset;
       let catAdd = ( catId != undefined ) ? `&cat_id=${ catId }` : '';
-      let taxAdd = ( tax != undefined ) ? `&tax=${ tax }&terms=${ terms }` : '';
+      let taxAdd = ( tax != undefined ) ? `&tax=${ tax }&term=${ term }` : '';
       let data   = `paged=${ paged }&offset=${ offset }&posts_per_page=${ postsPerPage }${catAdd}${taxAdd}`;
 
       request.open( 'POST', `${ my_ajax_url.ajax_url }?action=loadMorePosts`, true );
@@ -60,7 +60,7 @@ if( document.querySelector( '.all-post' )) {
           container.dataset.paged  = parseInt( paged ) + 1;
           container.dataset.offset = parseInt( offset ) + parseInt( postsPerPage );
 
-          if ( total - offset < postsPerPage ) {
+          if ( total - offset <= postsPerPage ) {
             loadMoreButton.style.display = 'none';
           }
         }

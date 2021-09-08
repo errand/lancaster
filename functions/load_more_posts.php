@@ -8,7 +8,7 @@ function loadMorePosts(){
 	$posts_per_page = $_POST['posts_per_page'] ? intval( $_POST['posts_per_page'] ) : get_option('posts_per_page');
 	$cat_id         = $_POST[ 'cat_id' ] ? intval( $_POST[ 'cat_id' ] ) : '';
 	$tax            = $_POST[ 'tax' ] ? $_POST[ 'tax' ] : '';
-	$terms          = $_POST[ 'terms' ] ? explode( ',', $_POST[ 'terms' ] ) : ''; 
+	$term           = $_POST[ 'term' ] ? explode( ',', $_POST[ 'term' ] ) : ''; 
 
 	$args = array(
 		'post_type'      => 'post',
@@ -25,7 +25,7 @@ function loadMorePosts(){
 		$args[ 'tax_query' ] = [
 			[
 				'taxonomy' => $tax,
-				'terms'    => $terms,
+				'terms'    => $term,
 			],
 		];
 	}
@@ -37,8 +37,6 @@ function loadMorePosts(){
 		$data  = array(
 			'total'  => $posts->found_posts,
 			'posts'  => Timber::compile( array( 'tease-ajax.twig' ), $context ),
-			'offset' => $offset,
-			'args'   => $args,
 		);
 
 	wp_send_json( $data );
