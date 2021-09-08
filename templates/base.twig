@@ -67,7 +67,12 @@
 				</form>
 			</div>
 		</div>
-		{% include 'partial/main-menu.twig' %}
+		<nav class="header_nav">
+  			{% include "menu.twig" with {'items': main_menu.get_items} %}
+  			<div class="menu-bar">
+				{% include 'partial/burger-menu.twig' with {'items': burger_menu.get_items} %}
+			</div>
+		</nav>
 	{% endblock %}
 </header>
 

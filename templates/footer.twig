@@ -3,32 +3,18 @@
     <a href="index.html" class="logo">
       <img src="{{ theme.link }}/static/img/logo_w.png" alt="img">
     </a>
-    <p class="quotes">... and the truth shall set you free - John 8:32</p>
+    <p class="quotes">
+      {% set quote = random( quotes ) %}
+      {{ quote.text }}
+          -
+      {{ quote.source }}
+    </p>
   </div>
   <div class="footer_nav">
-    <ul class="list">
-      <li class="item">
-        <a href="#" class="nav-link">About</a>
-      </li>
-      <li class="item">
-        <a href="#" class="nav-link">Write an article</a>
-      </li>
-      <li class="item">
-        <a href="#" class="nav-link">Donate</a>
-      </li>
-      <li class="item">
-        <a href="#" class="nav-link">Send us an idea, tip, or lead</a>
-      </li>
-      <li class="item">
-        <a href="#" class="nav-link">Topics</a>
-      </li>
-      <li class="item">
-        <a href="#" class="nav-link">Contacts</a>
-      </li>
-    </ul>
+    {% include 'partial/footer-menu.twig' with {'items': footer_menu.get_items} %}
   </div>
   <div class="footer_basement">
-    <p class="copyright">© 2021 The Lancaster Christian</p>
+    <p class="copyright">© {{ 'now' | date('Y') }} The Lancaster Christian</p>
     <ul class="list">
       <li class="item">
         <a href="#" class="link">Privacy Policy</a>
