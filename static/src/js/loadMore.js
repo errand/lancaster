@@ -55,13 +55,12 @@ if( document.querySelector( '.all-post' )) {
           let postsArray  = Array.from( container.querySelectorAll('.post-row') );
           let lastPost    = postsArray[ postsArray.length - 1 ];
           let content     = JSON.parse(request.response);
-          console.log( content );
           content = content[ 'posts' ].replace( /[\n\r\t]/g, '' );
           
           lastPost.insertAdjacentHTML( 'afterEnd', content );
           container.dataset.paged  = parseInt( paged ) + 1;
           container.dataset.offset = parseInt( offset ) + parseInt( postsPerPage );
-          console.log( total - offset ); 
+
           if ( total - offset < postsPerPage ) {
             loadMoreButton.style.display = 'none';
           }
