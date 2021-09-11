@@ -1,16 +1,17 @@
 .comment-row{
-  display: block;
   margin-top: 30px;
 
   .comment-form{
-    display: block;
-    border-top: 1px solid $gray-700;
     padding-top: 10px;
   }
 
   .fieldset{
     display: block;
     padding: 0 0 15px;
+
+    &:last-child{
+      padding-bottom: 0;
+    }
 
     label{
       display: block;
@@ -34,25 +35,130 @@
     textarea{
       display: block;
       width: 100%;
-      height: 150px;
+      height: 80px;
       font: $regular 16px/1 $OpenSans;
       color: $gray-400;
       background: transparent;
       border: 1px solid $gray-800;
       border-radius: 4px;
       padding: 15px;
-      resize: none;
+      resize: vertical;
     }
   }
 
   .btn-row{
     display: flex;
-    padding-top: 15px;
-    margin: -10px;
+    margin: 0 -10px;
 
     .btn{
       min-width: 150px;
-      margin: 10px;
+      margin: 0 10px 10px 10px;
     }
   }
+}
+
+ul.comments {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+
+  li.comment {
+    position: relative;
+    margin-bottom: 15px;
+    padding: 0px;
+    z-index: 9;
+
+    &:before {
+      content: '';
+      width: 1px;
+      height: 100%;
+      background: $gray-100;
+      position: absolute;
+      left: 15px;
+      top: 25px;
+    }
+
+    &:last-child:before {
+      display: none;
+    }
+
+    .comment-wrapper {
+      position: relative;
+      z-index: 99;
+    }
+
+    .card {
+      border: 1px solid $gray-100;
+      background: $gray-50;
+      border-radius: 10px 10px 0 0;
+      .card-header {
+        position: relative;
+
+        padding: 8px;
+
+        border-radius: 10px 10px 0 0;
+
+        background: lighten($gray-100, 40%);
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        font-size: 0.8rem;
+
+        img {
+          width: 48px;
+          margin-right: 1rem;
+          border-radius: 50%;
+        }
+        h5 {
+          line-height: 1;
+          margin: 0 10px;
+        }
+      }
+      .card-body {
+        padding: 1rem 8px;
+      }
+
+      .card-footer {
+        padding: 8px 8px 0 8px;
+        .btn {
+          font-size: 0.8rem;
+          padding: 4px 10px;
+        }
+      }
+    }
+
+    ul {
+      padding-left: 30px;
+      margin-top: 15px;
+    }
+  }
+
+  li > ul > li:first-child > .comment-wrapper > .card > .card-header:after {
+    content: '';
+    width: 15px;
+    height: 1px;
+    background: $gray-100;
+    position: absolute;
+    left: -15px;
+    top: 50%;
+    z-index: 3;
+  }
+
+  li > ul > li:first-child > .comment-wrapper > .card > .card-header:before {
+    content: '';
+    width: 1px;
+    height: 100%;
+    background: $gray-100;
+    position: absolute;
+    left: -16px;
+    bottom: 50%;
+    z-index: 1;
+  }
+}
+
+.comment-meta {
+  display: flex;
+  align-items: center;
 }

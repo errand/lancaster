@@ -1,28 +1,18 @@
-
-{% if counter > 0 %}
-	{% set commentId = rootCommentId~'.'~loop.index %}
-	{% set rootCommentId = commentId %}
-{% else %}
-	{% set rootCommentId = loop.index %}
-	{% set commentId = loop.index %}
-	{% set counter = 0 %}
-{% endif %}
-
-<li class="timeline-comment blog-comment {{ comment.comment_type }}" id="comment-{{ commentId }}">
-	<div class="timeline-comment-wrapper">
+<li class="{{ comment.comment_type }}" id="comment-{{ commentId }}">
+	<div class="comment-wrapper">
 		<div class="card">
 			<div class="card-header">
 				<div class="comment-meta d-flex align-items-center">
 					<img src="{{ fn('getAuthorAvatar', comment.author) }}" alt="Аватар {{comment.author.name}}" />
 					<span class="comment-author">{{comment.author.name}}, {{ comment.date }}</span>
 				</div>
-				<a href="{{ post.link }}#comment-{{ commentId }}" class="comment-id">#{{ commentId }}</a>
+				<a href="{{ post.link }}#comment-{{ comment.id }}" class="comment-id">#{{ comment.id }}</a>
 			</div>
 			<div class="card-body">
 				{{ comment.comment_content|wpautop }}
 			</div>
 			<div class="card-footer">
-				<h6>Ответить</h6>
+				<h6>Reply</h6>
 				{% include "comment-form.twig" %}
 			</div>
 		</div>
@@ -30,7 +20,7 @@
 	<!-- child comments -->
 	{% if post.comments %}
 		{% set counter = counter + 1 %}
-		<ul class="timeline-comments">
+		<ul class="comments">
 			{% for cmt in comment.children %}
 				{% include "comment.twig" with { comment:cmt } %}
 			{% endfor %}

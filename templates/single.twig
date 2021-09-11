@@ -91,8 +91,7 @@
 		<div class="addthis_inline_share_toolbox_yrh6"></div>
 	</div>
 
-	<section
-		id="comments" class="comment-row">
+	<section id="comments" class="comment-row">
 		<!-- comments -->
 		{% if post.comments.count > 0 %}
 			<div class="comments">
@@ -100,9 +99,11 @@
 					<div class="title-rows">
 						<h2 class="title">Comments</h2>
 					</div>
+				<ul class="comments">
 					{% for cmt in post.comments %}
 						{% include "comment.twig" with {comment:cmt} %}
 					{% endfor %}
+				</ul>
 				{% endif %}
 			</div>
 
