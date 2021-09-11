@@ -130,9 +130,6 @@ ul.comments {
 
         .comment-form{
           display: none;
-          height: 0;
-          transform: translateY(0);
-          transition: t;
 
           &.visible {
             display: block;
