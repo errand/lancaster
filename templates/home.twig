@@ -34,7 +34,7 @@
 						<div class="comments">
 							<a href="#">
 								<i class="icon icon-comment"></i>
-								<span class="number">{{ post.comment.count }}</span>
+								<span class="number">{% if post.comment_count > 0 %}{{ post.comment_count }}{% endif %}</span>
 							</a>
 						</div>
 						<div class="category">
