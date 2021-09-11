@@ -121,7 +121,23 @@ ul.comments {
       }
 
       .card-footer {
-        padding: 8px 8px 0 8px;
+        padding: 8px;
+
+        .reply{
+          color: $gray-200;
+          cursor: pointer;
+        }
+
+        .comment-form{
+          display: none;
+          height: 0;
+          transform: translateY(0);
+          transition: t;
+
+          &.visible {
+            display: block;
+          }
+        }
         .btn {
           font-size: 0.8rem;
           padding: 4px 10px;
