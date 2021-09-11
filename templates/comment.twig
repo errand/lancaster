@@ -1,4 +1,4 @@
-<li class="{{ comment.comment_type }}" id="comment-{{ commentId }}">
+<li class="{{ comment.comment_type }}" id="comment-{{comment.ID}}">
 	<div class="comment-wrapper">
 		<div class="card">
 			<div class="card-header">
@@ -6,7 +6,7 @@
 					<img src="{{ fn('getAuthorAvatar', comment.author) }}" alt="Аватар {{comment.author.name}}" />
 					<span class="comment-author">{{comment.author.name}}, {{ comment.date }}</span>
 				</div>
-				<a href="{{ post.link }}#comment-{{ comment.id }}" class="comment-id">#{{ comment.id }}</a>
+				<a href="{{ post.link }}#comment-{{comment.ID}}" class="comment-id">#{{comment.ID}}</a>
 			</div>
 			<div class="card-body">
 				{{ comment.comment_content|wpautop }}
