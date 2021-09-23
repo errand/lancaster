@@ -44,7 +44,7 @@
 				<div class="comments">
 					<a href="#comments">
 						<i class="icon icon-comment"></i>
-						<span class="number">{{post.comments.count}}</span>
+						<span class="number">{% if post.comment_count > 0 %}{{ post.comment_count }}{% endif %}</span>
 					</a>
 				</div>
 			</div>
@@ -65,7 +65,7 @@
 			</div>
 		</div>
 		<hr>
-		{% if post.thumbnail.src %}
+		{% if post.thumbnail.src and post.meta('hideimageonpage') == false %}
 			<div class="article-media">
 				<picture class="picture">
 					<source srcset="{{ post.thumbnail.src|resize(886)|towebp }}" type="image/webp">
