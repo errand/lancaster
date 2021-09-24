@@ -67,10 +67,10 @@
 		<hr>
 		{% if post.thumbnail.src and post.meta('hideimageonpage') == false %}
 			<div class="article-media">
-				<picture class="picture">
+				<a href="{{ post.thumbnail.src }}" target="_blank"><picture class="picture">
 					<source srcset="{{ post.thumbnail.src|resize(886)|towebp }}" type="image/webp">
 					<img src="{{ post.thumbnail.src|resize(570) }}" width="570" alt="{% if post.thumbnail.alt %}{{ post.thumbnail.alt }}{% else %}{{ post.title }}{% endif %}">
-				</picture>
+				</picture></a>
 				{% if post.thumbnail.caption or post.thumbnail.alt %}
 					<p class="media-desc">
 						{% if post.thumbnail.caption %}
