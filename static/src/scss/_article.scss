@@ -142,4 +142,12 @@
       padding-top: 10px;
     }
   }
+
+  .wp-block-embed-youtube{
+    .wp-block-embed__wrapper{
+      iframe{
+        width: 85% !important;
+      }
+    }
+  }
 }

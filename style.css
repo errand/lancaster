@@ -1521,6 +1521,8 @@ hr {
       color: #444444;
       font-style: italic;
       padding-top: 10px; }
+  .article .wp-block-embed-youtube .wp-block-embed__wrapper iframe {
+    width: 85% !important; }
 
 .shared-row {
   display: block; }
