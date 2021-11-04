@@ -7,7 +7,6 @@
 			<div class="post-full">
 				<div class="hero-category">
 					<a href="{{ post.category.link }}" class="category-link">{{ post.category }}</a>
-
 				</div>
 				<a href="{{post.link}}" class="media-link">
 					<picture class="picture">
@@ -23,6 +22,10 @@
 					<p class="preview-text">
 						{{ post.preview.length(21).read_more( '' ).force }}
 					</p>
+					<div class="author">
+						<a href="/author/{{ post.author }}" class="name-link">{{ post.author }}</a>
+					</div>
+
 					<div class="basement">
 						<div class="author">
 							<a href="#" class="name-link">John Johnson</a>
