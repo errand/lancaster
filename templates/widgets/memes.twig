@@ -1,15 +1,14 @@
-{{ args.before_widget|raw }}
-{{ args.before_title|raw }}
-{{ args.after_title|raw }}
-
 {% if memes %}
+	{{ args.before_widget|raw }}
+	{{ args.before_title|raw }}
+	{{ args.after_title|raw }}
+
 	<div class="media-widget">
 	<div class="string">
 		<span class="text">{{ instance.title }}</span>
 	</div>
 
 	{% set firstMeme = memes|first %}
-
 
 	<picture class="picture">
 		<source srcset="{{ firstMeme.image.url|resize(355)|towebp }}" type="image/webp">
@@ -20,5 +19,6 @@
 		<a href="{{instance.link}}" class="link">{{instance.subtitle}}</a>
 	</div>
 	</div>
+
+	{{ args.after_widget|raw }}
 {% endif %}
-{{ args.after_widget|raw }}
