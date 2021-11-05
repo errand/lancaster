@@ -6,6 +6,12 @@
     flex-wrap: wrap;
   }
 
+  .author{
+    .name-link {
+      color: $white;
+    }
+  }
+
   .post-full{
     width: calc(50% - 15px);
 
