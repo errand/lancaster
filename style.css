@@ -1424,7 +1424,8 @@ hr {
       padding: 3px 7px; }
 
 .article {
-  display: block; }
+  display: block;
+  margin-bottom: 30px; }
   .article .article-head {
     display: block; }
     .article .article-head .title {
