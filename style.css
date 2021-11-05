@@ -1457,7 +1457,7 @@ hr {
       border-right: 1px solid #414141;
       margin: 0 15px 5px 0; }
       .article .article-meta .author .name-link {
-        font: 400 16px/1.2 "Open Sans", sans-serif; }
+        font: 400 16px/1.2 "Open Sans", sans-serif #000000; }
       .article .article-meta .author .edition-link {
         font: 400 16px/1.2 "Open Sans", sans-serif; }
     .article .article-meta .words {
