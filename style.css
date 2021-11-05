@@ -1262,7 +1262,7 @@ hr {
     position: absolute;
     left: 0;
     bottom: 0;
-    padding: 20px 15px;
+    padding: 20px 15px 0px 15px;
     z-index: 2; }
     @media screen and (max-width: 768px) {
       .post-full .post-desc {
