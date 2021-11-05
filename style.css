@@ -1521,17 +1521,19 @@ hr {
       color: #444444;
       font-style: italic;
       padding-top: 10px; }
-  .article .wp-block-embed-youtube .wp-block-embed__wrapper {
-    position: relative;
-    width: 100%;
-    height: 0;
-    padding-bottom: 56.25%; }
-    .article .wp-block-embed-youtube .wp-block-embed__wrapper iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
+  .article .wp-block-embed-youtube {
+    margin-bottom: 30px; }
+    .article .wp-block-embed-youtube .wp-block-embed__wrapper {
+      position: relative;
       width: 100%;
-      height: 100%; }
+      height: 0;
+      padding-bottom: 56.25%; }
+      .article .wp-block-embed-youtube .wp-block-embed__wrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%; }
 
 .shared-row {
   display: block; }
